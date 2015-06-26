@@ -1,0 +1,50 @@
+footer{
+	width: 100%;
+	margin: 0 auto;
+	background: url('../images/footer.png') left top repeat-x;
+	height: 89px;
+	z-index: 9999;
+  	position: relative;
+}
+.footElement{
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 31px;
+	margin: 33px 0 0;
+	border-right: 1px solid #fff;
+	min-height: 45px;
+}
+
+.footElement > span{
+	display: block;
+	font-size: 12px;
+	color: #fff;
+}
+.footElement > a > img{
+	margin: 0 5px;
+}
+
+/** Inner Page Footer */
+footer.innerFoot{
+	height: 55px;
+}
+footer.innerFoot .footElement{
+	display: inline-block;
+	padding: 0 31px;
+	margin: 0 0;
+	min-height: 0px;
+	border-right: none;
+}
+footer.innerFoot .footElement > span{
+	position: relative;
+	top: 24px;
+}
+footer.innerFoot .footElement.social{
+	position: relative;
+	top: 10px;
+	float: right;
+}
+footer.innerFoot > .footElement{
+	position: relative;
+	top: 20px;
+}

@@ -1,0 +1,48 @@
+#innerPage{
+	margin-bottom: 10px;
+}
+#innerPage .picCont{
+	width: 650px;
+	height: 363px;
+	margin: 0 auto;
+	background: url('../images/video.png') left top no-repeat;
+	position: relative;
+}
+#innerPage .picCont > img{
+	width: 582px;
+	height: 294px;
+	position: relative;
+	top: 32px;
+	left: 31px;
+}
+.leftSection > a{
+	margin: 0 14px 25px;
+	text-decoration: none;
+	color: #000;
+	font-size: 12px;
+	text-transform: uppercase;
+	display: block;
+}
+.leftSection > a:hover{
+	color: #991B31;
+}
+.rightSection p{
+	font-size: 12px;
+	color: #000;
+	display: inline-block;
+	text-align: center;
+	padding: 0;
+	line-height: 17px;
+}
+.rightSection p > span{
+	font-weight: bold;
+	display: block;
+	margin-top: 20px;
+}
+.rightSection p > span a{
+	color: #000;
+	text-decoration: none;
+}
+.rightSection p > span a:hover{
+	color: #991B31;
+}

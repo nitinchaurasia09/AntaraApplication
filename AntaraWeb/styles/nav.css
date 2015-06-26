@@ -1,0 +1,26 @@
+nav{
+	width: 100%;
+	margin: 2px auto 0;
+	font-size: 12px;
+	text-align: center;
+	text-transform: uppercase;
+}
+nav a{
+	margin: 0 14px;
+	text-decoration: none;
+	color: #000;
+}
+nav a:hover{
+	color: #991B31;
+}
+nav a.active{
+	color: #991B31;
+}
+.navShadow{
+	position: absolute;
+	left: 0;
+	top: 114px;
+	width: 100%;
+	height: 26px;
+	background: url('../images/nav_shadow.png') left top repeat-x;
+}

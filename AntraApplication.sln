@@ -5,6 +5,28 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntaraApplication", "AntraApplication\AntaraApplication.csproj", "{743D4DEC-4C46-4E5F-89FE-6D3E05ED675C}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AntaraWeb", "http://localhost:64893", "{2C8E99E6-381E-4079-B247-CD6706349B2D}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_64893"
+		Debug.AspNetCompiler.PhysicalPath = "AntaraWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64893\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_64893"
+		Release.AspNetCompiler.PhysicalPath = "AntaraWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64893\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "AntaraWeb\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +37,10 @@ Global
 		{743D4DEC-4C46-4E5F-89FE-6D3E05ED675C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{743D4DEC-4C46-4E5F-89FE-6D3E05ED675C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{743D4DEC-4C46-4E5F-89FE-6D3E05ED675C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C8E99E6-381E-4079-B247-CD6706349B2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8E99E6-381E-4079-B247-CD6706349B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8E99E6-381E-4079-B247-CD6706349B2D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8E99E6-381E-4079-B247-CD6706349B2D}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

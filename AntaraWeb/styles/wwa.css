@@ -1,0 +1,12 @@
+#WhoWeAre a{
+	width: 262px;
+	height: 410px;
+	margin: 0 33px;
+	display: inline-block;
+	background: url('../images/imgFrame.png') left top no-repeat;
+}
+#WhoWeAre a img{
+	position: relative;
+	top: 22px;
+	left: 18px;
+}

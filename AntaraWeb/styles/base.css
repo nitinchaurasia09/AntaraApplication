@@ -1,0 +1,95 @@
+body {
+	font-family: verdana;
+	background: white;
+	margin: 0;
+	padding: 0;
+	background: url('../images/mid.jpg') center repeat;
+	overflow-x: hidden;
+}
+
+/* Container */
+#pageContainer{
+	width: 100%;
+	margin:0 auto;
+	position: relative;
+  	z-index: 0;
+}
+.innerContainer{
+	width: 996px;
+	margin: 0 auto;
+	padding: 0 28px;
+}
+.innerContainer > .leftSection{
+	width: 246px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 195px 0 0;
+}
+.innerContainer > .rightSection{
+	width: 693px;
+	padding-left: 50px;
+	display: inline-block;
+	border-left: 1px dashed #100f0e;
+	margin-top: 20px;
+}
+.rightSection > span.btmBorder{
+	border-bottom: 1px dashed #100f0e;
+	height: 1px;
+	display: block;
+	margin-bottom: 20px;
+	margin-top: 5px;
+}
+
+/* GLOBAL Page Heading */
+.headCont{
+	display: block;;
+	text-align: center;
+	margin: 0 0 20px;
+}
+.headCont.innerPage{
+	margin-bottom: 0;
+}
+h1{
+	font-family: "Baskerville";
+    src: url(../fonts/Baskerville.ttc);
+	color: #58595b;
+	font-size: 22px;
+	font-style: italic;
+	font-weight: normal;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+}
+h1.inner{
+	margin-top: 0;
+}
+h1 > span{
+	font-size: 14px;
+	display: block;
+}
+h1:before{
+	content:'.';
+	background: url('../images/head_icn.png') center repeat;
+	width: 32px;
+	height: 32px;
+	font-size: 13px;
+	position: absolute;
+	left: -40px;
+	top: 5px;
+}
+h1:after{
+	content:'.';
+	background: url('../images/head_icn.png') center repeat;
+	width: 32px;
+	height: 32px;
+	font-size: 13px;
+	position: absolute;
+	right: -40px;
+	top: 5px;
+}
+h1.inner:before{
+	top: 0;
+}
+h1.inner:after{
+	top: 0;
+}

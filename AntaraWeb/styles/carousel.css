@@ -1,0 +1,126 @@
+.slideContainer{
+	width:1024px;
+	height: 442px;
+	margin: 0 auto;
+	background: #dedede;
+	position: relative;
+  	z-index: -1;
+}
+.carouselMessage{
+	width: 275px;
+	height: 95px;
+	background: url('../images/msg.png') left top no-repeat;
+	display: inline-block;
+	position: absolute;
+	top: 25%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	font-family: "Baskerville";
+    src: url(../fonts/Baskerville.ttc);
+}
+.carousel {
+	position: relative;
+}
+.carousel-inner {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.carousel-inner > .item {
+	position: relative;
+	display: none;
+	-webkit-transition: 0.6s ease-in-out left;
+	-moz-transition: 0.6s ease-in-out left;
+	-o-transition: 0.6s ease-in-out left;
+	transition: 0.6s ease-in-out left;
+}
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	display: block;
+	line-height: 1;
+}
+.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
+	display: block;
+}
+.carousel-inner > .active {
+	left: 0;
+}
+.carousel-inner > .next, .carousel-inner > .prev {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.carousel-inner > .next {
+	left: 100%;
+}
+.carousel-inner > .prev {
+	left: -100%;
+}
+.carousel-inner > .next.left, .carousel-inner > .prev.right {
+	left: 0;
+}
+.carousel-inner > .active.left {
+	left: -100%;
+}
+.carousel-inner > .active.right {
+	left: 100%;
+	
+}
+.carousel-control {
+	position: absolute;
+	top: 48%;
+	left: 15px;
+	width: 59px;
+	height: 58px;
+	margin-top: -20px;
+	background: url('../images/arwLft.png') left top no-repeat;
+	cursor: pointer;
+}
+.carousel-control.right {
+	right: 15px;
+	left: auto;
+	background: url('../images/arwRht.png') left top no-repeat;
+	cursor: pointer;
+}
+.carousel-control:hover, .carousel-control:focus {
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+.carousel-indicators {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	z-index: 5;
+	margin: 0;
+	list-style: none;
+}
+.carousel-indicators li {
+	display: block;
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin-left: 5px;
+	text-indent: -999px;
+	background-color: #ccc;
+	background-color: rgba(255, 255, 255, 0.25);
+	border-radius: 5px;
+}
+.carousel-indicators .active {
+	background-color: #fff;
+}
+.carousel-caption {
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 42%;
+	width: 58%;
+	margin: 0 auto;
+	text-align: center;
+}
+.carousel-caption p {
+	color: #ffffff;
+	font-size: 19px;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	font-family: "Baskerville";
+    src: url(../fonts/Baskerville.ttc);
+}

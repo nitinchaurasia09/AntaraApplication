@@ -1,0 +1,12 @@
+#letTalk a{
+	width: 258px;
+	height: 401px;
+	margin: 0 35px;
+	display: inline-block;
+	background: url('../images/mandalFrame.png') left top no-repeat;
+}
+#letTalk a img{
+	position: relative;
+	top: 23px;
+	left: 23px;
+}
