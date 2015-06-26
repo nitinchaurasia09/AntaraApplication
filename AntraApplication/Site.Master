@@ -60,10 +60,10 @@
                 <ul class="sidebar-nav">
                     <li class="sidebar-brand">Administrator
                     </li>
-                    <li>
-                        <a href="../PageModule/DynamicPageImages.aspx">Page Management</a>
+                    <li><a href="../UserModule/ShowAllUsers.aspx">User Management</a>
+                        <a href="../PageModule/ManageDynamicPages.aspx">Page Management</a>
                         <a href="../YTModule/YouTube.aspx">Youtube Management</a>
-                        <a href="../UserModule/ShowAllUsers.aspx">User Management</a>
+                        
                     </li>
                 </ul>
             </div>

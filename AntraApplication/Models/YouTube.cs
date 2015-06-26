@@ -85,6 +85,8 @@ namespace AntaraApplication.Models
                     parameters[2].DbType = DbType.String;
 
                     Ado.ExecuteNonQueryStoredProcedure("UpdateYouTubeUrls", parameters);
+                    //lblError.Visible = true;
+                    //lblError.Text = "Updated Successfully";
                 }
             }
             catch (Exception ex)
