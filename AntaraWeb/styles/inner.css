@@ -15,10 +15,89 @@
 	top: 32px;
 	left: 31px;
 }
+#innerPage .picCont.drd{
+	width: 249px;
+	height: 402px;
+	float: left;
+	margin: 0 30px 0 0;
+	background: url('../images/drdFrame.png') left top no-repeat;
+	position: relative;
+	vertical-align: top;
+}#innerPage .picCont.drd.right{
+	float: right;
+	margin: 0 0 0 30px;
+}
+#innerPage .picCont.drd > img{
+	width: 219px;
+	height: 372px;
+	position: relative;
+	top: 15px;
+	left: 15px;
+}
+#innerPage .picCont.drdSml{
+	width: 332px;
+	height: 205px;
+	margin: 0 5px;
+	background: url('../images/drdFrame1.png') left top no-repeat;
+	position: relative;
+	vertical-align: top;
+	display: inline-block;
+}
+#innerPage .picCont.drdSml > img{
+	width: 305px;
+	height: 180px;
+	position: relative;
+	top: 14px;
+	left: 2px;
+}
+#innerPage .picCont.ourBelief{
+	width: 405px;
+	height: 251px;
+	margin: 0 auto;
+	background: url('../images/our_team.png') left top no-repeat;
+	position: relative;
+}
+#innerPage .picCont.ourBelief > img{
+	width: 360px;
+	height: 205px;
+	position: relative;
+	top: 23px;
+	left: 23px;
+}
+#innerPage .picCont.ourTeam{
+	width: 159px;
+	height: 248px;
+	margin: 100px auto 0;
+	background: url('../images/teamFrame.png') left top no-repeat;
+	position: relative;
+}
+#innerPage .picCont.ourTeam:hover{
+	box-shadow: 0 0 10px rgba(183, 91, 15, 2.9);
+}
+#innerPage .picCont.ourTeam > img{
+	width: 140px;
+	height: 229px;
+	position: relative;
+	top: 10px;
+	left: 10px;
+	cursor: pointer;
+}
+#innerPage .picCont.ourTeam span{
+	display: block;
+  	margin: 20px 0 0;
+  	font-size: 11px;
+  	text-align: center;
+  	cursor: pointer;
+}
+#innerPage .picCont.ourTeam span > span{
+	display: block;
+  	font-size: 10px;
+  	margin: 0;
+}
 .leftSection > a{
 	margin: 0 14px 25px;
 	text-decoration: none;
-	color: #000;
+	color: #59595b;
 	font-size: 12px;
 	text-transform: uppercase;
 	display: block;
@@ -26,23 +105,133 @@
 .leftSection > a:hover{
 	color: #991B31;
 }
+.leftSection > a.active{
+	color: #991B31;
+}
 .rightSection p{
 	font-size: 12px;
-	color: #000;
-	display: inline-block;
+	color: #58595b;
+	display: block;
 	text-align: center;
 	padding: 0;
 	line-height: 17px;
+	margin-top: 0;
 }
-.rightSection p > span{
+.rightSection p span{
 	font-weight: bold;
 	display: block;
 	margin-top: 20px;
 }
+.rightSection p span.orange{
+	font-weight: bold;
+	display: inline-block;
+	margin-top: 0;
+	color: #f16f23;
+}
+.rightSection p a.question{
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	margin-top: 0;
+	margin-bottom: 10px;
+	color: #f16f23;
+}
 .rightSection p > span a{
-	color: #000;
+	color: #58595b;
 	text-decoration: none;
 }
 .rightSection p > span a:hover{
 	color: #991B31;
+}
+div.drdText{
+	width: 408px;
+	min-height: 400px;
+	display: inline-block;
+}
+div.drdText p{
+	text-align: left;
+}
+.thumbnails{
+	width: 514px;
+	display: inline-block;
+}
+.thumbnails div{
+	display: inline-block;
+	width: 103px;
+	height: 93px;
+	vertical-align: top;
+	margin: 0 10px 60px;
+	text-align: center;
+	background: url('../images/teamThumb.png') center no-repeat;
+}
+.thumbnails div:hover{
+	box-shadow: 0 0 10px rgba(183, 91, 15, 2.9);
+}
+.thumbnails.directors{
+	width: 693px;
+	text-align: center;
+}
+.thumbnails.directors div{
+	margin: 0 3px 40px;
+}
+.thumbnails.directors div img{
+	width: 85px;
+	height: 76px;
+}	
+.thumbnails div img{
+	width: 85px;
+	height: 76px;
+	position: relative;
+	top: 8px;
+	left: 0;
+	cursor: pointer;
+}
+.thumbnails div span{
+	display: block;
+  	margin: 20px 0 0;
+  	font-size: 11px;
+  	text-align: center;
+  	cursor: pointer;
+}
+.thumbnails div span > span{
+	display: block;
+  	font-size: 10px;
+  	margin: 0;
+}
+
+/** CAREER  */
+.career{
+	width: 95%;
+	background: url('../images/career.png') left top repeat-x #fff;
+	min-height: 260px;
+	padding: 20px 30px;
+	border-radius: 8px;
+	font-size: 11px;
+}
+.career span{
+	padding: 15px 0;
+	vertical-align: text-top;
+}
+span.btm_border{
+	border-bottom: 1px dashed #100f0e;
+	display: block;
+	height: 2px;
+	padding: 0;
+}
+.smal{
+	width: 20%;
+	display: inline-block;
+}
+.big{
+	width: 63%;
+	display: inline-block;
+	border-left: 1px dashed #100f0e;
+	border-right: 1px dashed #100f0e;
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+.midl{
+	width: 10%;
+	display: inline-block;
+	text-align: center;
 }

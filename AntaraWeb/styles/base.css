@@ -6,6 +6,26 @@ body {
 	background: url('../images/mid.jpg') center repeat;
 	overflow-x: hidden;
 }
+.bold{
+	font-weight: bold;
+}
+
+.leftFloat{
+	float: left;
+}
+.rightFloat{
+	float: right;
+}
+.clearall{
+	clear: both;
+}
+.clearContent{
+	height: 30px;
+}
+.centerImg{
+	margin: 0 auto;
+	display: block;
+}
 
 /* Container */
 #pageContainer{
@@ -19,21 +39,39 @@ body {
 	margin: 0 auto;
 	padding: 0 28px;
 }
+.maxPromise #innerPage,
+.getInTouch #innerPage {
+	min-height: calc(100vh - 114px - 66px);
+}
 .innerContainer > .leftSection{
 	width: 246px;
 	display: inline-block;
 	vertical-align: top;
 	padding: 195px 0 0;
 }
+.innerContainer > .leftSection.small{
+	width: 150px;
+}	
 .innerContainer > .rightSection{
-	width: 693px;
+	width: 692px;
 	padding-left: 50px;
 	display: inline-block;
-	border-left: 1px dashed #100f0e;
+	border-left: 2px dotted #100f0e;
+	margin-top: 20px;
+}
+.innerContainer > .rightSection.small{
+	width: 808px;
+  	padding-left: 30px;
+}
+.innerContainer > .rightSection.fullPage{
+	width: 100%;
+	padding-left: 0;
+	border-left: none;
+	display: inline-block;
 	margin-top: 20px;
 }
 .rightSection > span.btmBorder{
-	border-bottom: 1px dashed #100f0e;
+	border-bottom: 2px dotted #100f0e;
 	height: 1px;
 	display: block;
 	margin-bottom: 20px;
@@ -53,7 +91,7 @@ h1{
 	font-family: "Baskerville";
     src: url(../fonts/Baskerville.ttc);
 	color: #58595b;
-	font-size: 22px;
+	font-size: 24px;
 	font-style: italic;
 	font-weight: normal;
 	text-align: center;
@@ -66,6 +104,7 @@ h1.inner{
 h1 > span{
 	font-size: 14px;
 	display: block;
+	font-style: normal;
 }
 h1:before{
 	content:'.';
@@ -74,7 +113,7 @@ h1:before{
 	height: 32px;
 	font-size: 13px;
 	position: absolute;
-	left: -40px;
+	left: -50px;
 	top: 5px;
 }
 h1:after{
@@ -84,7 +123,7 @@ h1:after{
 	height: 32px;
 	font-size: 13px;
 	position: absolute;
-	right: -40px;
+	right: -50px;
 	top: 5px;
 }
 h1.inner:before{

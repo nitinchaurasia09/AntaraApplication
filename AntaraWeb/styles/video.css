@@ -1,0 +1,88 @@
+.videoPlayer{
+	width: 650px;
+	height: 363px;
+	margin: 0 auto;
+	background: url('../images/video.png') left top no-repeat;
+	position: relative;
+}
+span.leftArw{
+	background: url('../images/leftArw.png') left top no-repeat;
+	width: 10px;
+	height: 16px;
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: -55px;
+}
+span.rightArw{
+	background: url('../images/rightArw.png') left top no-repeat;
+	width: 10px;
+	height: 16px;
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: -55px;
+}
+.videoPlayer > img{
+	width: 582px;
+	height: 294px;
+	position: relative;
+	top: 32px;
+	left: 31px;
+}
+.videoPlayer > span.playBtn{
+	background: url('../images/playIcnBig.png') left top no-repeat;
+	width: 58px;
+	height: 57px;
+	display: inline-block;
+	margin: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 99;
+	cursor: pointer;
+}
+.thumbCont{
+	text-align: center;
+	margin: 30px 0 0;
+}
+.thumbCont a{
+	width: 147px;
+	height: 82px;
+	margin: 0 10px;
+	position: relative;
+	display: inline-block;
+	background: url('../images/vidIcn.png') left top no-repeat;
+}
+.thumbCont a img{
+	width: 131px;
+	height: 67px;
+	position: relative;
+	top: 7px;
+	left: -1px;
+	cursor: default;
+}
+.thumbCont a span.play{
+	display: block;
+	background: url('../images/playIcn.png') left top no-repeat;
+	width: 19px;
+	height: 19px;
+	position: absolute;
+	top: 32px;
+	left: 111px;
+	cursor: pointer
+}
+.thumbCont a span{
+	font-size: 13px;
+	color: #58595b;
+	text-decoration: none;
+	margin: 18px 0 0;
+	display: inline-block;
+}
+.thumbCont a span:hover{
+	text-decoration: underline;
+}

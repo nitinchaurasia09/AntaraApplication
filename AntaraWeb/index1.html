@@ -73,6 +73,12 @@
         <div id="myCarousel" class="carousel slide">
             <div class="carousel-inner">
                 <div class="item active">
+                    <img src="images/c3.jpg" alt="">
+                    <div class="carousel-caption">
+                      <p>Antara is a beautifully crafted full service residential community for those who believe age is just a number</p>
+                    </div>
+                </div>
+                <div class="item">
                     <img src="images/c1.jpg" alt="">
                     <div class="carousel-caption">
                       <p>Antara is a beautifully crafted full service residential community for those who believe age is just a number</p>
@@ -80,12 +86,6 @@
                 </div>
                 <div class="item">
                     <img src="images/c2.jpg" alt="">
-                    <div class="carousel-caption">
-                      <p>Antara is a beautifully crafted full service residential community for those who believe age is just a number</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="images/c3.jpg" alt="">
                     <div class="carousel-caption">
                       <p>Antara is a beautifully crafted full service residential community for those who believe age is just a number</p>
                     </div>
@@ -98,7 +98,7 @@
     </div>
     <!-- Scroll -->
     <div class="scroll">
-            <a href="#">to discuss your life at antara,&nbsp;&nbsp;click here</a>
+            <a href="#">to discuss your life at antara, click here</a>
             <a href="#WhoWeAre" class="scrollLink down">SCROLL DOWN <span><img src="images/downarw.jpg"/></span></a>
     </div>
 	
@@ -111,14 +111,14 @@
             <h1>Who we are <span>Our belief, location and ethos</span></h1>
         </div>
         <!-- Stack of Images -->
-        <a href="our-belief.html"><img src="images/wwa1.jpg"></a>
-        <a href="antara-dehradun.html"><img src="images/wwa2.jpg"></a>
-        <a href="max-promise.html"><img src="images/wwa3.jpg"></a>
+        <a href="#"><img src="images/wwa1.jpg"></a>
+        <a href="#"><img src="images/wwa2.jpg"></a>
+        <a href="#"><img src="images/wwa3.jpg"></a>
     </div>
     <!-- Scroll -->
     <div class="scroll lowHght">
-            <a href="#pageContainer" class="scrollLink up"><span><img src="images/uparw.jpg"/></span></a>
-            <a href="#lifeHandcraft" class="scrollLink centerLink down"><span><img src="images/downarw.jpg"/></span></a>
+            <a href="#pageContainer" class="scrollLink centerLink up"><span><img src="images/uparw.jpg"/></span></a>
+            <a href="#lifeHandcraft" class="scrollLink down"><span><img src="images/downarw.jpg"/></span></a>
     </div>
 	</section>
 	<section>
@@ -131,21 +131,20 @@
         <!-- Video PLayer -->
         <div class="videoPlayer">
             <span class="playBtn"></span>
-            <a  onclick="" vId="https://www.youtube.com/embed/xhSVZAqTiPk?autoplay=1&rel=0"></a>
             <img src="images/c5.jpg">
         </div>
         <!-- Stack of Images -->
         <div class="thumbCont">
-            <a onclick="" vId="https://www.youtube.com/embed/5pjx3t1hE1E?autoplay=1&rel=0"><img src="images/vid1.jpg"><span class="play"></span><span>Philosophy</span></a>
-            <a onclick="" vId="https://www.youtube.com/embed/fBbBelc_0kc?autoplay=1&rel=0"><img src="images/vid3.jpg"><span class="play"></span><span>Dehradun</span></a>
+            <a href="#"><img src="images/c1.jpg"><span class="play"></span><span>Philosophy</span></a>
+            <a href="#"><img src="images/c2.jpg"><span class="play"></span><span>Dehradun</span></a>
             <a href="#"><img src="images/c4.jpg"><span class="play"></span><span>Design</span></a>
             <a href="#"><img src="images/c5.jpg"><span class="play"></span><span>Walktrough</span></a>
         </div>
     </div>
     <!-- Scroll -->
     <div class="scroll lowHght">
-            <a href="#WhoWeAre" class="scrollLink up"><span><img src="images/uparw.jpg"/></span></a>
-            <a href="#letTalk" class="scrollLink centerLink down"><span><img src="images/downarw.jpg"/></span></a>
+            <a href="#WhoWeAre" class="scrollLink centerLink up"><span><img src="images/uparw.jpg"/></span></a>
+            <a href="#letTalk" class="scrollLink down"><span><img src="images/downarw.jpg"/></span></a>
     </div>    
 	</section>
 	<section>
@@ -169,39 +168,13 @@
     <footer>
         <div class="innerContainer">
             <div class="footElement"><img src="images/footLogo.png"></div>
-            <div class="footElement"><span>To discuss your life at Antara, call us at<br/>+91 88600 76464/ +91 8063 23252</span></div>
-            <div class="footElement"><span>Email us at<br/>contactus@antaraseniorliving.com</span></div>
-            <div class="footElement noBorder"><a href="#"><img src="images/youtubeIcn.png"></a><a href="#"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement"><span>Call us: +91 88600 76464/ +91 83929 26464</span><span>Email us: contactus@antaraseniorliving.com</span></div>
+            <div class="footElement"><a href="#"><img src="images/youtubeIcn.png"></a><a href="#"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement noBorder"><img src="images/maxIcn.png"></div>
         </div>
     </footer>
 	</section>
 	
-</div> 
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("div.thumbCont a").click(function(e){
-            e.stopPropagation();
-            var oldSrc=$(this).children('img').attr('src');
-            var oldVid=$(this).attr('vId');
-            $(this).children('img').attr('src',$("div.videoPlayer img").attr("src"));
-            $(this).attr('vId',$("div.videoPlayer a").attr("vId"));
-
-            $("div.videoPlayer img").hide();
-$("iframe").remove();
-            $("div.videoPlayer").append('<iframe width="582px" height="294px" style="position:relative;top:32px;left:31px" src="'+oldVid+'" frameborder="0"></iframe>');
-            //$("div.videoPlayer img").show();
-            $("div.videoPlayer img").attr('src',oldSrc);
-            $("div.videoPlayer a").attr('vId',oldVid);
-        
-        });
-
-        $("div.videoPlayer").click(function(){
-            $("span.playBtn").hide();
-            $(this).children('img').hide();
-            $("div.videoPlayer").append('<iframe width="582px" height="294px" style="position:relative;top:32px;left:31px" src="'+$(this).children('a').attr('vId')+'" frameborder="0"></iframe>');
-        })
-    });
-       
-</script>    
+</div>    
 </body>
 </html>

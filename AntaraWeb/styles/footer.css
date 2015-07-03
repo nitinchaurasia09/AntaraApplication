@@ -9,19 +9,26 @@ footer{
 .footElement{
 	display: inline-block;
 	vertical-align: middle;
-	padding: 0 31px;
+	padding: 0 24px;
 	margin: 33px 0 0;
 	border-right: 1px solid #fff;
 	min-height: 45px;
 }
-
 .footElement > span{
 	display: block;
 	font-size: 12px;
 	color: #fff;
+	margin-top: 8px;
+}
+.footElement a{
+	position: relative;
+	top: 3px;
 }
 .footElement > a > img{
 	margin: 0 5px;
+}
+footer .footElement.noBorder{
+	border-right: none;
 }
 
 /** Inner Page Footer */
@@ -30,21 +37,22 @@ footer.innerFoot{
 }
 footer.innerFoot .footElement{
 	display: inline-block;
-	padding: 0 31px;
+	padding: 0 23px;
 	margin: 0 0;
 	min-height: 0px;
+	border-right: 1px solid #fff;
+}
+footer.innerFoot .footElement{
+	position: relative;
+	top: 19px;
+}
+footer.innerFoot .footElement span{
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+footer.innerFoot .footElement a{
+	top: 0;
+}
+footer.innerFoot .footElement.noBorder{
 	border-right: none;
-}
-footer.innerFoot .footElement > span{
-	position: relative;
-	top: 24px;
-}
-footer.innerFoot .footElement.social{
-	position: relative;
-	top: 10px;
-	float: right;
-}
-footer.innerFoot > .footElement{
-	position: relative;
-	top: 20px;
 }

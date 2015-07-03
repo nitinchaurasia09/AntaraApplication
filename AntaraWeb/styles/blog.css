@@ -1,0 +1,78 @@
+.blogArea{
+	width: 595px;
+	height: 300px;
+	padding: 0 20px 0 0;
+	margin: 0 5px 0 0;
+	display: inline-block;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.blogSnippet{
+	width: 600px;
+	display: inline-block;
+}
+.blogSnippet .date{
+	width: 100%;
+	display: inline-block;
+	font-size: 12px;
+	color: #59595b;
+}
+.blogSnippet .blogHead{
+	width: 100%;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	color: #59595b;
+}
+.blogSnippet .blogContent{
+	width: 100%;
+	display: inline-block;
+	font-size: 13px;
+	color: #59595b;
+	margin-top: 10px;
+}
+.blogSnippet .blogContent a{
+	font-size: 12px;
+	color: #59595b;
+	text-decoration: none;
+}
+.blogSnippet .blogContent a:hover{
+	color: #991B31;
+}
+.clearBlog{
+	clear: both;
+	height: 25px;
+}
+.searchArea{
+	display: inline-block;
+	width: 150px;
+	padding-left: 30px;
+	border-left: 2px dotted #100f0e;
+	vertical-align: top;
+}
+.search{
+	width: 182px;
+	display: inline-block;
+}
+.searchInput{
+	width: 126px;
+	height: 21px;
+	padding: 0 7px;
+	background: url('../images/search.png') left top no-repeat;
+	border-radius: 5px;
+	border: none;
+	float: left;
+}
+.go{
+	width: 29px;
+	height: 21px;
+	background: url('../images/go.png') left top no-repeat;
+	border-radius: 5px;
+	border: none;
+	font-size: 10px;
+	color: #fff;
+	float: left;
+	position: relative;
+    left: -6px;
+    text-align: center;
+}

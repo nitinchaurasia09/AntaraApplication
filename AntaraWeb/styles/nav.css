@@ -4,11 +4,35 @@ nav{
 	font-size: 12px;
 	text-align: center;
 	text-transform: uppercase;
+	position: relative;
 }
 nav a{
 	margin: 0 14px;
 	text-decoration: none;
 	color: #000;
+}
+
+nav span span{
+	position: absolute;
+	left: 224px;
+	top: 15px;
+	background: #eae5c8;
+	display: inline-block;
+	border-radius: 5px 5px 5px 5px;
+	font-size: 11px;
+	z-index: 9999;
+	padding: 5px;
+	display: none;
+}
+nav span:hover{
+	background: #eae5c8;
+	border-radius: 5px 5px 5px 5px;
+}
+nav span:hover span{
+	display: block;
+}
+nav span a{
+	margin: 0 4px;
 }
 nav a:hover{
 	color: #991B31;

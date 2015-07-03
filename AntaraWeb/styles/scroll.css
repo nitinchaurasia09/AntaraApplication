@@ -28,7 +28,7 @@
 	content: '';
 }
 .scroll > a{
-	color: #f8732a;
+	color: #f16f23;
 	font-size: 12px;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -40,7 +40,7 @@ a.centerLink{
 }
 .scroll > a.scrollLink{
 	float: right;
-	color: #403940;
+	color: #f16f23;
 	font-size: 10px;
 	font-weight: normal;
 }
@@ -48,4 +48,15 @@ a.centerLink{
 	text-align: center;
 	display: block;
 	font-size: 13px;
+}
+.scroll.sml{
+	width: 744px;
+	height: 40px;
+}
+.scroll.sml:after{
+	content:'..................................................................................................................................................';
+	top: 25px;
+}
+.scroll.sml > a{
+	margin: 0;
 }

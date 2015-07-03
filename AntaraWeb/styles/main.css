@@ -8,8 +8,11 @@
 @import 'nav.css';
 @import 'carousel.css';
 @import 'scroll.css';
+@import 'form.css';
+@import 'video.css';
+@import 'press.css';
+@import 'blog.css';
 
 /* Home Page Sections */
 @import 'wwa.css';
 @import 'talk.css';
-@import 'life.css';
