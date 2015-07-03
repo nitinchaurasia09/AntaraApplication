@@ -24,6 +24,12 @@ nav span span{
 	padding: 5px;
 	display: none;
 }
+nav span span#getocuh{
+	left: 715px;
+}
+nav span span#asp{
+	left: 475px;
+}
 nav span:hover{
 	background: #eae5c8;
 	border-radius: 5px 5px 5px 5px;

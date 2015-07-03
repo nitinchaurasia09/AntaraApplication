@@ -62,14 +62,6 @@ namespace AntaraApplication.PageModule
                     HiddenField hdnField = (HiddenField)row.FindControl("hdnGUID");
                     Response.Redirect("DynamicPageImages.aspx?guid=" + new Guid(hdnField.Value.ToString()));
                 }
-                if (e.CommandName.Equals("Description"))
-                {
-                    int index = Convert.ToInt32(e.CommandArgument);
-                    GridViewRow row = grdPages.Rows[index];
-                    HiddenField hdnField = (HiddenField)row.FindControl("hdnGUID");
-                    Response.Redirect("ChangeDescription.aspx?guid=" + new Guid(hdnField.Value.ToString()));
-                }
-
             }
             catch (Exception ex)
             {

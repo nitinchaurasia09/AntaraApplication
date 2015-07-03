@@ -42,6 +42,12 @@
                             <asp:TextBox ID="txtLabelControl" runat="server" CssClass="form-control" MaxLength="50" Enabled="false"></asp:TextBox>
                         </div>
                     </div>
+                    <div class="form-group clearfix">
+                        <label for="inputName" class="col-lg-3 control-label">Description *</label>
+                        <div class="col-lg-9">
+                            <asp:TextBox ID="txtDesc" TextMode="MultiLine" Rows="10" Columns="20" runat="server" CssClass="form-control" ></asp:TextBox>
+                        </div>
+                    </div>
                 </fieldset>
             </div>
             <div class="modal-footer">

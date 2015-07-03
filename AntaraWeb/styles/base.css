@@ -39,8 +39,7 @@ body {
 	margin: 0 auto;
 	padding: 0 28px;
 }
-.maxPromise #innerPage,
-.getInTouch #innerPage {
+#innerPage {
 	min-height: calc(100vh - 114px - 66px);
 }
 .innerContainer > .leftSection{

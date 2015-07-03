@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using AntaraApplication.Models;
+using MySql.Data.MySqlClient;
 
 
 namespace AntaraApplication.Models
@@ -107,10 +108,14 @@ namespace AntaraApplication.Models
         public DataTable getAllUsers()
         {
             DbParameter[] parameters = new DbParameter[1];
-            parameters = null;
+            //parameters = null;
             DataTable dtUser = new DataTable();
             try
-            {
+            {                
+                parameters[0] = new MySqlParameter("@guid", null);
+                parameters[0].Direction = ParameterDirection.Input;
+                parameters[0].DbType = DbType.Guid;
+
                 dtUser = Ado.ExecuteStoredProcedure("sp_GetAllUsers", parameters);
             }
             catch (Exception ex)
@@ -131,7 +136,7 @@ namespace AntaraApplication.Models
             DataTable dtUser = new DataTable();
             try
             {
-                parameters[0] = new SqlParameter("@guid", guid);
+                parameters[0] = new MySqlParameter("@guid", guid);
                 parameters[0].Direction = ParameterDirection.Input;
                 parameters[0].DbType = DbType.Guid;
                 dtUser = Ado.ExecuteStoredProcedure("sp_GetAllUsers", parameters);
@@ -153,7 +158,7 @@ namespace AntaraApplication.Models
             DbParameter[] parameters = new DbParameter[1];
             try
             {
-                parameters[0] = new SqlParameter("@guid", guid);
+                parameters[0] = new MySqlParameter("@guid", guid);
                 parameters[0].Direction = ParameterDirection.Input;
                 parameters[0].DbType = DbType.Guid;
                 Ado.ExecuteNonQueryStoredProcedure("sp_DeleteUser", parameters);
@@ -173,43 +178,43 @@ namespace AntaraApplication.Models
             DbParameter[] parameters = new DbParameter[10];
             try
             {
-                parameters[0] = new SqlParameter("@userName", userName);
+                parameters[0] = new MySqlParameter("@userName", UserName);
                 parameters[0].Direction = ParameterDirection.Input;
                 parameters[0].DbType = DbType.String;
 
-                parameters[1] = new SqlParameter("@userEmail", userEmail);
+                parameters[1] = new MySqlParameter("@userEmail", UserEmail);
                 parameters[1].Direction = ParameterDirection.Input;
                 parameters[1].DbType = DbType.String;
 
-                parameters[2] = new SqlParameter("@userPhone", userPhone);
+                parameters[2] = new MySqlParameter("@userPhone", UserPhone);
                 parameters[2].Direction = ParameterDirection.Input;
                 parameters[2].DbType = DbType.String;
 
-                parameters[3] = new SqlParameter("@userLocation", userLocation);
+                parameters[3] = new MySqlParameter("@userLocation", UserLocation);
                 parameters[3].Direction = ParameterDirection.Input;
                 parameters[3].DbType = DbType.String;
 
-                parameters[4] = new SqlParameter("@firstName", firstName);
+                parameters[4] = new MySqlParameter("@firstName", FirstName);
                 parameters[4].Direction = ParameterDirection.Input;
                 parameters[4].DbType = DbType.String;
 
-                parameters[5] = new SqlParameter("@lastName", lastName);
+                parameters[5] = new MySqlParameter("@lastName", LastName);
                 parameters[5].Direction = ParameterDirection.Input;
                 parameters[5].DbType = DbType.String;
 
-                parameters[6] = new SqlParameter("@password", password);
+                parameters[6] = new MySqlParameter("@password", Password);
                 parameters[6].Direction = ParameterDirection.Input;
                 parameters[6].DbType = DbType.String;
 
-                parameters[7] = new SqlParameter("@isAdmin", isAdmin);
+                parameters[7] = new MySqlParameter("@isAdmin", IsAdmin);
                 parameters[7].Direction = ParameterDirection.Input;
                 parameters[7].DbType = DbType.Int32;
 
-                parameters[8] = new SqlParameter("@userStatus", userStatus);
+                parameters[8] = new MySqlParameter("@userStatus", UserStatus);
                 parameters[8].Direction = ParameterDirection.Input;
                 parameters[8].DbType = DbType.Int32;
 
-                parameters[9] = new SqlParameter("@userImage", UserImage);
+                parameters[9] = new MySqlParameter("@userImage", UserImage);
                 parameters[9].Direction = ParameterDirection.Input;
                 parameters[9].DbType = DbType.String;
 
@@ -230,43 +235,43 @@ namespace AntaraApplication.Models
             DbParameter[] parameters = new DbParameter[10];
             try
             {
-                parameters[0] = new SqlParameter("@guid", guid);
+                parameters[0] = new MySqlParameter("@guid", guid);
                 parameters[0].Direction = ParameterDirection.Input;
                 parameters[0].DbType = DbType.Guid;
 
-                parameters[1] = new SqlParameter("@userName", userName);
+                parameters[1] = new MySqlParameter("@userName", userName);
                 parameters[1].Direction = ParameterDirection.Input;
                 parameters[1].DbType = DbType.String;
 
-                parameters[2] = new SqlParameter("@userEmail", userEmail);
+                parameters[2] = new MySqlParameter("@userEmail", userEmail);
                 parameters[2].Direction = ParameterDirection.Input;
                 parameters[2].DbType = DbType.String;
 
-                parameters[3] = new SqlParameter("@userPhone", userPhone);
+                parameters[3] = new MySqlParameter("@userPhone", userPhone);
                 parameters[3].Direction = ParameterDirection.Input;
                 parameters[3].DbType = DbType.String;
 
-                parameters[4] = new SqlParameter("@userLocation", userLocation);
+                parameters[4] = new MySqlParameter("@userLocation", userLocation);
                 parameters[4].Direction = ParameterDirection.Input;
                 parameters[4].DbType = DbType.String;
 
-                parameters[5] = new SqlParameter("@firstName", firstName);
+                parameters[5] = new MySqlParameter("@firstName", firstName);
                 parameters[5].Direction = ParameterDirection.Input;
                 parameters[5].DbType = DbType.String;
 
-                parameters[6] = new SqlParameter("@lastName", lastName);
+                parameters[6] = new MySqlParameter("@lastName", lastName);
                 parameters[6].Direction = ParameterDirection.Input;
                 parameters[6].DbType = DbType.String;
 
-                parameters[7] = new SqlParameter("@password", password);
+                parameters[7] = new MySqlParameter("@password", password);
                 parameters[7].Direction = ParameterDirection.Input;
                 parameters[7].DbType = DbType.String;
 
-                parameters[8] = new SqlParameter("@isAdmin", isAdmin);
+                parameters[8] = new MySqlParameter("@isAdmin", isAdmin);
                 parameters[8].Direction = ParameterDirection.Input;
                 parameters[8].DbType = DbType.Int32;
 
-                parameters[9] = new SqlParameter("@userStatus", userStatus);
+                parameters[9] = new MySqlParameter("@userStatus", userStatus);
                 parameters[9].Direction = ParameterDirection.Input;
                 parameters[9].DbType = DbType.Int32;
                 
@@ -288,7 +293,7 @@ namespace AntaraApplication.Models
             DataTable dtUser = new DataTable();
             try
             {
-                parameters[0] = new SqlParameter("@userName", userName);
+                parameters[0] = new MySqlParameter("@userName", userName);
                 parameters[0].Direction = ParameterDirection.Input;
                 parameters[0].DbType = DbType.String;
                 dtUser = Ado.ExecuteStoredProcedure("sp_GetUsersForLogin", parameters);
@@ -310,15 +315,15 @@ namespace AntaraApplication.Models
             DbParameter[] parameters = new DbParameter[3];
             try
             {
-                parameters[0] = new SqlParameter("@guid", guid);
+                parameters[0] = new MySqlParameter("@guid", guid);
                 parameters[0].Direction = ParameterDirection.Input;
                 parameters[0].DbType = DbType.Guid;
 
-                parameters[1] = new SqlParameter("@password", password);
+                parameters[1] = new MySqlParameter("@password", password);
                 parameters[1].Direction = ParameterDirection.Input;
                 parameters[1].DbType = DbType.String;
 
-                parameters[2] = new SqlParameter("@oldpassword", OldPassword);
+                parameters[2] = new MySqlParameter("@oldpassword", OldPassword);
                 parameters[2].Direction = ParameterDirection.Input;
                 parameters[2].DbType = DbType.String;
 

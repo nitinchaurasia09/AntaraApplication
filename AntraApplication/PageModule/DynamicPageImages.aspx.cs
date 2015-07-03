@@ -34,6 +34,7 @@ namespace AntaraApplication.PageModule
                             txtImageText.Text = dt.Rows[0]["ImageText"].ToString();
                             txtImageControl.Text = dt.Rows[0]["ImageControl"].ToString();
                             txtLabelControl.Text = dt.Rows[0]["LabelControl"].ToString();
+                            txtDesc.Text = dt.Rows[0]["Description"].ToString();
                             hdnPageId.Value = dt.Rows[0]["PageId"].ToString();
                         }
                     }
@@ -70,7 +71,7 @@ namespace AntaraApplication.PageModule
                     objPageImg.IMAGEURL = imgPage.ImageUrl == "" ? ConfigurationManager.AppSettings["ImageUrl"].ToString() + "Images/" + "noimage.png" : imgPage.ImageUrl;
 
 
-
+                objPageImg.DESCRIPTION = txtDesc.Text;
                 objPageImg.LABELCONTROL = txtLabelControl.Text;
                 objPageImg.PAGEID = new Guid(hdnPageId.Value);
                 objPageImg.saveUser();

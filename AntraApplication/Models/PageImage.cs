@@ -47,6 +47,12 @@ namespace AntaraApplication.Models
             set;
         }
 
+        public string DESCRIPTION
+        {
+            get;
+            set;
+        }
+
         public DataTable getAllPageImages()
         {
             DbParameter[] parameters = new DbParameter[1];
@@ -96,7 +102,7 @@ namespace AntaraApplication.Models
             DataTable dtPage = new DataTable();
             try
             {
-                dtPage = Ado.ExecuteText("select * from [page_master]");
+                dtPage = Ado.ExecuteText("select * from page_master");
             }
             catch (Exception ex)
             {
@@ -114,7 +120,7 @@ namespace AntaraApplication.Models
             DataTable dtPage = new DataTable();
             try
             {
-                dtPage = Ado.ExecuteText("select pitm.GUID, pm.PageName, pitm.ImageUrl, pitm.ImageText from page_master pm, page_image_text_master pitm where pm.GUID = pitm.PageId and pitm.PageId = '" + guid + "'");
+                dtPage = Ado.ExecuteText("select pitm.GUID, pm.PageName, pitm.ImageUrl, pitm.ImageText, pitm.Description from page_master pm, page_image_text_master pitm where pm.GUID = pitm.PageId and pitm.PageId = '" + guid + "'");
             }
             catch (Exception ex)
             {
@@ -167,7 +173,7 @@ namespace AntaraApplication.Models
         {
             try
             {
-                Ado.ExecuteNoneQueryText("UPDATE [dbo].[page_image_text_master] SET [ImageUrl] = '" + IMAGEURL + "'    ,[ImageText] = '" + IMAGETEXT + "' ,[ImageControl] = '" + IMAGECONTROL + "' ,[LabelControl] = '" + LABELCONTROL + "' WHERE GUID = '" + GUID + "'");
+                Ado.ExecuteNoneQueryText("UPDATE page_image_text_master SET ImageUrl = '" + IMAGEURL + "'    ,ImageText = '" + IMAGETEXT + "' ,ImageControl = '" + IMAGECONTROL + "' ,LabelControl = '" + LABELCONTROL + "',Description = '" + DESCRIPTION + "' WHERE GUID = '" + GUID + "'");
             }
             catch (Exception ex)
             {
