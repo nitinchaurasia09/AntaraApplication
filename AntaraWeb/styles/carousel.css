@@ -71,7 +71,7 @@
 .carousel-control {
 	position: absolute;
 	top: 35%;
-	left: 15px;
+	left: 28px;
 	width: 59px;
 	height: 58px;
 	margin-top: -20px;
@@ -79,7 +79,7 @@
 	cursor: pointer;
 }
 .carousel-control.right {
-	right: 15px;
+	right: 28px;
 	left: auto;
 	background: url('../images/arwRht.png') left top no-repeat;
 	cursor: pointer;

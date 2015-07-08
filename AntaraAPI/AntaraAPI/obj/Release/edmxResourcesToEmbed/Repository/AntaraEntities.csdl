@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="antaraModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="antaraEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="page_image_text_master" EntityType="antaraModel.page_image_text_master" />
+    <EntitySet Name="page_master" EntityType="antaraModel.page_master" />
+    <EntitySet Name="user_master" EntityType="antaraModel.user_master" />
+    <EntitySet Name="youtube_master" EntityType="antaraModel.youtube_master" />
+    <FunctionImport Name="DeleteYouTubeUrls" />
+    <FunctionImport Name="sp_AddNewUser">
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="userEmail" Mode="In" Type="String" />
+      <Parameter Name="userPhone" Mode="In" Type="String" />
+      <Parameter Name="userLocation" Mode="In" Type="String" />
+      <Parameter Name="firstName" Mode="In" Type="String" />
+      <Parameter Name="lastName" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+      <Parameter Name="isAdmin" Mode="In" Type="Int16" />
+      <Parameter Name="userImage" Mode="In" Type="String" />
+      <Parameter Name="userStatus" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DeleteUser">
+      <Parameter Name="guid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetAllPageImages" ReturnType="Collection(antaraModel.sp_GetAllPageImages_Result)">
+      <Parameter Name="guid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetAllUsers" ReturnType="Collection(antaraModel.sp_GetAllUsers_Result)">
+      <Parameter Name="guid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetAllYTlinks" ReturnType="Collection(antaraModel.sp_GetAllYTlinks_Result)">
+      <Parameter Name="guid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetUsersForLogin" ReturnType="Collection(antaraModel.sp_GetUsersForLogin_Result)">
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UpdateUser">
+      <Parameter Name="guid" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="userEmail" Mode="In" Type="String" />
+      <Parameter Name="userPhone" Mode="In" Type="String" />
+      <Parameter Name="userLocation" Mode="In" Type="String" />
+      <Parameter Name="firstName" Mode="In" Type="String" />
+      <Parameter Name="lastName" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+      <Parameter Name="isAdmin" Mode="In" Type="Int16" />
+      <Parameter Name="userStatus" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateYouTubeUrls">
+      <Parameter Name="YouTubeLink" Mode="In" Type="String" />
+      <Parameter Name="NumberOfTimeExecuted" Mode="In" Type="Int16" />
+      <Parameter Name="YouTubeText" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="page_image_text_master">
+    <Key>
+      <PropertyRef Name="GUID" />
+      <PropertyRef Name="PageId" />
+      <PropertyRef Name="ImageUrl" />
+      <PropertyRef Name="ImageText" />
+      <PropertyRef Name="ImageControl" />
+      <PropertyRef Name="LabelControl" />
+    </Key>
+    <Property Name="GUID" Type="String" Nullable="false" MaxLength="38" Unicode="false" FixedLength="true" />
+    <Property Name="PageId" Type="String" Nullable="false" MaxLength="38" Unicode="false" FixedLength="true" />
+    <Property Name="ImageUrl" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="ImageText" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="ImageControl" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LabelControl" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="5000" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="page_master">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="String" Nullable="false" MaxLength="38" Unicode="false" FixedLength="true" />
+    <Property Name="PageName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PageDescription" Type="String" MaxLength="10000" Unicode="false" FixedLength="false" />
+    <Property Name="PageChild" Type="Int32" />
+    <Property Name="OrderNumber" Type="Int32" />
+  </EntityType>
+  <EntityType Name="user_master">
+    <Key>
+      <PropertyRef Name="GUID" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="UserEmail" />
+      <PropertyRef Name="IsAdmin" />
+      <PropertyRef Name="DeleteStatus" />
+      <PropertyRef Name="UserStatus" />
+    </Key>
+    <Property Name="GUID" Type="String" Nullable="false" MaxLength="38" Unicode="false" FixedLength="true" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserEmail" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="UserPhone" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="UserLocation" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IsAdmin" Type="Int16" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="DeleteStatus" Type="Int16" Nullable="false" />
+    <Property Name="UserStatus" Type="Int16" Nullable="false" />
+    <Property Name="UserImage" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="youtube_master">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="String" Nullable="false" MaxLength="38" Unicode="false" FixedLength="true" />
+    <Property Name="YouTubeLink" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="NumberOfTimeExecuted" Type="Int16" />
+    <Property Name="YouTubeText" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <ComplexType Name="sp_GetAllPageImages_Result" />
+  <ComplexType Name="sp_GetAllUsers_Result" />
+  <ComplexType Name="sp_GetAllYTlinks_Result" />
+  <ComplexType Name="sp_GetUsersForLogin_Result" />
+</Schema>

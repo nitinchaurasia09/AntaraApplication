@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="antaraModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="antaraModelStoreContainer">
+          <EntitySet Name="page_image_text_master" EntityType="antaraModel.Store.page_image_text_master" store:Type="Tables" store:Schema="antara" store:Name="page_image_text_master">
+            <DefiningQuery>SELECT
+      `page_image_text_master`.`GUID`, 
+      `page_image_text_master`.`PageId`, 
+      `page_image_text_master`.`ImageUrl`, 
+      `page_image_text_master`.`ImageText`, 
+      `page_image_text_master`.`ImageControl`, 
+      `page_image_text_master`.`LabelControl`, 
+      `page_image_text_master`.`Description`
+      FROM `page_image_text_master` AS `page_image_text_master`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="page_master" EntityType="antaraModel.Store.page_master" store:Type="Tables" Schema="antara" />
+          <EntitySet Name="user_master" EntityType="antaraModel.Store.user_master" store:Type="Tables" store:Schema="antara" store:Name="user_master">
+            <DefiningQuery>SELECT
+      `user_master`.`GUID`, 
+      `user_master`.`UserName`, 
+      `user_master`.`UserEmail`, 
+      `user_master`.`UserPhone`, 
+      `user_master`.`UserLocation`, 
+      `user_master`.`FirstName`, 
+      `user_master`.`LastName`, 
+      `user_master`.`Password`, 
+      `user_master`.`IsAdmin`, 
+      `user_master`.`CreatedDate`, 
+      `user_master`.`DeleteStatus`, 
+      `user_master`.`UserStatus`, 
+      `user_master`.`UserImage`
+      FROM `user_master` AS `user_master`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="youtube_master" EntityType="antaraModel.Store.youtube_master" store:Type="Tables" store:Schema="antara" store:Name="youtube_master">
+            <DefiningQuery>SELECT
+      `youtube_master`.`GUID`, 
+      `youtube_master`.`YouTubeLink`, 
+      `youtube_master`.`NumberOfTimeExecuted`, 
+      `youtube_master`.`YouTubeText`
+      FROM `youtube_master` AS `youtube_master`</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'def.antara.page_image_text_master' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="page_image_text_master">
+          <Key>
+            <PropertyRef Name="GUID" />
+            <PropertyRef Name="PageId" />
+            <PropertyRef Name="ImageUrl" />
+            <PropertyRef Name="ImageText" />
+            <PropertyRef Name="ImageControl" />
+            <PropertyRef Name="LabelControl" />
+          </Key>
+          <Property Name="GUID" Type="char" Nullable="false" MaxLength="38" />
+          <Property Name="PageId" Type="char" Nullable="false" MaxLength="38" />
+          <Property Name="ImageUrl" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="ImageText" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="ImageControl" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LabelControl" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="5000" />
+        </EntityType>
+        <EntityType Name="page_master">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="char" Nullable="false" MaxLength="38" />
+          <Property Name="PageName" Type="varchar" MaxLength="50" />
+          <Property Name="PageDescription" Type="varchar" MaxLength="10000" />
+          <Property Name="PageChild" Type="int" />
+          <Property Name="OrderNumber" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'def.antara.user_master' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="user_master">
+          <Key>
+            <PropertyRef Name="GUID" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="UserEmail" />
+            <PropertyRef Name="IsAdmin" />
+            <PropertyRef Name="DeleteStatus" />
+            <PropertyRef Name="UserStatus" />
+          </Key>
+          <Property Name="GUID" Type="char" Nullable="false" MaxLength="38" />
+          <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="UserEmail" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="UserPhone" Type="varchar" MaxLength="12" />
+          <Property Name="UserLocation" Type="varchar" MaxLength="250" />
+          <Property Name="FirstName" Type="varchar" MaxLength="40" />
+          <Property Name="LastName" Type="varchar" MaxLength="40" />
+          <Property Name="Password" Type="varchar" MaxLength="100" />
+          <Property Name="IsAdmin" Type="smallint" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="DeleteStatus" Type="smallint" Nullable="false" />
+          <Property Name="UserStatus" Type="smallint" Nullable="false" />
+          <Property Name="UserImage" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'def.antara.youtube_master' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="youtube_master">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="char" Nullable="false" MaxLength="38" />
+          <Property Name="YouTubeLink" Type="varchar" MaxLength="250" />
+          <Property Name="NumberOfTimeExecuted" Type="smallint" />
+          <Property Name="YouTubeText" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <Function Name="DeleteYouTubeUrls" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="antara" />
+        <Function Name="sp_AddNewUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="antara">
+          <Parameter Name="userName" Type="varchar" Mode="In" />
+          <Parameter Name="userEmail" Type="varchar" Mode="In" />
+          <Parameter Name="userPhone" Type="varchar" Mode="In" />
+          <Parameter Name="userLocation" Type="varchar" Mode="In" />
+          <Parameter Name="firstName" Type="varchar" Mode="In" />
+          <Parameter Name="lastName" Type="varchar" Mode="In" />
+          <Parameter Name="password" Type="varchar" Mode="In" />
+          <Parameter Name="isAdmin" Type="smallint" Mode="In" />
+          <Parameter Name="userImage" Type="varchar" Mode="In" />
+          <Parameter Name="userStatus" Type="smallint" Mode="In" />
+        </Function>
+        <Function Name="sp_DeleteUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="antara">
+          <Parameter Name="guid" Type="char" Mode="In" />
+        </Function>
+        <Function Name="sp_GetAllPageImages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="antara">
+          <Parameter Name="guid" Type="char" Mode="In" />
+        </Function>
+        <Function Name="sp_GetAllUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="antara">
+          <Parameter Name="guid" Type="char" Mode="In" />
+        </Function>
+        <Function Name="sp_GetAllYTlinks" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="antara">
+          <Parameter Name="guid" Type="char" Mode="In" />
+        </Function>
+        <Function Name="sp_GetUsersForLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="antara">
+          <Parameter Name="userName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_UpdateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="antara">
+          <Parameter Name="guid" Type="char" Mode="In" />
+          <Parameter Name="userName" Type="varchar" Mode="In" />
+          <Parameter Name="userEmail" Type="varchar" Mode="In" />
+          <Parameter Name="userPhone" Type="varchar" Mode="In" />
+          <Parameter Name="userLocation" Type="varchar" Mode="In" />
+          <Parameter Name="firstName" Type="varchar" Mode="In" />
+          <Parameter Name="lastName" Type="varchar" Mode="In" />
+          <Parameter Name="password" Type="varchar" Mode="In" />
+          <Parameter Name="isAdmin" Type="smallint" Mode="In" />
+          <Parameter Name="userStatus" Type="smallint" Mode="In" />
+        </Function>
+        <Function Name="UpdateYouTubeUrls" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="antara">
+          <Parameter Name="YouTubeLink" Type="varchar" Mode="In" />
+          <Parameter Name="NumberOfTimeExecuted" Type="smallint" Mode="In" />
+          <Parameter Name="YouTubeText" Type="varchar" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="antaraModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="antaraEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="page_image_text_master" EntityType="antaraModel.page_image_text_master" />
+          <EntitySet Name="page_master" EntityType="antaraModel.page_master" />
+          <EntitySet Name="user_master" EntityType="antaraModel.user_master" />
+          <EntitySet Name="youtube_master" EntityType="antaraModel.youtube_master" />
+          <FunctionImport Name="DeleteYouTubeUrls" />
+          <FunctionImport Name="sp_AddNewUser">
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="userEmail" Mode="In" Type="String" />
+            <Parameter Name="userPhone" Mode="In" Type="String" />
+            <Parameter Name="userLocation" Mode="In" Type="String" />
+            <Parameter Name="firstName" Mode="In" Type="String" />
+            <Parameter Name="lastName" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+            <Parameter Name="isAdmin" Mode="In" Type="Int16" />
+            <Parameter Name="userImage" Mode="In" Type="String" />
+            <Parameter Name="userStatus" Mode="In" Type="Int16" />
+          </FunctionImport>
+          <FunctionImport Name="sp_DeleteUser">
+            <Parameter Name="guid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetAllPageImages" ReturnType="Collection(antaraModel.sp_GetAllPageImages_Result)">
+            <Parameter Name="guid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetAllUsers" ReturnType="Collection(antaraModel.sp_GetAllUsers_Result)">
+            <Parameter Name="guid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetAllYTlinks" ReturnType="Collection(antaraModel.sp_GetAllYTlinks_Result)">
+            <Parameter Name="guid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetUsersForLogin" ReturnType="Collection(antaraModel.sp_GetUsersForLogin_Result)">
+            <Parameter Name="userName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_UpdateUser">
+            <Parameter Name="guid" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="userEmail" Mode="In" Type="String" />
+            <Parameter Name="userPhone" Mode="In" Type="String" />
+            <Parameter Name="userLocation" Mode="In" Type="String" />
+            <Parameter Name="firstName" Mode="In" Type="String" />
+            <Parameter Name="lastName" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+            <Parameter Name="isAdmin" Mode="In" Type="Int16" />
+            <Parameter Name="userStatus" Mode="In" Type="Int16" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateYouTubeUrls">
+            <Parameter Name="YouTubeLink" Mode="In" Type="String" />
+            <Parameter Name="NumberOfTimeExecuted" Mode="In" Type="Int16" />
+            <Parameter Name="YouTubeText" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="page_image_text_master">
+          <Key>
+            <PropertyRef Name="GUID" />
+            <PropertyRef Name="PageId" />
+            <PropertyRef Name="ImageUrl" />
+            <PropertyRef Name="ImageText" />
+            <PropertyRef Name="ImageControl" />
+            <PropertyRef Name="LabelControl" />
+          </Key>
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="38" Unicode="false" FixedLength="true" />
+          <Property Name="PageId" Type="String" Nullable="false" MaxLength="38" Unicode="false" FixedLength="true" />
+          <Property Name="ImageUrl" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="ImageText" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="ImageControl" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LabelControl" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="5000" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="page_master">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="38" Unicode="false" FixedLength="true" />
+          <Property Name="PageName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PageDescription" Type="String" MaxLength="10000" Unicode="false" FixedLength="false" />
+          <Property Name="PageChild" Type="Int32" />
+          <Property Name="OrderNumber" Type="Int32" />
+        </EntityType>
+        <EntityType Name="user_master">
+          <Key>
+            <PropertyRef Name="GUID" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="UserEmail" />
+            <PropertyRef Name="IsAdmin" />
+            <PropertyRef Name="DeleteStatus" />
+            <PropertyRef Name="UserStatus" />
+          </Key>
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="38" Unicode="false" FixedLength="true" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UserEmail" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="UserPhone" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="UserLocation" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="FirstName" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IsAdmin" Type="Int16" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="DeleteStatus" Type="Int16" Nullable="false" />
+          <Property Name="UserStatus" Type="Int16" Nullable="false" />
+          <Property Name="UserImage" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="youtube_master">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="38" Unicode="false" FixedLength="true" />
+          <Property Name="YouTubeLink" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="NumberOfTimeExecuted" Type="Int16" />
+          <Property Name="YouTubeText" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <ComplexType Name="sp_GetAllPageImages_Result" />
+        <ComplexType Name="sp_GetAllUsers_Result" />
+        <ComplexType Name="sp_GetAllYTlinks_Result" />
+        <ComplexType Name="sp_GetUsersForLogin_Result" />
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="antaraModelStoreContainer" CdmEntityContainer="antaraEntities">
+          <EntitySetMapping Name="page_image_text_master">
+            <EntityTypeMapping TypeName="antaraModel.page_image_text_master">
+              <MappingFragment StoreEntitySet="page_image_text_master">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="PageId" ColumnName="PageId" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="ImageText" ColumnName="ImageText" />
+                <ScalarProperty Name="ImageControl" ColumnName="ImageControl" />
+                <ScalarProperty Name="LabelControl" ColumnName="LabelControl" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="page_master">
+            <EntityTypeMapping TypeName="antaraModel.page_master">
+              <MappingFragment StoreEntitySet="page_master">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="PageName" ColumnName="PageName" />
+                <ScalarProperty Name="PageDescription" ColumnName="PageDescription" />
+                <ScalarProperty Name="PageChild" ColumnName="PageChild" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_master">
+            <EntityTypeMapping TypeName="antaraModel.user_master">
+              <MappingFragment StoreEntitySet="user_master">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+                <ScalarProperty Name="UserPhone" ColumnName="UserPhone" />
+                <ScalarProperty Name="UserLocation" ColumnName="UserLocation" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+                <ScalarProperty Name="UserImage" ColumnName="UserImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youtube_master">
+            <EntityTypeMapping TypeName="antaraModel.youtube_master">
+              <MappingFragment StoreEntitySet="youtube_master">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="YouTubeLink" ColumnName="YouTubeLink" />
+                <ScalarProperty Name="NumberOfTimeExecuted" ColumnName="NumberOfTimeExecuted" />
+                <ScalarProperty Name="YouTubeText" ColumnName="YouTubeText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="DeleteYouTubeUrls" FunctionName="antaraModel.Store.DeleteYouTubeUrls" />
+          <FunctionImportMapping FunctionImportName="sp_AddNewUser" FunctionName="antaraModel.Store.sp_AddNewUser" />
+          <FunctionImportMapping FunctionImportName="sp_DeleteUser" FunctionName="antaraModel.Store.sp_DeleteUser" />
+          <FunctionImportMapping FunctionImportName="sp_GetAllPageImages" FunctionName="antaraModel.Store.sp_GetAllPageImages">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="antaraModel.sp_GetAllPageImages_Result" />
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetAllUsers" FunctionName="antaraModel.Store.sp_GetAllUsers">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="antaraModel.sp_GetAllUsers_Result" />
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetAllYTlinks" FunctionName="antaraModel.Store.sp_GetAllYTlinks">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="antaraModel.sp_GetAllYTlinks_Result" />
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetUsersForLogin" FunctionName="antaraModel.Store.sp_GetUsersForLogin">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="antaraModel.sp_GetUsersForLogin_Result" />
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_UpdateUser" FunctionName="antaraModel.Store.sp_UpdateUser" />
+          <FunctionImportMapping FunctionImportName="UpdateYouTubeUrls" FunctionName="antaraModel.Store.UpdateYouTubeUrls" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

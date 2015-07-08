@@ -2,9 +2,12 @@ body {
 	font-family: verdana;
 	background: white;
 	margin: 0;
-	padding: 0;
+	padding: 114px 0 0;
 	background: url('../images/mid.jpg') center repeat;
 	overflow-x: hidden;
+}
+body.home{
+	padding: 114px 0 89;
 }
 .bold{
 	font-weight: bold;
@@ -39,6 +42,10 @@ body {
 	margin: 0 auto;
 	padding: 0 28px;
 }
+/*.innerContainer.headerantara {
+	width: auto;
+}*/
+
 #innerPage {
 	min-height: calc(100vh - 114px - 66px);
 }
@@ -130,4 +137,29 @@ h1.inner:before{
 }
 h1.inner:after{
 	top: 0;
+}
+
+img.zoom_img{
+	-moz-transition:-moz-transform 0.5s ease-in; 
+	-webkit-transition:-webkit-transform 0.5s ease-in; 
+	-o-transition:-o-transform 0.5s ease-in;
+	width:50%;
+	height: auto;
+}
+img.zoom_img:hover{
+	-moz-transform:scale(1.5); 
+	-webkit-transform:scale(1.5);
+	-o-transform:scale(1.5);
+}
+
+.an_inline {
+ 	display: inline !important;
+}
+
+.an_vtop{
+	vertical-align: top;
+}
+
+.margin_t10 {
+	margin-top: 10px !important;
 }

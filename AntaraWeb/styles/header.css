@@ -4,7 +4,8 @@ header{
 	background: url('../images/upper.png') left top repeat-x;
 	min-height: 114px;
 	z-index: 9999;
-  	position: relative;
+  	position: fixed;
+  	top: 0;
 }
 .topHeader{
 	width: 100%;

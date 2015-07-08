@@ -4,7 +4,8 @@ footer{
 	background: url('../images/footer.png') left top repeat-x;
 	height: 89px;
 	z-index: 9999;
-  	position: relative;
+  	/*position: fixed;*/
+  	bottom: 0;
 }
 .footElement{
 	display: inline-block;
@@ -55,4 +56,15 @@ footer.innerFoot .footElement a{
 }
 footer.innerFoot .footElement.noBorder{
 	border-right: none;
+}
+
+.terms {
+    color: #fff;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.terms:hover {
+    color: #fff;
+    text-decoration: underline;
 }

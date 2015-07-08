@@ -37,15 +37,25 @@
             })
         </script>
 </head>
-<body>
+<body class="home">
+    <!-- Facebook plugin -->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- Facebook SDK plugin -->
 <div id="pageContainer">
     <section class="activesumit">
 	<!-- HEADER -->
     <header>
-        <div class="innerContainer">
+        <div class="innerContainer headerantara">
             <!-- Top Header -->
             <div class="topHeader">
-                <a href="#" class="arLogo">Antara Senior Living</a>
+                <a href="http://antaraseniorliving.com" class="arLogo">Antara Senior Living</a>
                 <span class="maxEnt">A MAX Enterprise</span>
             </div>
 
@@ -80,8 +90,9 @@
                 <a href="max-promise.html">max promise</a>  
                 <span> 
                     <a href="get-in-touch.html">get in touch</a>
-                    <span id="getocuh">
-                        <a href="get-in-touch.html#carer">careers</a>
+                    <span id="getocuh">                        
+                        <a href="get-in-touch.html#innerPage">Reach Us</a>
+<a href="get-in-touch.html#carer">careers</a>
                     </span>
                 </span>
             </nav>
@@ -96,19 +107,19 @@
                 <div class="item active">
                     <img src="images/c1.jpg" alt="">
                     <div class="carousel-caption">
-                      <p>Antara is a beautifully crafted full service residential community for those who believe age is just a number</p>
+                      <p>Antara is a beautifully crafted full service residential community </br>for those who believe age is just a number</p>
                     </div>
                 </div>
                 <div class="item">
                     <img src="images/c2.jpg" alt="">
                     <div class="carousel-caption">
-                      <p>Antara is a beautifully crafted full service residential community for those who believe age is just a number</p>
+                      <p>Antara is a beautifully crafted full service residential community </br> for those who believe age is just a number</p>
                     </div>
                 </div>
                 <div class="item">
                     <img src="images/c3.jpg" alt="">
                     <div class="carousel-caption">
-                      <p>Antara is a beautifully crafted full service residential community for those who believe age is just a number</p>
+                      <p>Antara is a beautifully crafted full service residential community </br> for those who believe age is just a number</p>
                     </div>
                 </div>
             </div>
@@ -119,7 +130,7 @@
     </div>
     <!-- Scroll -->
     <div class="scroll">
-            <a href="#">to discuss your life at antara,&nbsp;&nbsp;click here</a>
+            <a href="get-in-touch.html">to discuss your life at antara,&nbsp;&nbsp;click here</a>
             <a href="#WhoWeAre" class="scrollLink down">SCROLL DOWN <span><img src="images/downarw.jpg"/></span></a>
     </div>
 	
@@ -152,7 +163,7 @@
         <!-- Video PLayer -->
         <div class="videoPlayer">
             <span class="playBtn"></span>
-            <a  onclick="" vId="https://www.youtube.com/embed/xhSVZAqTiPk?autoplay=1&rel=0"></a>
+            <a  onclick="" vId="https://www.youtube.com/embed/EloZ2XRlM4w?autoplay=1&rel=0"></a>
             <img src="images/c5.jpg">
         </div>
         <!-- Stack of Images -->
@@ -177,9 +188,18 @@
             <h1>Let's get talking <span>Connect with us on social media</span></h1>
         </div>
         <!-- Stack of Images -->
-        <a href="#"><img src="images/blog.jpg"></a>
-        <a href="#"><img src="images/fb.jpg"></a>
-        <a href="#"><img src="images/youtube.jpg"></a>  
+        <div class="borderDiv" href="#"><img src="images/blog.jpg"></div>
+        <div class="borderDiv" href="#">
+        <!-- Facebook content -->
+        <span class="fbContent">
+            <div class="fb-page" data-href="https://www.facebook.com/antaraseniorliving" data-width="209" data-height="350" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/antaraseniorliving"><a href="https://www.facebook.com/antaraseniorliving">Antara Senior Living</a></blockquote></div></div>
+        </span>
+        <!-- /// Facebook content -->
+        </div>
+        <div class="borderDiv" href="#"><img src="images/youtube.jpg"></div> 
+
+        
+
     </div>
     <!-- Scroll -->
     <div class="scroll lowHght noCnt">
@@ -191,8 +211,8 @@
         <div class="innerContainer">
             <div class="footElement"><img src="images/footLogo.png"></div>
             <div class="footElement"><span>Call us: +91 88600 76464 / +91 83929 26464<br/>
-Email us: contactus@antaraseniorliving.com</span></div>
-            <div class="footElement"><a href="#"><img src="images/youtubeIcn.png"></a><a href="#"><img src="images/facebookIcn.png"></a></div>
+Email us: contactus@antaraseniorliving.com</br><a href="terms.html" class="terms">antara&nbsp;&copy;&nbsp;2015 | Terms &amp; Conditions</a></span></div>
+            <div class="footElement"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving"><img src="images/facebookIcn.png"></a></div>
             <div class="footElement noBorder"><img src="images/max.png" style="margin-top:11px"/></div>
         </div>
     </footer>
@@ -202,7 +222,8 @@ Email us: contactus@antaraseniorliving.com</span></div>
 <script type="text/javascript">
     $(document).ready(function(){
         $("div.thumbCont a").click(function(e){
-            e.stopPropagation();
+                
+                     e.stopPropagation();
             var oldSrc=$(this).children('img').attr('src');
             var oldVid=$(this).attr('vId');
             $(this).children('img').attr('src',$("div.videoPlayer img").attr("src"));

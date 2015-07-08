@@ -23,7 +23,7 @@
 <div id="pageContainer">
     <!-- HEADER -->
     <header>
-        <div class="innerContainer">
+        <div class="innerContainer headerantara">
             <!-- Top Header -->
             <div class="topHeader">
                 <a href="#" class="arLogo">Antara Senior Living</a>
@@ -62,7 +62,8 @@
                 <span> 
                     <a href="get-in-touch.html" class="active">get in touch</a>
                     <span id="getocuh">
-                        <a href="get-in-touch.html#carer">careers</a>
+                       <a href="get-in-touch.html#innerPage">Reach Us</a>
+                       <a href="get-in-touch.html#carer">careers</a>
                     </span>
                 </span>
             </nav>
@@ -74,7 +75,7 @@
     <div class="innerContainer" id="innerPage">
         <!-- Left Section -->
         <div class="leftSection">
-            <a href="#innerPage" class="active">get in touch</a>
+            <a href="#innerPage" class="active">Reach Us</a>
             <a href="#carer">careers</a>
         </div>
         <!-- Right Section -->
@@ -84,15 +85,15 @@
             </div>
             <p>Curious to know more about Antara – the concept and community? Feel free to drop us a line, give us a call or simply visit our experiential studios in Delhi or Dehradun. Or you could simply share your details and we will get in touch with you. Fields marked with an asterisk are mandatory.
             </p>
-            <form>
-                <div class="div1"><label>Title</label> <input type="text" value="" class="div1"/></div>
-                <div><label>First Name*</label>  <input type="text" value=""/></div>
-                <div><label>Last Name*</label>  <input type="text" value=""/></div>
-                <div><label>Email ID*</label>  <input type="text" value=""/></div>
-                <div><label>Phone No.*</label>  <input type="text" value=""/></div>
-                <div><label>State</label>  <input type="text" value=""/></div>
-                <div><label>Country</label>  <input type="text" value=""/></div>
-                <div><input type="submit" value="Submit" class="button"/></div>
+            <form action="" method="" id="frmMail">
+                <div class="div1"><label>Title</label> <input type="text" name="txtTitle" id="txtTitle" value="" class="div1"/></div>
+                <div><label>First Name*</label>  <input type="text" value="" name="txtFirstName"  id="txtFirstName"/></div>
+                <div><label>Last Name*</label>  <input type="text" value="" name="txtLastName"  id="txtLastName"/></div>
+                <div><label>Email ID*</label>  <input type="text" value="" name="txtEmail"  id="txtEmail"/></div>
+                <div><label>Phone No.*</label>  <input type="text" value="" name="txtPhone"  id="txtPhone"/></div>
+                <div><label>State</label>  <input type="text" value="" name="txtState"  id="txtState"/></div>
+                <div><label>Country</label>  <input type="text" value="" name="txtCountry"  id="txtCountry"/></div>
+                <div><input type="submit" value="Submit" class="button" /></div>
             </form>
             <div class="map">
                 <div class="mapContainer">
@@ -151,9 +152,34 @@
         <div class="innerContainer">
             <div class="footElement"><span>To discuss your life at Antara, please call +91 88600 76464 / +91 839292 6464</span></div>
             <div class="footElement"><span>Email: contactus@antaraseniorliving.com</span></div>
-            <div class="footElement noBorder"><a href="#"><img src="images/youtubeIcn.png"></a><a href="#"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement noBorder"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving"><img src="images/facebookIcn.png"></a></div>
         </div>
     </footer>
-</div>    
+</div> 
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#frmMail").submit(function(e){
+            $.ajax(
+                {
+                    url:"SendMail.php",
+                    method:"post",
+                    data:GetData(),
+                    //type:"json",
+                    success:function(_data){
+                        alert(_data);
+                    }   
+                });
+            e.preventDefault();
+        });
+
+    });
+    this.GetData=function(){
+      /*  var _d="{'txtTitle':'"+$("#txtTitle").val()+"','txtFirstName':'"+$("#txtFirstName").val()+"','txtLastName':'"+$("#txtLastName").val()+"','txtEmail':'"+$("#txtEmail").val()+"','txtPhone':'"+$("#txtPhone").val()+"','txtState':'"+$("#txtState").val()+"','txtCountry':'"+$("#txtCountry").val()+"'}";
+       */
+       var _d=$("#frmMail").serialize();
+        alert(_d);
+        return _d;
+    }
+</script>   
 </body>
 </html>

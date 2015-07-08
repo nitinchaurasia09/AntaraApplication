@@ -1,0 +1,48 @@
+
+
+our belief and max promise new ai file
+
+devender ok to change as per 
+
+wooden header css ya image
+
+home page footer issue 
+
+slider text -- two lined or not
+
+scroll coming together
+
+click here space
+wooden bordes thicker
+
+home page who we are images 
+font and size and style
+tara image vertically center aligned
+PDF file
+FAQ - questions collapse
+Antara dehradun -  padding in every block
+
+Varun's changes
+
+Antara dehradun - drop down
+mandalas to be kept away
+aunty pic replace 
+image border thinner
+navigation change
+
+no changes in header and footer fix -- suspended
+
+click here space -- done
+
+four elements of life to be linked with respective -- done
+Our board of director's footer to be fixed
+
+bigger image in antara dehradun
+FAQs remaining
+home page footer bottom aligned
+header height is lesser than original -- check
+header logo and max enterprise should be aligned with carousel mandalas
+footer of home page will have max enterprise logo
+key up and down not working in antara dehradun -- key up and down won't work in inner pages
+carousal auto scroll not working  -- done
+carousal arrows are small

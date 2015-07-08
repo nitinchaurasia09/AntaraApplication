@@ -21,9 +21,19 @@
  </head>
 <body>
 <div id="pageContainer">
+    <!-- Facebook plugin -->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- Facebook SDK plugin -->
     <!-- HEADER -->
     <header>
-        <div class="innerContainer">
+        <div class="innerContainer headerantara">
             <!-- Top Header -->
             <div class="topHeader">
                 <a href="#" class="arLogo">Antara Senior Living</a>
@@ -62,7 +72,8 @@
                 <span> 
                     <a href="get-in-touch.html">get in touch</a>
                     <span id="getocuh">
-                        <a href="get-in-touch.html#carer">careers</a>
+                        <a href="get-in-touch.html#innerPage">Reach Us</a>
+<a href="get-in-touch.html#carer">careers</a>
                     </span>
                 </span>
             </nav>
@@ -86,11 +97,17 @@
             <p>We invite you to have a conversation with us and join our community on social media</p>
             
             <!-- Let,s Get Talking -->
-            <div id="letTalk">
+            <div id="letTalk" class="antaraSpeak">
                 <!-- Stack of Images -->
-                <a href="tara-blog.html" class="small"><img src="images/blog.jpg"></a>
-                <a href="#" class="small"><img src="images/fb.jpg"></a>
-                <a href="#" class="small"><img src="images/youtube.jpg"></a>  
+                        <div class="borderDiv" href="#"><img src="images/blog.jpg"></div>
+                <div class="borderDiv" href="#">
+                <!-- Facebook content -->
+                <span class="fbContent">
+                    <div class="fb-page" data-href="https://www.facebook.com/antaraseniorliving" data-width="209" data-height="350" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/antaraseniorliving"><a href="https://www.facebook.com/antaraseniorliving">Antara Senior Living</a></blockquote></div></div>
+                </span>
+                <!-- /// Facebook content -->
+                </div>
+                <div class="borderDiv" href="#"><img src="images/youtube.jpg"></div> 
             </div>
 
         </div>
@@ -101,7 +118,7 @@
         <div class="innerContainer">
             <div class="footElement"><span>To discuss your life at Antara, please call +91 88600 76464 / +91 839292 6464</span></div>
             <div class="footElement"><span>Email: contactus@antaraseniorliving.com</span></div>
-            <div class="footElement noBorder"><a href="#"><img src="images/youtubeIcn.png"></a><a href="#"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement noBorder"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving"><img src="images/facebookIcn.png"></a></div>
         </div>
     </footer>
 </div>    
