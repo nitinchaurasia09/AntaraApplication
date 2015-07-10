@@ -22,7 +22,7 @@ footer{
 	margin-top: 8px;
 }
 .footElement a{
-	position: relative;
+	/*position: relative;*/
 	top: 3px;
 }
 .footElement > a > img{
@@ -38,7 +38,7 @@ footer.innerFoot{
 }
 footer.innerFoot .footElement{
 	display: inline-block;
-	padding: 0 23px;
+	padding: 0 15px;
 	margin: 0 0;
 	min-height: 0px;
 	border-right: 1px solid #fff;
@@ -58,13 +58,15 @@ footer.innerFoot .footElement.noBorder{
 	border-right: none;
 }
 
-.terms {
+.terms,
+.contactEmail {
     color: #fff;
     font-style: normal;
     text-decoration: none;
 }
 
-.terms:hover {
+.terms:hover,
+.contactEmail:hover {
     color: #fff;
     text-decoration: underline;
 }

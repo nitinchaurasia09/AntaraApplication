@@ -1,4 +1,4 @@
-    <!doctype html>
+﻿    <!doctype html>
 <html class="no-js">
     <head>
         <meta charset="utf-8">
@@ -11,7 +11,53 @@
         <link rel="stylesheet" href="styles/main.css">
 
         <!-- Bootstrap Default JS -->
-        
+    <style type="text/css">
+    .overlay-pop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  overflow: hidden;
+  cursor: pointer;
+}
+.close-pop {
+  background: url(images/controls1.png) no-repeat -50px 0;
+  text-indent: -9999px;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  display: block;
+  right: 0;
+  margin-right: 33px;
+  cursor: pointer;
+}
+.pop-new {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 99999;
+  overflow: hidden;
+  width: 480px;
+  margin-left: -240px;
+  background: url(images/pop_bg.png) repeat left top;
+  padding: 10px;
+  color: #2d2d2d;
+  font-size: 14px;
+  line-height: 19px;
+}
+.pop-inside {
+  background: #fff;
+  padding: 32px 31px 10px;
+  margin: 0;
+  background: #fff;
+  color: #2d2d2d;
+  text-align: center;
+  height: 176px;
+}
+</style>
+    
 		<script src="scripts/jquery.js"></script>
     
     <!-- Plugin JavaScript -->
@@ -83,38 +129,40 @@
             <div class="headCont innerPage">
                 <h1 class="inner">Get in Touch</h1>
             </div>
-            <p>Curious to know more about Antara – the concept and community? Feel free to drop us a line, give us a call or simply visit our experiential studios in Delhi or Dehradun. Or you could simply share your details and we will get in touch with you. Fields marked with an asterisk are mandatory.
+            <p>
+                Curious to know more about Antara – the concept and community? Feel free to drop us a line, give us a call or visit our experiential studios in Delhi or Dehradun.
+                <br />You can also simply share your details and we will get in touch with you. Fields marked with an asterisk are mandatory.                
             </p>
             <form action="" method="" id="frmMail">
-                <div class="div1"><label>Title</label> <input type="text" name="txtTitle" id="txtTitle" value="" class="div1"/></div>
-                <div><label>First Name*</label>  <input type="text" value="" name="txtFirstName"  id="txtFirstName"/></div>
-                <div><label>Last Name*</label>  <input type="text" value="" name="txtLastName"  id="txtLastName"/></div>
-                <div><label>Email ID*</label>  <input type="text" value="" name="txtEmail"  id="txtEmail"/></div>
-                <div><label>Phone No.*</label>  <input type="text" value="" name="txtPhone"  id="txtPhone"/></div>
-                <div><label>State</label>  <input type="text" value="" name="txtState"  id="txtState"/></div>
-                <div><label>Country</label>  <input type="text" value="" name="txtCountry"  id="txtCountry"/></div>
+                <div class="div1"><label>Title</label> <input type="text" name="txtTitle" id="txtTitle" value="" maxlength="5" class="div1"/></div>
+                <div><label>First Name*</label>  <input type="text" value="" name="txtFirstName" maxlength="20"  id="txtFirstName"/></div>
+                <div><label>Last Name*</label>  <input type="text" value="" name="txtLastName" maxlength="20" id="txtLastName"/></div>
+                <div><label>Email ID*</label>  <input type="text" value="" name="txtEmail" maxlength="40"  id="txtEmail"/></div>
+                <div><label>Phone No.*</label>  <input type="text" value="" name="txtPhone" maxlength="10" id="txtPhone"/></div>
+                <div><label>State</label>  <input type="text" value="" name="txtState"  id="txtState" maxlength="30"/></div>
+                <div><label>Country</label>  <input type="text" value="" name="txtCountry"  id="txtCountry" maxlength="50"/></div>
                 <div><input type="submit" value="Submit" class="button" /></div>
             </form>
             <div class="map">
                 <div class="mapContainer">
-                    <div class="mapview"><img src="images/map1.png"></div>
+                    <div class="mapview"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.8473578069556!2d77.2377659!3d28.574346000000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce25487c5b247%3A0xb8888b06bda1b7c0!2sD-18%2C+Shiniwas+Puri%2C+Block+D%2C+Defence+Colony%2C+New+Delhi%2C+Delhi+110049!5e0!3m2!1sen!2sin!4v1436385300595" width ="220px" height="140px" frameborder="0" style="border:0"    ></iframe></div> <!--<img src="images/map1.png">-->
                     <p><span>Delhi Experiential Studio:</span> D - 18, Defence Colony, New Delhi - 110024,<br/>India M: +91 8860076464</p>
                 </div>
                 <div class="mapContainer">
-                    <div class="mapview"><img src="images/map2.png"></div>
-                    <p><span>Community Address:</span> 2, Purukul Road, Guniyal Gaon, Dehradun - <br/>248001,Uttarakhand, India M: +91 8392926464</p>
+                     <div class="mapview"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.418285010424!2d78.0669661!3d30.3958722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d701b6b57eb3%3A0x3bdf1469eede4c82!2sAntara+Senior+Living!5e0!3m2!1sen!2sin!4v1436385774110" width="220" height="200" frameborder="0" style="border:0" allowfullscreen></iframe></div> <!-- <img src="images/map2.png">  -->
+                    <p><span>Dehradun Experiential Studio & Community Address:</span> 2, Purukul Road, Guniyal Gaon, Dehradun - <br/>248001,Uttarakhand, India M: +91 8392926464</p>
                 </div>
             </div>
             <!-- Scroll -->
             <div class="scroll sml lowHght">
                 <!--<a href="#ol" class="scrollLink centerLink"><span><img src="images/uparw.jpg"></span></a>-->
-                <a href="#carer" class="scrollLink"><span><img src="images/downarw.jpg"></span></a>
+                <a href="#carer" class="scrollLink"><span><!-- <img src="images/downarw.jpg"> --></span></a>
             </div>
 
             <div id="carer" class="headCont innerPage">
                 <h1 class="inner">Careers</h1>
             </div>
-            <p>At Antara, the following positions are currently waiting to be filled.</p>
+            <!--<p>At Antara, the following positions are currently waiting to be filled.</p>
             <div class="career">
                 <span class="bold smal">Position</span>
                 <span class="bold big">Role description</span>
@@ -139,7 +187,8 @@
                 <span class="midl">Submit resume</span>
             </div>
             <br/>
-            <p>You could also upload your resume at hr@antaraseniorliving.com</p>
+            <p>You could also upload your resume at <a href="mailto:careers@antaraseniorliving.com">careers@antaraseniorliving.com</a></p>-->
+            <p>We are always looking for fresh talent to join the Antara family. To know more about what roles are available at Antara, please email us on <a href="mailto:careers@antaraseniorliving.com">careers@antaraseniorliving.com</a></p>
              <div class="scroll sml lowHght">
                 <!--<a href="#ol" class="scrollLink centerLink"><span><img src="images/uparw.jpg"></span></a>-->
                 <a href="#innerPage" class="scrollLink"><span><img src="images/uparw.jpg"></span></a>
@@ -151,34 +200,93 @@
     <footer class="innerFoot">
         <div class="innerContainer">
             <div class="footElement"><span>To discuss your life at Antara, please call +91 88600 76464 / +91 839292 6464</span></div>
-            <div class="footElement"><span>Email: contactus@antaraseniorliving.com</span></div>
-            <div class="footElement noBorder"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement"><span>Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com?Subject=Contact%20Info" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
+            <div class="footElement noBorder"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
         </div>
     </footer>
 </div> 
+<div id="show_popup" style="display: none;">
+    <div class="overlay-pop"></div>
+
+
+        <div class="pop-new" style="top: 213px; margin-top: -88px;">
+            <div class="close-pop"></div>
+                <div class="pop-inside">Thank you for your interest 
+                   <span id="lblName"></span>
+                <br>
+                Team Antara will be delighted to speak with you and will be in touch soon!<br>
+                <br>
+                <br>
+
+            <div style="padding-top:10px;"><img src="http://antaraseniorliving.com/wp-content/themes/flashlight/images/logo-pop.png"></div>
+
+        </div>
+
+
+    </div>
+</div>
 <script type="text/javascript">
     $(document).ready(function(){
         $("#frmMail").submit(function(e){
-            $.ajax(
+            e.preventDefault();
+            if(!validate())
+                return false;
+           $.ajax(
                 {
                     url:"SendMail.php",
                     method:"post",
                     data:GetData(),
                     //type:"json",
                     success:function(_data){
-                        alert(_data);
+                       // alert(_data);
+                        $("#lblName").text($("#txtTitle").val() + " " + $("#txtFirstName").val() + " " + $("#txtLastName").val());
+                        $("div#show_popup").show();
                     }   
                 });
-            e.preventDefault();
-        });
+            e.preventDefault();  
+        });    
+
+
+$(".close-pop, .overlay-pop").click(function(e) {
+    $("#show_popup").hide('fast');
+});
+
+br_height= $(window).height()/2;
+
+$(".pop-new").css({"top":br_height,"margin-top":-88});
+
 
     });
     this.GetData=function(){
       /*  var _d="{'txtTitle':'"+$("#txtTitle").val()+"','txtFirstName':'"+$("#txtFirstName").val()+"','txtLastName':'"+$("#txtLastName").val()+"','txtEmail':'"+$("#txtEmail").val()+"','txtPhone':'"+$("#txtPhone").val()+"','txtState':'"+$("#txtState").val()+"','txtCountry':'"+$("#txtCountry").val()+"'}";
        */
        var _d=$("#frmMail").serialize();
-        alert(_d);
+       // alert(_d);
         return _d;
+    }
+    this.validate=function(){
+
+
+        if($("#txtFirstName").val()==''){
+           alert('Please enter First Name');
+            return false;
+          }
+        if($("#txtLastName").val()=='')
+        {
+          alert('Please enter Last Name');
+            return false;
+        }
+        if($("#txtPhone").val()=='')
+        {
+          alert('Please enter Phone Number');
+            return false;                      
+        }
+        if($("#txtEmail").val()=='')
+        {
+          alert('Please enter Email');
+            return false;
+        }
+        return true;
     }
 </script>   
 </body>

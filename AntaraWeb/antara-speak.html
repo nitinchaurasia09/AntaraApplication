@@ -1,4 +1,4 @@
-    <!doctype html>
+﻿    <!doctype html>
 <html class="no-js">
     <head>
         <meta charset="utf-8">
@@ -17,7 +17,9 @@
     <!-- Plugin JavaScript -->
 		<script src="scripts/jquery.easing.min.js"></script>
         <script src="scripts/bootstrap.js" type="text/javascript"></script>
-		<script src="scripts/custom.js"></script>
+		<script src="scripts/custom.js"></script><script src="scripts/ytembed.js"></script>
+        
+
  </head>
 <body>
 <div id="pageContainer">
@@ -99,7 +101,7 @@
             <!-- Let,s Get Talking -->
             <div id="letTalk" class="antaraSpeak">
                 <!-- Stack of Images -->
-                        <div class="borderDiv" href="#"><img src="images/blog.jpg"></div>
+                        <div class="borderDiv" href="#"><img class="letsImg" src="images/blog.jpg"></div>
                 <div class="borderDiv" href="#">
                 <!-- Facebook content -->
                 <span class="fbContent">
@@ -107,7 +109,11 @@
                 </span>
                 <!-- /// Facebook content -->
                 </div>
-                <div class="borderDiv" href="#"><img src="images/youtube.jpg"></div> 
+                <div class="borderDiv" href="#"><span class="fbContent">
+            <div class="ytLogo"><img class="" src="images/ytlogo.png"></div>
+            <div id="youtubeDivPlaylist"></div>
+
+        </span></div> 
             </div>
 
         </div>
@@ -117,10 +123,10 @@
     <footer class="innerFoot">
         <div class="innerContainer">
             <div class="footElement"><span>To discuss your life at Antara, please call +91 88600 76464 / +91 839292 6464</span></div>
-            <div class="footElement"><span>Email: contactus@antaraseniorliving.com</span></div>
-            <div class="footElement noBorder"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement"><span>Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com?Subject=Contact%20Info" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
+            <div class="footElement noBorder"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
         </div>
     </footer>
-</div>    
+</div>    <script>ytEmbed.init({ 'block': 'youtubeDivPlaylist', 'type': 'playlist', 'q': 'PLHAh1MP5b-NXvVc5arVO8TaV1moqLvcn3', 'results': 5, 'meta': true });</script>  
 </body>
 </html>

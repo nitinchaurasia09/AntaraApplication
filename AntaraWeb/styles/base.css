@@ -146,7 +146,7 @@ img.zoom_img{
 	width:50%;
 	height: auto;
 }
-img.zoom_img:hover{
+img.zoom_imgClick{
 	-moz-transform:scale(1.5); 
 	-webkit-transform:scale(1.5);
 	-o-transform:scale(1.5);
