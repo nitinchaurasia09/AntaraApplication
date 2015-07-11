@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AntaraModelStoreContainer" CdmEntityContainer="AntaraEntities">
+    <EntitySetMapping Name="user_master">
+      <EntityTypeMapping TypeName="AntaraModel.user_master">
+        <MappingFragment StoreEntitySet="user_master">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserPhone" ColumnName="UserPhone" />
+          <ScalarProperty Name="UserLocation" ColumnName="UserLocation" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+          <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+          <ScalarProperty Name="UserImage" ColumnName="UserImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="page_image_text_master">
+      <EntityTypeMapping TypeName="AntaraModel.page_image_text_master">
+        <MappingFragment StoreEntitySet="page_image_text_master">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="ImageText" ColumnName="ImageText" />
+          <ScalarProperty Name="ImageControl" ColumnName="ImageControl" />
+          <ScalarProperty Name="LabelControl" ColumnName="LabelControl" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="page_master">
+      <EntityTypeMapping TypeName="AntaraModel.page_master">
+        <MappingFragment StoreEntitySet="page_master">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="PageDescription" ColumnName="PageDescription" />
+          <ScalarProperty Name="PageChild" ColumnName="PageChild" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="youtube_master">
+      <EntityTypeMapping TypeName="AntaraModel.youtube_master">
+        <MappingFragment StoreEntitySet="youtube_master">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="YouTubeLink" ColumnName="YouTubeLink" />
+          <ScalarProperty Name="NumberOfTimeExecuted" ColumnName="NumberOfTimeExecuted" />
+          <ScalarProperty Name="YouTubeText" ColumnName="YouTubeText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

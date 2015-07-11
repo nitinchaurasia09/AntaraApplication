@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AntaraModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Antara.dbo.page_image_text_master' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="page_image_text_master">
+    <Key>
+      <PropertyRef Name="GUID" />
+      <PropertyRef Name="PageId" />
+      <PropertyRef Name="ImageUrl" />
+      <PropertyRef Name="ImageText" />
+      <PropertyRef Name="ImageControl" />
+      <PropertyRef Name="LabelControl" />
+    </Key>
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PageId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ImageText" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ImageControl" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LabelControl" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Antara.dbo.page_master' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="page_master">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PageName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PageDescription" Type="nvarchar(max)" />
+    <Property Name="PageChild" Type="smallint" />
+    <Property Name="OrderNumber" Type="smallint" />
+  </EntityType>
+  <EntityType Name="user_master">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserEmail" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="UserPhone" Type="nvarchar" MaxLength="12" />
+    <Property Name="UserLocation" Type="nvarchar" MaxLength="250" />
+    <Property Name="FirstName" Type="varchar" MaxLength="40" />
+    <Property Name="LastName" Type="varchar" MaxLength="40" />
+    <Property Name="Password" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsAdmin" Type="smallint" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="DeleteStatus" Type="smallint" Nullable="false" />
+    <Property Name="UserStatus" Type="smallint" Nullable="false" />
+    <Property Name="UserImage" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Antara.dbo.youtube_master' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="youtube_master">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="YouTubeLink" Type="nvarchar" MaxLength="250" />
+    <Property Name="NumberOfTimeExecuted" Type="smallint" />
+    <Property Name="YouTubeText" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="AntaraModelStoreContainer">
+    <EntitySet Name="user_master" EntityType="Self.user_master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="page_image_text_master" EntityType="Self.page_image_text_master" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[page_image_text_master].[GUID] AS [GUID], 
+[page_image_text_master].[PageId] AS [PageId], 
+[page_image_text_master].[ImageUrl] AS [ImageUrl], 
+[page_image_text_master].[ImageText] AS [ImageText], 
+[page_image_text_master].[ImageControl] AS [ImageControl], 
+[page_image_text_master].[LabelControl] AS [LabelControl], 
+[page_image_text_master].[Description] AS [Description]
+FROM [dbo].[page_image_text_master] AS [page_image_text_master]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="page_master" EntityType="Self.page_master" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[page_master].[GUID] AS [GUID], 
+[page_master].[PageName] AS [PageName], 
+[page_master].[PageDescription] AS [PageDescription], 
+[page_master].[PageChild] AS [PageChild], 
+[page_master].[OrderNumber] AS [OrderNumber]
+FROM [dbo].[page_master] AS [page_master]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="youtube_master" EntityType="Self.youtube_master" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[youtube_master].[GUID] AS [GUID], 
+[youtube_master].[YouTubeLink] AS [YouTubeLink], 
+[youtube_master].[NumberOfTimeExecuted] AS [NumberOfTimeExecuted], 
+[youtube_master].[YouTubeText] AS [YouTubeText]
+FROM [dbo].[youtube_master] AS [youtube_master]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
