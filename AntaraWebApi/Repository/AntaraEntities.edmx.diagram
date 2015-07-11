@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7692012d3063449aa8aa8cbc4b2d52ad" Name="Diagram1">
+      <Diagram DiagramId="5edcaf93fdff49508ec55b5a3abbd8cc" Name="Diagram1">
         <EntityTypeShape EntityType="AntaraModel.user_master" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AntaraModel.page_image_text_master" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AntaraModel.page_master" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />

@@ -14,7 +14,7 @@ namespace AntaraAPI.Repository
     
     public partial class youtube_master
     {
-        public string GUID { get; set; }
+        public System.Guid GUID { get; set; }
         public string YouTubeLink { get; set; }
         public Nullable<short> NumberOfTimeExecuted { get; set; }
         public string YouTubeText { get; set; }

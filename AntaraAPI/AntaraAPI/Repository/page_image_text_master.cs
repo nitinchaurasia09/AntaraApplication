@@ -14,8 +14,8 @@ namespace AntaraAPI.Repository
     
     public partial class page_image_text_master
     {
-        public string GUID { get; set; }
-        public string PageId { get; set; }
+        public System.Guid GUID { get; set; }
+        public System.Guid PageId { get; set; }
         public string ImageUrl { get; set; }
         public string ImageText { get; set; }
         public string ImageControl { get; set; }

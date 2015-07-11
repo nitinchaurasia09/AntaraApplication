@@ -16,10 +16,10 @@ namespace AntaraAPI.Repository
     using System.Data.Objects.DataClasses;
     using System.Linq;
     
-    public partial class antaraEntities : DbContext
+    public partial class AntaraEntities : DbContext
     {
-        public antaraEntities()
-            : base("name=antaraEntities")
+        public AntaraEntities()
+            : base("name=AntaraEntities")
         {
         }
     
@@ -83,38 +83,99 @@ namespace AntaraAPI.Repository
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_AddNewUser", userNameParameter, userEmailParameter, userPhoneParameter, userLocationParameter, firstNameParameter, lastNameParameter, passwordParameter, isAdminParameter, userImageParameter, userStatusParameter);
         }
     
-        public virtual int sp_DeleteUser(string guid)
+        public virtual int sp_DeleteUser(Nullable<System.Guid> guid)
         {
-            var guidParameter = guid != null ?
+            var guidParameter = guid.HasValue ?
                 new ObjectParameter("guid", guid) :
-                new ObjectParameter("guid", typeof(string));
+                new ObjectParameter("guid", typeof(System.Guid));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_DeleteUser", guidParameter);
         }
     
-        public virtual ObjectResult<sp_GetAllPageImages_Result> sp_GetAllPageImages(string guid)
+        public virtual ObjectResult<string> sp_generate_inserts(string table_name, string target_table, Nullable<bool> include_column_list, string from, Nullable<bool> include_timestamp, Nullable<bool> debug_mode, string owner, Nullable<bool> ommit_images, Nullable<bool> ommit_identity, Nullable<int> top, string cols_to_include, string cols_to_exclude, Nullable<bool> disable_constraints, Nullable<bool> ommit_computed_cols)
         {
-            var guidParameter = guid != null ?
+            var table_nameParameter = table_name != null ?
+                new ObjectParameter("table_name", table_name) :
+                new ObjectParameter("table_name", typeof(string));
+    
+            var target_tableParameter = target_table != null ?
+                new ObjectParameter("target_table", target_table) :
+                new ObjectParameter("target_table", typeof(string));
+    
+            var include_column_listParameter = include_column_list.HasValue ?
+                new ObjectParameter("include_column_list", include_column_list) :
+                new ObjectParameter("include_column_list", typeof(bool));
+    
+            var fromParameter = from != null ?
+                new ObjectParameter("from", from) :
+                new ObjectParameter("from", typeof(string));
+    
+            var include_timestampParameter = include_timestamp.HasValue ?
+                new ObjectParameter("include_timestamp", include_timestamp) :
+                new ObjectParameter("include_timestamp", typeof(bool));
+    
+            var debug_modeParameter = debug_mode.HasValue ?
+                new ObjectParameter("debug_mode", debug_mode) :
+                new ObjectParameter("debug_mode", typeof(bool));
+    
+            var ownerParameter = owner != null ?
+                new ObjectParameter("owner", owner) :
+                new ObjectParameter("owner", typeof(string));
+    
+            var ommit_imagesParameter = ommit_images.HasValue ?
+                new ObjectParameter("ommit_images", ommit_images) :
+                new ObjectParameter("ommit_images", typeof(bool));
+    
+            var ommit_identityParameter = ommit_identity.HasValue ?
+                new ObjectParameter("ommit_identity", ommit_identity) :
+                new ObjectParameter("ommit_identity", typeof(bool));
+    
+            var topParameter = top.HasValue ?
+                new ObjectParameter("top", top) :
+                new ObjectParameter("top", typeof(int));
+    
+            var cols_to_includeParameter = cols_to_include != null ?
+                new ObjectParameter("cols_to_include", cols_to_include) :
+                new ObjectParameter("cols_to_include", typeof(string));
+    
+            var cols_to_excludeParameter = cols_to_exclude != null ?
+                new ObjectParameter("cols_to_exclude", cols_to_exclude) :
+                new ObjectParameter("cols_to_exclude", typeof(string));
+    
+            var disable_constraintsParameter = disable_constraints.HasValue ?
+                new ObjectParameter("disable_constraints", disable_constraints) :
+                new ObjectParameter("disable_constraints", typeof(bool));
+    
+            var ommit_computed_colsParameter = ommit_computed_cols.HasValue ?
+                new ObjectParameter("ommit_computed_cols", ommit_computed_cols) :
+                new ObjectParameter("ommit_computed_cols", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("sp_generate_inserts", table_nameParameter, target_tableParameter, include_column_listParameter, fromParameter, include_timestampParameter, debug_modeParameter, ownerParameter, ommit_imagesParameter, ommit_identityParameter, topParameter, cols_to_includeParameter, cols_to_excludeParameter, disable_constraintsParameter, ommit_computed_colsParameter);
+        }
+    
+        public virtual ObjectResult<sp_GetAllPageImages_Result> sp_GetAllPageImages(Nullable<System.Guid> guid)
+        {
+            var guidParameter = guid.HasValue ?
                 new ObjectParameter("guid", guid) :
-                new ObjectParameter("guid", typeof(string));
+                new ObjectParameter("guid", typeof(System.Guid));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_GetAllPageImages_Result>("sp_GetAllPageImages", guidParameter);
         }
     
-        public virtual ObjectResult<sp_GetAllUsers_Result> sp_GetAllUsers(string guid)
+        public virtual ObjectResult<sp_GetAllUsers_Result> sp_GetAllUsers(Nullable<System.Guid> guid)
         {
-            var guidParameter = guid != null ?
+            var guidParameter = guid.HasValue ?
                 new ObjectParameter("guid", guid) :
-                new ObjectParameter("guid", typeof(string));
+                new ObjectParameter("guid", typeof(System.Guid));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_GetAllUsers_Result>("sp_GetAllUsers", guidParameter);
         }
     
-        public virtual ObjectResult<sp_GetAllYTlinks_Result> sp_GetAllYTlinks(string guid)
+        public virtual ObjectResult<sp_GetAllYTlinks_Result> sp_GetAllYTlinks(Nullable<System.Guid> guid)
         {
-            var guidParameter = guid != null ?
+            var guidParameter = guid.HasValue ?
                 new ObjectParameter("guid", guid) :
-                new ObjectParameter("guid", typeof(string));
+                new ObjectParameter("guid", typeof(System.Guid));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_GetAllYTlinks_Result>("sp_GetAllYTlinks", guidParameter);
         }
@@ -128,11 +189,11 @@ namespace AntaraAPI.Repository
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_GetUsersForLogin_Result>("sp_GetUsersForLogin", userNameParameter);
         }
     
-        public virtual int sp_UpdateUser(string guid, string userName, string userEmail, string userPhone, string userLocation, string firstName, string lastName, string password, Nullable<short> isAdmin, Nullable<short> userStatus)
+        public virtual int sp_UpdateUser(Nullable<System.Guid> guid, string userName, string userEmail, string userPhone, string userLocation, string firstName, string lastName, string password, Nullable<short> isAdmin, Nullable<short> userStatus)
         {
-            var guidParameter = guid != null ?
+            var guidParameter = guid.HasValue ?
                 new ObjectParameter("guid", guid) :
-                new ObjectParameter("guid", typeof(string));
+                new ObjectParameter("guid", typeof(System.Guid));
     
             var userNameParameter = userName != null ?
                 new ObjectParameter("userName", userName) :

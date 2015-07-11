@@ -24,8 +24,10 @@ namespace AntaraWebApi.Repository
                           GUID = pm.GUID,
                           PageName = pm.PageName,
                           PageDescription = pm.PageDescription,
-                          PImages = dbContext.page_image_text_master.Where(y => y.PageId == pm.GUID).Select(pitm => new PageImages { PageId = pitm.PageId, LabelControl = pitm.LabelControl, ImageUrl = pitm.ImageUrl, ImageText = pitm.ImageText, ImageControl = pitm.ImageControl, Description = pitm.Description }).AsEnumerable()
-                      }).ToList();
+                          PageChild = pm.PageChild,
+                          OrderNumber = pm.OrderNumber,
+                          PImages = dbContext.page_image_text_master.Where(y => y.PageId == pm.GUID).Select(pitm => new PageImages { PageId = pitm.PageId, LabelControl = pitm.LabelControl, ImageUrl = pitm.ImageUrl, ImageText = pitm.ImageText, ImageControl = pitm.ImageControl, Description = pitm.Description, DescControl = pitm.DescControl }).AsEnumerable()
+                      }).OrderBy(field => field.PageChild).ThenBy(field2 => field2.OrderNumber).ToList();
             return result;
         }
 

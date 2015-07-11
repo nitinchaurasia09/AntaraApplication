@@ -13,5 +13,9 @@ namespace AntaraAPI.Repository
     
     public partial class sp_GetAllYTlinks_Result
     {
+        public System.Guid GUID { get; set; }
+        public string YouTubeLink { get; set; }
+        public Nullable<short> NumberOfTimeExecuted { get; set; }
+        public string YouTubeText { get; set; }
     }
 }

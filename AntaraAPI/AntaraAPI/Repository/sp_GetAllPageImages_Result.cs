@@ -13,5 +13,10 @@ namespace AntaraAPI.Repository
     
     public partial class sp_GetAllPageImages_Result
     {
+        public System.Guid GUID { get; set; }
+        public string PageName { get; set; }
+        public string PageDescription { get; set; }
+        public Nullable<short> PageChild { get; set; }
+        public Nullable<short> OrderNumber { get; set; }
     }
 }

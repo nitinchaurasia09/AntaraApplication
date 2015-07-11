@@ -14,5 +14,6 @@ namespace AntaraWebApi.Models
         public string ImageControl { get; set; }
         public string LabelControl { get; set; }
         public string Description { get; set; }
+        public string DescControl { get; set; }
     }
 }

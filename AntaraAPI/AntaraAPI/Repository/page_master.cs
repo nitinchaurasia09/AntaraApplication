@@ -14,10 +14,10 @@ namespace AntaraAPI.Repository
     
     public partial class page_master
     {
-        public string GUID { get; set; }
+        public System.Guid GUID { get; set; }
         public string PageName { get; set; }
         public string PageDescription { get; set; }
-        public Nullable<int> PageChild { get; set; }
-        public Nullable<int> OrderNumber { get; set; }
+        public Nullable<short> PageChild { get; set; }
+        public Nullable<short> OrderNumber { get; set; }
     }
 }

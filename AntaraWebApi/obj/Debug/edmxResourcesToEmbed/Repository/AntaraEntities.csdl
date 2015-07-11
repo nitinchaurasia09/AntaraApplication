@@ -34,6 +34,7 @@
     <Property Name="ImageControl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LabelControl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DescControl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="page_master">
     <Key>
@@ -59,5 +60,110 @@
     <EntitySet Name="page_image_text_master" EntityType="Self.page_image_text_master" />
     <EntitySet Name="page_master" EntityType="Self.page_master" />
     <EntitySet Name="youtube_master" EntityType="Self.youtube_master" />
+    <FunctionImport Name="DeleteYouTubeUrls" />
+    <FunctionImport Name="sp_AddNewUser">
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="userEmail" Mode="In" Type="String" />
+      <Parameter Name="userPhone" Mode="In" Type="String" />
+      <Parameter Name="userLocation" Mode="In" Type="String" />
+      <Parameter Name="firstName" Mode="In" Type="String" />
+      <Parameter Name="lastName" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+      <Parameter Name="isAdmin" Mode="In" Type="Int16" />
+      <Parameter Name="userImage" Mode="In" Type="String" />
+      <Parameter Name="userStatus" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DeleteUser">
+      <Parameter Name="guid" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="sp_generate_inserts" ReturnType="Collection(String)">
+      <Parameter Name="table_name" Mode="In" Type="String" />
+      <Parameter Name="target_table" Mode="In" Type="String" />
+      <Parameter Name="include_column_list" Mode="In" Type="Boolean" />
+      <Parameter Name="from" Mode="In" Type="String" />
+      <Parameter Name="include_timestamp" Mode="In" Type="Boolean" />
+      <Parameter Name="debug_mode" Mode="In" Type="Boolean" />
+      <Parameter Name="owner" Mode="In" Type="String" />
+      <Parameter Name="ommit_images" Mode="In" Type="Boolean" />
+      <Parameter Name="ommit_identity" Mode="In" Type="Boolean" />
+      <Parameter Name="top" Mode="In" Type="Int32" />
+      <Parameter Name="cols_to_include" Mode="In" Type="String" />
+      <Parameter Name="cols_to_exclude" Mode="In" Type="String" />
+      <Parameter Name="disable_constraints" Mode="In" Type="Boolean" />
+      <Parameter Name="ommit_computed_cols" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetAllPageImages" ReturnType="Collection(AntaraModel.sp_GetAllPageImages_Result)">
+      <Parameter Name="guid" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetAllUsers" ReturnType="Collection(AntaraModel.sp_GetAllUsers_Result)">
+      <Parameter Name="guid" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetAllYTlinks" ReturnType="Collection(AntaraModel.sp_GetAllYTlinks_Result)">
+      <Parameter Name="guid" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetUsersForLogin" ReturnType="Collection(AntaraModel.sp_GetUsersForLogin_Result)">
+      <Parameter Name="userName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UpdateUser">
+      <Parameter Name="guid" Mode="In" Type="Guid" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="userEmail" Mode="In" Type="String" />
+      <Parameter Name="userPhone" Mode="In" Type="String" />
+      <Parameter Name="userLocation" Mode="In" Type="String" />
+      <Parameter Name="firstName" Mode="In" Type="String" />
+      <Parameter Name="lastName" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+      <Parameter Name="isAdmin" Mode="In" Type="Int16" />
+      <Parameter Name="userStatus" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateYouTubeUrls">
+      <Parameter Name="YouTubeLink" Mode="In" Type="String" />
+      <Parameter Name="NumberOfTimeExecuted" Mode="In" Type="Int16" />
+      <Parameter Name="YouTubeText" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
+  <ComplexType Name="sp_GetAllPageImages_Result">
+    <Property Type="Guid" Name="GUID" Nullable="false" />
+    <Property Type="String" Name="PageName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PageDescription" Nullable="true" />
+    <Property Type="Int16" Name="PageChild" Nullable="true" />
+    <Property Type="Int16" Name="OrderNumber" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_GetAllUsers_Result">
+    <Property Type="Guid" Name="GUID" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UserEmail" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="UserPhone" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="UserLocation" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="100" />
+    <Property Type="Int16" Name="IsAdmin" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UserStatus" Nullable="true" MaxLength="3" />
+    <Property Type="Int16" Name="UserStat" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate1" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UserImage" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="sp_GetAllYTlinks_Result">
+    <Property Type="Guid" Name="GUID" Nullable="false" />
+    <Property Type="String" Name="YouTubeLink" Nullable="true" MaxLength="250" />
+    <Property Type="Int16" Name="NumberOfTimeExecuted" Nullable="true" />
+    <Property Type="String" Name="YouTubeText" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_GetUsersForLogin_Result">
+    <Property Type="Guid" Name="GUID" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UserEmail" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="UserPhone" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="UserLocation" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="100" />
+    <Property Type="Int16" Name="IsAdmin" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UserStatus" Nullable="true" MaxLength="3" />
+    <Property Type="Int16" Name="UserStat" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate1" Nullable="true" Precision="23" />
+  </ComplexType>
 </Schema>
