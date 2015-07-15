@@ -18,13 +18,32 @@
 		<script src="scripts/jquery.easing.min.js"></script>
         <script src="scripts/bootstrap.js" type="text/javascript"></script>		<script type="text/javascript">
         <!--
-            function toggle_visibility(id) {
-               var e = document.getElementById(id);
-               if(e.style.display == 'block')
-                  e.style.display = 'none';
-               else
-                  e.style.display = 'block';
-            }
+            (function () {
+                var antaraAPI = "http://localhost:49182/api/page/getallpages";
+                $.ajax(antaraAPI, {
+                    type: 'GET', contentType: 'application/json', success: function (result) {
+                        $.each(result, function (i, field) {
+                            if (field.PageChild == 11) {
+                                $.each(field.PImages, function (i, subfield) {
+                                    debugger;
+                                    $('#' + subfield.ImageControl).attr("src", subfield.ImageUrl);
+                                    $('#' + subfield.LabelControl).html(subfield.ImageText);
+                                    $('#' + subfield.DescControl).html(subfield.Description);
+                                });
+                            }
+                        });
+                    }
+                });
+
+                function toggle_visibility(id) {
+                    var e = document.getElementById(id);
+                    if (e.style.display == 'block')
+                        e.style.display = 'none';
+                    else
+                        e.style.display = 'block';
+                }
+            })();
+            
         //-->
         </script>		
 		 <link href="styles/custom-responsive.css" rel="stylesheet" type="text/css">
@@ -110,45 +129,45 @@
                      <p id="rohitP">Mr. Rohit Kapoor, Sr. Director – Strategy and Business Performance, Max India Limited, is a seasoned professional with diverse experience across management consulting and industry. Over a career spanning 15 years, he has worked across six markets globally, notably with Religare Enterprises Limited and McKinsey & Company. </p>
             <div class="thumbnails directors">
                     <div class="anaP">                        
-                        <img src="images/ana.png"/> 
-                        <span>Analjit Singh</span>
+                        <img id="imgana" src="images/ana.png" />
+                        <span id="lblana">Analjit Singh</span>
                     </div>
                     <div class="rahulP">                        
-                        <img src="images/rk.png"/> 
-                        <span>Rahul Khosla</span>
+                        <img id="imgrk" src="images/rk.png" />
+                        <span id="lblrk">Rahul Khosla</span>
                     </div>
                     <div class="mohitP">                        
-                        <img src="images/mt.png"/> 
-                        <span>Mohit Talwar</span>
+                        <img id="imgmt" src="images/mt.png" />
+                        <span id="lblmt">Mohit Talwar</span>
                     </div>
                     <div class="ashwiniP">                        
-                        <img src="images/aw.png"/> 
-                        <span>Ashwani Windlass</span>
+                        <img id="imgaw" src="images/aw.png" />
+                        <span id="lblaw">Ashwani Windlass</span>
                     </div>
                     <br/>
                     <div class="sujataP">                        
-                        <img src="images/sujata.png"/> 
-                        <span>Sujata Ratnam</span>
+                        <img id="imgsr" src="images/sujata.png" /> 
+                        <span id="lblsr">Sujata Ratnam</span>
                     </div>
                     <div class="pradeepP">                        
-                        <img src="images/prp.png"/> 
-                        <span>Pradeep Pant</span>
+                        <img id="imgprp" src="images/prp.png" />
+                        <span id="lblprp">Pradeep Pant</span>
                     </div>
                     <div class="sharmilaP">                        
-                        <img src="images/st.png"/> 
-                        <span>Sharmila Tagore</span>
+                        <img id="imgst" src="images/st.png" />
+                        <span id="lblst">Sharmila Tagore</span>
                     </div>
                     <div class="shubnumP">                        
-                        <img src="images/sbs.png"/> 
-                        <span>Shubnum Singh</span>
+                        <img id="imgsbs" src="images/sbs.png" />
+                        <span id="lblsbs">Shubnum Singh</span>
                     </div>
                     <div class="hectorP">                        
-                        <img src="images/hdg.png"/> 
-                        <span>Hector de Galard</span>
+                        <img id="imghdg" src="images/hdg.png" />
+                        <span id="lblhdg">Hector de Galard</span>
                     </div>
                     <div class="rohitP">                        
-                        <img src="images/rok.png"/> 
-                        <span>Rohit Kapoor</span>
+                        <img id="imgrok" src="images/rok.png" />
+                        <span id="lblrok">Rohit Kapoor</span>
                     </div>
             </div>
             <p><span>Scroll over to know more about our directors</span></p>
