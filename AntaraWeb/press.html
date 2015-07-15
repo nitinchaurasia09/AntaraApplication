@@ -18,7 +18,60 @@
 		<script src="scripts/jquery.easing.min.js"></script>
         <script src="scripts/bootstrap.js" type="text/javascript"></script>
 		<script src="scripts/custom.js"></script>
- </head>
+
+        <script type="text/javascript">
+        <!--
+            function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+            }
+
+
+            $(document).ready(function(){
+                $('.sp').first().addClass('active');
+                $('.sp').hide();    
+                $('.active').show();
+
+                    $('#button-next').click(function(){
+
+                        $('.active').removeClass('active').addClass('oldActive');    
+                                       if ( $('.oldActive').is(':last-child')) {
+                            $('.sp').first().addClass('active');
+                            }
+                            else{
+                            $('.oldActive').next().addClass('active');
+                            }
+                        $('.oldActive').removeClass('oldActive');
+                        $('.sp').fadeOut();
+                        $('.active').fadeIn();                        
+                        
+                    });
+                    
+                    $('#button-previous').click(function(){
+                        $('.active').removeClass('active').addClass('oldActive');    
+                               if ( $('.oldActive').is(':first-child')) {
+                            $('.sp').last().addClass('active');
+                            }
+                               else{
+                        $('.oldActive').prev().addClass('active');
+                               }
+                        $('.oldActive').removeClass('oldActive');
+                        $('.sp').fadeOut();
+                        $('.active').fadeIn();
+                    });
+            });
+
+        //-->
+        </script>		
+		 <link href="styles/custom-responsive.css" rel="stylesheet" type="text/css">
+		
+		
+		
+		</head>
+
 <body>
 <div id="pageContainer">
     <!-- HEADER -->
@@ -31,7 +84,7 @@
             </div>
 
             <!-- Navigation-->
- <nav>
+ <nav id="nav">
                 <a href="index.html">home</a>  
                 <span><a href="our-belief.html">our belief</a>
                     <span>
@@ -68,10 +121,9 @@
                 </span>
             </nav>
             <div class="navShadow"></div>
-        </div>
-    </header>
+        </div>    </header>
 
-    <!-- Life Handcrafted -->
+<div class="optional-menu" onclick="toggle_visibility('nav');">Menu</div><!-- Life Handcrafted -->
     <div class="innerContainer" id="innerPage">
         <!-- Left Section -->
         <div class="leftSection small">
@@ -86,30 +138,33 @@
             </div>
             <!-- Let,s Get Talking -->
             <div class="press">
-                <span class="leftArw"></span>
+                <!--<span id="button-next" class="leftArw"></span> -->
                 <span class="pressThumb">
-                    <span><a href="#" class="pressFrame"><img src="images/pr1.png"/></a> <a href="#">Media 1</a></span>
-                    <span><a href="#" class="pressFrame"><img src="images/pr2.png"/></a> <a href="#">Media 2</a></span>
-                    <span><a href="#" class="pressFrame"><img src="images/pr3.png"/></a> <a href="#">TOI Crest 08.06.2013</a></span>
-                    <span><a href="#" class="pressFrame"><img src="images/pr4.png"/></a> <a href="#">Forbes 31.12.2013</a></span>
-                    <span><a href="#" class="pressFrame"><img src="images/pr5.png"/></a> <a href="#">India Today</a></span>
-                    <span><a href="#" class="pressFrame"><img src="images/pr6.png"/></a> <a href="#">India Se Jan 2014</a></span>
-                    <span><a href="#" class="pressFrame"><img src="images/pr7.png"/></a> <a href="#">India Today Woman cover story</a></span>
-                    <span><a href="#" class="pressFrame"><img src="images/pr8.png"/></a> <a href="#">Millionaire Asia 05.10.13</a></span>
+                    <span><a href="press/pr1_big.jpg" class="pressFrame" target="_blank"><img src="images/pr1.png"/></a> <!--<a href="#">Media 1</a>--></span>
+                    <span><a href="press/pr2_big.jpg" class="pressFrame" target="_blank"><img src="images/pr2.png"/></a> <!--<a href="#">Media 2</a> --></span>
+                    <span><a href="press/pr3_big.jpg" class="pressFrame" target="_blank"><img src="images/pr3.png"/></a> <!-- <a href="#">TOI Crest 08.06.2013</a> --></span>
+                    <span><a href="press/Forbes India_National_07November2013.pdf" class="pressFrame" target="_blank"><img src="images/pr4.png"/></a> <!-- <a href="#">Forbes 31.12.2013</a>--></span>
+                    <span><a href="press/pr5_big.jpg" class="pressFrame" target="_blank"><img src="images/pr5.png"/></a> <!--<a href="#">India Today</a> --></span>
+                    <span><a href="press/Lifestyle with Lifecare_India Se.pdf" class="pressFrame" target="_blank"><img src="images/pr6.png"/></a> <!-- <a href="#">India Se Jan 2014</a>--></span>
+                    <span><a href="press/IndiaTodayWoman_December2013_ASL.PDF" class="pressFrame" target="_blank"><img src="images/pr7.png"/></a> <!-- <a href="#">India Today Woman cover story</a> --></span>
+                    <span><a href="press/Millionaire Asia_Building the future of care_05October2013.pdf" class="pressFrame" target="_blank"><img src="images/pr8.png"/></a> <!-- <a href="#">Millionaire Asia 05.10.13</a>--></span>
                 </span>
-                <span class="rightArw"></span>
+               <!-- <span class="rightArw"></span> -->
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="innerFoot">
+    <footer>
         <div class="innerContainer">
-            <div class="footElement"><span>To discuss your life at Antara, please call +91 88600 76464 / +91 839292 6464</span></div>
-            <div class="footElement"><span>Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com?Subject=Contact%20Info" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
-            <div class="footElement noBorder"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement"><img src="images/footLogo.png"></div>
+            <div class="footElement"><span>Call us: +91 88600 76464 / +91 83929 26464<br/>
+Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
+            <div class="footElement"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement noBorder"><img src="images/max.png" style="margin-top:11px"/></div>
         </div>
     </footer>
+
 </div>    
 </body>
 </html>

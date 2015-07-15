@@ -35,8 +35,23 @@
             $('.carousel').carousel({
                 interval: 42000 <!-- Time Interval Parameters -->
             })
-        </script>
-</head>
+        </script>		<script type="text/javascript">
+        <!--
+            function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+            }
+        //-->
+        </script>		
+		 <link href="styles/custom-responsive.css" rel="stylesheet" type="text/css">
+		
+		
+		
+		</head>
+
 <body>
 <div id="pageContainer">
     <section class="activesumit">
@@ -50,7 +65,7 @@
             </div>
 
             <!-- Navigation-->
-            <nav>
+            <nav id="nav">
                 <a href="index.html" class="active">home</a>  
                 <span><a href="our-belief.html">our belief</a>
                     <span>
@@ -65,10 +80,9 @@
                 <a href="get-in-touch.html">get in touch</a>
             </nav>
             <div class="navShadow"></div>
-        </div>
-    </header>
+        </div>    </header>
 
-    <!-- CAROUSEL  -->
+<div class="optional-menu" onclick="toggle_visibility('nav');">Menu</div><!-- CAROUSEL  -->
     <div class="slideContainer">
         <div id="myCarousel" class="carousel slide">
             <div class="carousel-inner">

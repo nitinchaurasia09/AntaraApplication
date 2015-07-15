@@ -1,0 +1,68 @@
+#lifeHandcraft .videoPlayer{
+	width: 650px;
+	height: 363px;
+	margin: 0 auto;
+	background: url('../images/video.png') left top no-repeat;
+	position: relative;
+}
+#lifeHandcraft .videoPlayer > img{
+	width: 582px;
+	height: 294px;
+	position: relative;
+	top: 32px;
+	left: 31px;
+}
+#lifeHandcraft .videoPlayer > span.playBtn{
+	background: url('../images/playIcnBig.png') left top no-repeat;
+	width: 58px;
+	height: 57px;
+	display: inline-block;
+	margin: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 99;
+	cursor: pointer;
+}
+#lifeHandcraft .thumbCont{
+	text-align: center;
+	margin: 30px 0 0;
+}
+#lifeHandcraft .thumbCont a{
+	width: 147px;
+	height: 82px;
+	margin: 0 10px;
+	position: relative;
+	display: inline-block;
+	background: url('../images/vidIcn.png') left top no-repeat;
+}
+#lifeHandcraft .thumbCont a img{
+	width: 131px;
+	height: 67px;
+	position: relative;
+	top: 7px;
+	left: -1px;
+	cursor: default;
+}
+#lifeHandcraft .thumbCont a span.play{
+	display: block;
+	background: url('../images/playIcn.png') left top no-repeat;
+	width: 19px;
+	height: 19px;
+	position: absolute;
+	top: 32px;
+	left: 111px;
+	cursor: pointer
+}
+#lifeHandcraft .thumbCont a span{
+	font-size: 13px;
+	color: #58595b;
+	text-decoration: none;
+	margin: 18px 0 0;
+	display: inline-block;
+}
+#lifeHandcraft .thumbCont a span:hover{
+	text-decoration: underline;
+}

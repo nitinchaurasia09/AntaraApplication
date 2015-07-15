@@ -12,7 +12,7 @@
 
         <!-- Bootstrap Default JS -->
     <style type="text/css">
-    .overlay-pop {
+   /* .overlay-pop {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -55,7 +55,7 @@
   color: #2d2d2d;
   text-align: center;
   height: 176px;
-}
+}*/
 </style>
     
 		<script src="scripts/jquery.js"></script>
@@ -63,8 +63,23 @@
     <!-- Plugin JavaScript -->
 		<script src="scripts/jquery.easing.min.js"></script>
         <script src="scripts/bootstrap.js" type="text/javascript"></script>
-		<script src="scripts/custom.js"></script>
- </head>
+		<script src="scripts/custom.js"></script>		<script type="text/javascript">
+        <!--
+            function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+            }
+        //-->
+        </script>		
+		 <link href="styles/custom-responsive.css" rel="stylesheet" type="text/css">
+		
+		
+		
+		</head>
+
 <body>
 <div id="pageContainer">
     <!-- HEADER -->
@@ -77,7 +92,7 @@
             </div>
 
             <!-- Navigation-->
- <nav>
+ <nav id="nav">
                 <a href="index.html">home</a>  
                 <span><a href="our-belief.html">our belief</a>
                     <span>
@@ -114,10 +129,9 @@
                 </span>
             </nav>
             <div class="navShadow"></div>
-        </div>
-    </header>
+        </div>    </header>
 
-    <!-- Life Handcrafted -->
+<div class="optional-menu" onclick="toggle_visibility('nav');">Menu</div><!-- Life Handcrafted -->
     <div class="innerContainer" id="innerPage">
         <!-- Left Section -->
         <div class="leftSection">
@@ -134,23 +148,276 @@
                 <br />You can also simply share your details and we will get in touch with you. Fields marked with an asterisk are mandatory.                
             </p>
             <form action="" method="" id="frmMail">
-                <div class="div1"><label>Title</label> <input type="text" name="txtTitle" id="txtTitle" value="" maxlength="5" class="div1"/></div>
+                <div class="div1"><label>Title</label> <select name="txtTitle" id="txtTitle" style="width:71px" ><option>Mr.</option><option>Ms.</option></select></div>
+                <!-- <input type="text" name="txtTitle" id="txtTitle" value="" maxlength="5" class="div1"/> -->
                 <div><label>First Name*</label>  <input type="text" value="" name="txtFirstName" maxlength="20"  id="txtFirstName"/></div>
                 <div><label>Last Name*</label>  <input type="text" value="" name="txtLastName" maxlength="20" id="txtLastName"/></div>
                 <div><label>Email ID*</label>  <input type="text" value="" name="txtEmail" maxlength="40"  id="txtEmail"/></div>
                 <div><label>Phone No.*</label>  <input type="text" value="" name="txtPhone" maxlength="10" id="txtPhone"/></div>
+                
+                <div><label>Country</label> <!--  <input type="text" value="" name="txtCountry"  id="txtCountry" maxlength="50"/> -->
+<select name="Country" id="Country">
+          <option value="">Please select country</option>
+                    <option >Afghanistan</option>
+                    <option >Aland Islands</option>
+                    <option >Albania</option>
+                    <option >Algeria</option>
+                    <option >American Samoa</option>
+                    <option >Andorra</option>
+                    <option >Angola</option>
+                    <option >Anguilla</option>
+                    <option >Antarctica</option>
+                    <option >Antigua and Barbuda</option>
+                    <option >Argentina</option>
+                    <option >Armenia</option>
+                    <option >Aruba</option>
+                    <option >Australia</option>
+                    <option >Austria</option>
+                    <option >Azerbaijan</option>
+                    <option >Bahamas</option>
+                    <option >Bahrain</option>
+                    <option >Bangladesh</option>
+                    <option >Barbados</option>
+                    <option >Belarus</option>
+                    <option >Belgium</option>
+                    <option >Belize</option>
+                    <option >Benin</option>
+                    <option >Bermuda</option>
+                    <option >Bhutan</option>
+                    <option >Bolivia</option>
+                    <option >Bosnia and Herzegovina</option>
+                    <option >Botswana</option>
+                    <option >Bouvet Island</option>
+                    <option >Brazil</option>
+                    <option >British Indian Ocean Territory</option>
+                    <option >Brunei Darussalam</option>
+                    <option >Bulgaria</option>
+                    <option >Burkina Faso</option>
+                    <option >Burundi</option>
+                    <option >Cambodia</option>
+                    <option >Cameroon</option>
+                    <option >Canada</option>
+                    <option >Cape Verde</option>
+                    <option >Cayman Islands</option>
+                    <option >Central African Republic</option>
+                    <option >Chad</option>
+                    <option >Chile</option>
+                    <option >China</option>
+                    <option >Christmas Island</option>
+                    <option >Cocos (Keeling) Islands</option>
+                    <option >Colombia</option>
+                    <option >Comoros</option>
+                    <option >Congo</option>
+                    <option >Congo, The Democratic Republic of the</option>
+                    <option >Cook Islands</option>
+                    <option >Costa Rica</option>
+                    <option >Cote D'Ivoire</option>
+                    <option >Croatia</option>
+                    <option >Cuba</option>
+                    <option >Cyprus</option>
+                    <option >Czech Republic</option>
+                    <option >Denmark</option>
+                    <option >Djibouti</option>
+                    <option >Dominica</option>
+                    <option >Dominican Republic</option>
+                    <option >Ecuador</option>
+                    <option >Egypt</option>
+                    <option >El Salvador</option>
+                    <option >Equatorial Guinea</option>
+                    <option >Eritrea</option>
+                    <option >Estonia</option>
+                    <option >Ethiopia</option>
+                    <option >Falkland Islands (Malvinas)</option>
+                    <option >Faroe Islands</option>
+                    <option >Fiji</option>
+                    <option >Finland</option>
+                    <option >France</option>
+                    <option >French Guiana</option>
+                    <option >French Polynesia</option>
+                    <option >French Southern Territories</option>
+                    <option >Gabon</option>
+                    <option >Gambia</option>
+                    <option >Georgia</option>
+                    <option >Germany</option>
+                    <option >Ghana</option>
+                    <option >Gibraltar</option>
+                    <option >Greece</option>
+                    <option >Greenland</option>
+                    <option >Grenada</option>
+                    <option >Guadeloupe</option>
+                    <option >Guam</option>
+                    <option >Guatemala</option>
+                    <option >Guernsey</option>
+                    <option >Guinea</option>
+                    <option >Guinea-Bissau</option>
+                    <option >Guyana</option>
+                    <option >Haiti</option>
+                    <option >Heard Island and McDonald Islands</option>
+                    <option >Holy See (Vatican City State)</option>
+                    <option >Honduras</option>
+                    <option >Hong Kong</option>
+                    <option >Hungary</option>
+                    <option >Iceland</option>
+                    <option India>India</option>
+                    <option >Indonesia</option>
+                    <option >Iran, Islamic Republic of</option>
+                    <option >Iraq</option>
+                    <option >Ireland</option>
+                    <option >Isle of Man</option>
+                    <option >Israel</option>
+                    <option >Italy</option>
+                    <option >Jamaica</option>
+                    <option >Japan</option>
+                    <option >Jersey</option>
+                    <option >Jordan</option>
+                    <option >Kazakhstan</option>
+                    <option >Kenya</option>
+                    <option >Kiribati</option>
+                    <option >Korea, Democratic People's Republic of</option>
+                    <option >Korea, Republic of</option>
+                    <option >Kuwait</option>
+                    <option >Kyrgyzstan</option>
+                    <option >Lao People's Democratic Republic</option>
+                    <option >Latvia</option>
+                    <option >Lebanon</option>
+                    <option >Lesotho</option>
+                    <option >Liberia</option>
+                    <option >Libyan Arab Jamahiriya</option>
+                    <option >Liechtenstein</option>
+                    <option >Lithuania</option>
+                    <option >Luxembourg</option>
+                    <option >Macao</option>
+                    <option >Macedonia, The Former Yugoslav Republic of</option>
+                    <option >Madagascar</option>
+                    <option >Malawi</option>
+                    <option >Malaysia</option>
+                    <option >Maldives</option>
+                    <option >Mali</option>
+                    <option >Malta</option>
+                    <option >Marshall Islands</option>
+                    <option >Martinique</option>
+                    <option >Mauritania</option>
+                    <option >Mauritius</option>
+                    <option >Mayotte</option>
+                    <option >Mexico</option>
+                    <option >Micronesia, Federated States of</option>
+                    <option >Moldova, Republic of</option>
+                    <option >Monaco</option>
+                    <option >Mongolia</option>
+                    <option >Montenegro</option>
+                    <option >Montserrat</option>
+                    <option >Morocco</option>
+                    <option >Mozambique</option>
+                    <option >Myanmar</option>
+                    <option >Namibia</option>
+                    <option >Nauru</option>
+                    <option >Nepal</option>
+                    <option >Netherlands</option>
+                    <option >Netherlands Antilles</option>
+                    <option >New Caledonia</option>
+                    <option >New Zealand</option>
+                    <option >Nicaragua</option>
+                    <option >Niger</option>
+                    <option >Nigeria</option>
+                    <option >Niue</option>
+                    <option >Norfolk Island</option>
+                    <option >Northern Mariana Islands</option>
+                    <option >Norway</option>
+                    <option >Oman</option>
+                    <option >Pakistan</option>
+                    <option >Palau</option>
+                    <option >Palestinian Territory, Occupied</option>
+                    <option >Panama</option>
+                    <option >Papua New Guinea</option>
+                    <option >Paraguay</option>
+                    <option >Peru</option>
+                    <option >Philippines</option>
+                    <option >Pitcairn</option>
+                    <option >Poland</option>
+                    <option >Portugal</option>
+                    <option >Puerto Rico</option>
+                    <option >Qatar</option>
+                    <option >Reunion</option>
+                    <option >Romania</option>
+                    <option >Russian Federation</option>
+                    <option >Rwanda</option>
+                    <option >Saint Barthelemy</option>
+                    <option >Saint Helena</option>
+                    <option >Saint Kitts and Nevis</option>
+                    <option >Saint Lucia</option>
+                    <option >Saint Martin</option>
+                    <option >Saint Pierre and Miquelon</option>
+                    <option >Saint Vincent and the Grenadines</option>
+                    <option >Samoa</option>
+                    <option >San Marino</option>
+                    <option >Sao Tome and Principe</option>
+                    <option >Saudi Arabia</option>
+                    <option >Senegal</option>
+                    <option >Serbia</option>
+                    <option >Seychelles</option>
+                    <option >Sierra Leone</option>
+                    <option >Singapore</option>
+                    <option >Slovakia</option>
+                    <option >Slovenia</option>
+                    <option >Solomon Islands</option>
+                    <option >Somalia</option>
+                    <option >South Africa</option>
+                    <option >South Georgia and the South Sandwich Islands</option>
+                    <option >Spain</option>
+                    <option >Sri Lanka</option>
+                    <option >Sudan</option>
+                    <option >Suriname</option>
+                    <option >Svalbard and Jan Mayen</option>
+                    <option >Swaziland</option>
+                    <option >Sweden</option>
+                    <option >Switzerland</option>
+                    <option >Syrian Arab Republic</option>
+                    <option >Taiwan, Province Of China</option>
+                    <option >Tajikistan</option>
+                    <option >Tanzania, United Republic of</option>
+                    <option >Thailand</option>
+                    <option >Timor-Leste</option>
+                    <option >Togo</option>
+                    <option >Tokelau</option>
+                    <option >Tonga</option>
+                    <option >Trinidad and Tobago</option>
+                    <option >Tunisia</option>
+                    <option >Turkey</option>
+                    <option >Turkmenistan</option>
+                    <option >Turks and Caicos Islands</option>
+                    <option >Tuvalu</option>
+                    <option >Uganda</option>
+                    <option >Ukraine</option>
+                    <option >United Arab Emirates</option>
+                    <option >United Kingdom</option>
+                    <option >United States</option>
+                    <option >United States Minor Outlying Islands</option>
+                    <option >Uruguay</option>
+                    <option >Uzbekistan</option>
+                    <option >Vanuatu</option>
+                    <option >Venezuela</option>
+                    <option >Viet Nam</option>
+                    <option >Virgin Islands, British</option>
+                    <option >Virgin Islands, U.S.</option>
+                    <option >Wallis And Futuna</option>
+                    <option >Western Sahara</option>
+                    <option >Yemen</option>
+                    <option >Zambia</option>
+                    <option >Zimbabwe</option>
+
+                  </select>
+                </div>
                 <div><label>State</label>  <input type="text" value="" name="txtState"  id="txtState" maxlength="30"/></div>
-                <div><label>Country</label>  <input type="text" value="" name="txtCountry"  id="txtCountry" maxlength="50"/></div>
                 <div><input type="submit" value="Submit" class="button" /></div>
             </form>
-            <div class="map">
+             <div class="map">
                 <div class="mapContainer">
                     <div class="mapview"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.8473578069556!2d77.2377659!3d28.574346000000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce25487c5b247%3A0xb8888b06bda1b7c0!2sD-18%2C+Shiniwas+Puri%2C+Block+D%2C+Defence+Colony%2C+New+Delhi%2C+Delhi+110049!5e0!3m2!1sen!2sin!4v1436385300595" width ="220px" height="140px" frameborder="0" style="border:0"    ></iframe></div> <!--<img src="images/map1.png">-->
-                    <p><span>Delhi Experiential Studio:</span> D - 18, Defence Colony, New Delhi - 110024,<br/>India M: +91 8860076464</p>
+                    <p><span>Delhi Experiential Studio:</span> D - 18, Defence Colony, New Delhi - 110024, India <br/>M: +91 8860076464</p>
                 </div>
                 <div class="mapContainer">
                      <div class="mapview"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.418285010424!2d78.0669661!3d30.3958722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d701b6b57eb3%3A0x3bdf1469eede4c82!2sAntara+Senior+Living!5e0!3m2!1sen!2sin!4v1436385774110" width="220" height="200" frameborder="0" style="border:0" allowfullscreen></iframe></div> <!-- <img src="images/map2.png">  -->
-                    <p><span>Dehradun Experiential Studio & Community Address:</span> 2, Purukul Road, Guniyal Gaon, Dehradun - <br/>248001,Uttarakhand, India M: +91 8392926464</p>
+                    <p><span>Dehradun Experiential Studio & Community Address:</span> 2, Purukul Road, Guniyal Gaon, <br/>Dehradun - 248001,&nbsp;Uttarakhand, India <br/> M: +91 8392926464</p>
                 </div>
             </div>
             <!-- Scroll -->
@@ -196,14 +463,16 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="innerFoot">
+    <!-- Footer -->    <footer>
         <div class="innerContainer">
-            <div class="footElement"><span>To discuss your life at Antara, please call +91 88600 76464 / +91 839292 6464</span></div>
-            <div class="footElement"><span>Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com?Subject=Contact%20Info" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
-            <div class="footElement noBorder"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement"><img src="images/footLogo.png"></div>
+            <div class="footElement"><span>Call us: +91 88600 76464 / +91 83929 26464<br/>
+Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
+            <div class="footElement"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement noBorder"><img src="images/max.png" style="margin-top:11px"/></div>
         </div>
     </footer>
+
 </div> 
 <div id="show_popup" style="display: none;">
     <div class="overlay-pop"></div>
@@ -218,7 +487,7 @@
                 <br>
                 <br>
 
-            <div style="padding-top:10px;"><img src="http://antaraseniorliving.com/wp-content/themes/flashlight/images/logo-pop.png"></div>
+            <div style="padding-top:10px;"><img src="images/logo-pop.png"></div>
 
         </div>
 
@@ -261,7 +530,7 @@ $(".pop-new").css({"top":br_height,"margin-top":-88});
       /*  var _d="{'txtTitle':'"+$("#txtTitle").val()+"','txtFirstName':'"+$("#txtFirstName").val()+"','txtLastName':'"+$("#txtLastName").val()+"','txtEmail':'"+$("#txtEmail").val()+"','txtPhone':'"+$("#txtPhone").val()+"','txtState':'"+$("#txtState").val()+"','txtCountry':'"+$("#txtCountry").val()+"'}";
        */
        var _d=$("#frmMail").serialize();
-       // alert(_d);
+        //alert(_d);
         return _d;
     }
     this.validate=function(){

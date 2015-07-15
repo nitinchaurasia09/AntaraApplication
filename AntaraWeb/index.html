@@ -11,54 +11,7 @@
         <link rel="stylesheet" href="styles/main.css">
 
         <!-- Bootstrap Default JS -->
-         <style type="text/css">
-    .overlay-pop {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 99999;
-  overflow: hidden;
-  cursor: pointer;
-}
-.close-pop {
-  background: url(images/controls1.png) no-repeat -50px 0;
-  text-indent: -9999px;
-  width: 26px;
-  height: 26px;
-  position: absolute;
-  display: block;
-  right: 0;
-  margin-right: 33px;
-  cursor: pointer;
-}
-.pop-new {
-  position: fixed;
-  background-color:#68132F;
-  top: 0;
-  left: 50%;
-  z-index: 99999;
-  overflow: hidden;
-  width: 480px;
-  margin-left: -240px;
-  /*ackground: url(images/pop_bg.png) repeat left top;*/
-  padding: 10px;
-  color: #2d2d2d;
-  font-size: 14px;
-  line-height: 19px;
-}
-.pop-inside {
-  background: #FDF1F1;
-  padding: 32px 31px 10px;
-  margin: 0;
-  background: #fff;
-  color: #2d2d2d;
-  text-align: center;
-  height: 176px;
-}
-</style>
-		<script src="scripts/jquery.js"></script>
+         <script src="scripts/jquery.js"></script>
     
     <!-- Plugin JavaScript -->
 		<script src="scripts/jquery.easing.min.js"></script>
@@ -83,7 +36,24 @@
                 interval: 42000 // Time Interval Parameters -->
             })
         </script>
-</head>
+
+		
+		<script type="text/javascript">
+        <!--
+            function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+            }
+        //-->
+        </script>		
+		 <link href="styles/custom-responsive.css" rel="stylesheet" type="text/css">
+		
+		
+		
+		</head>
 <body class="home">
     <!-- Facebook plugin -->
     <div id="fb-root"></div>
@@ -107,7 +77,7 @@
             </div>
 
             <!-- Navigation-->
-            <nav>
+            <nav id="nav">
                 <a href="index.html" class="active">home</a>  
                 <span><a href="our-belief.html">our belief</a>
                     <span>
@@ -147,6 +117,10 @@
         </div>
     </header>
 
+<div class="optional-menu" onClick="toggle_visibility('nav');">Menu</div>	
+
+<div class="optional-banner"><img src="images/c11.jpg"></div>	
+	
     <!-- CAROUSEL  -->
     <div class="slideContainer">
         <div id="myCarousel" class="carousel slide">
@@ -170,12 +144,12 @@
                       <p>Antara is a beautifully crafted full service residential community </br> for those who believe age is just a number</p>
                     </div>
                 </div>
-                <div class="item">
+                <!-- <div class="item">
                     <img src="images/c5.jpg" alt="">
                     <div class="carousel-caption">
                       <p>Antara is a beautifully crafted full service residential community </br> for those who believe age is just a number</p>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="item">
                     <img src="images/c1.jpg" alt="">
@@ -209,6 +183,14 @@
         <a href="antara-dehradun.html"><img src="images/wwa2.png"></a>
         <a href="max-promise.html"><img src="images/wwa3.png"></a>
     </div>
+
+	<div class="optional">
+        <a href="our-belief.html"><img src="images/wwa11.png"></a>
+        <a href="antara-dehradun.html"><img src="images/wwa22.png"></a>
+        <a href="max-promise.html"><img src="images/wwa33.png"></a>
+	</div>
+
+
     <!-- Scroll -->
     <div class="scroll lowHght">
             <a href="#pageContainer" class="scrollLink up"><span><img src="images/uparw.jpg"/></span></a>
@@ -225,8 +207,8 @@
         <!-- Video PLayer -->
         <div class="videoPlayer">
             <span class="playBtn"></span>
-            <a  onclick="" vId="https://www.youtube.com/embed/EloZ2XRlM4w?autoplay=1&rel=0"></a>
-             <img src="images/c5.jpg">
+            <a  onclick="" vId="https://www.youtube.com/embed/EloZ2XRlM4w?autoplay=1&rel=0&fs=1"></a>
+             <img src="images/frame_yt.png">
         </div>
         <!-- Stack of Images -->
         <!-- <div class="thumbCont">
@@ -250,7 +232,23 @@
             <h1>Let's get talking <span>Connect with us on social media</span></h1>
         </div>
         <!-- Stack of Images -->
-        <div class="borderDiv" href="#"><img class="letsImg" src="images/blog.jpg"></div>
+        <div class="borderDiv" href="#">
+          <span class="fbContent">
+            <div class="blogLogo">
+            <a href="tara-blog.html" class="blogContentlink">   <img class="" src="images/tara_blog_head.png"></a>
+            </div>
+             <div class="ytLogo ">
+            <a href="tara-blog.html" class="blogContentlink">   <img class="" src="images/tara_blog_pic.png"></a>
+            </div>
+            <div class="blogContent">
+             <a href="tara-blog.html" class="blogContentlink"> Hi, I am Tara Singh Vachani, CEO, Antara Senior Living. Welcome to my blog, where I share the Antara Dehradun journey.</a>
+              <a class="signupLink" >Sign up </a>
+            </div>
+            <div class="blogsignup">         </div>
+          </span>
+
+        </div>
+        
         <div class="borderDiv" href="#">
         <!-- Facebook content -->
             <span class="fbContent">
@@ -267,6 +265,14 @@
         
 
     </div>
+
+	<div class="optional">
+        <a href="tara-blog.html"><img src="images/blog.png"></a>
+		
+		<a class="signupLink" style="text-decoration:underline;">Sign up for Tara's Blog </a>
+        
+	</div>
+
     <!-- Scroll -->
     <div class="scroll lowHght noCnt">
         <a href="#pageContainer" class="scrollLink up"><span><img src="images/uparw.jpg"/></span></a>
@@ -277,7 +283,7 @@
         <div class="innerContainer">
             <div class="footElement"><img src="images/footLogo.png"></div>
             <div class="footElement"><span>Call us: +91 88600 76464 / +91 83929 26464<br/>
-Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com?Subject=Contact%20Info" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
+Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com" target="_top">contactus@antaraseniorliving.com</a></br>&nbsp; Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
             <div class="footElement"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
             <div class="footElement noBorder"><img src="images/max.png" style="margin-top:11px"/></div>
         </div>
@@ -305,7 +311,7 @@ Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com?
                 <br/>
                 <br/>
                 </form>
-            <div style="padding-top:10px;"><img src="http://antaraseniorliving.com/wp-content/themes/flashlight/images/logo-pop.png"></div>
+            <div><img src="images/logo-pop.png"></div>
 
         </div>
 
@@ -325,7 +331,7 @@ Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com?
 
             $("div.videoPlayer img").hide();
 $("iframe").remove();
-            $("div.videoPlayer").append('<iframe width="582px" height="294px" style="position:relative;top:32px;left:31px" src="'+oldVid+'" frameborder="0"></iframe>');
+            $("div.videoPlayer").append('<iframe width="582px" height="294px" style="position:relative;top:32px;left:31px" src="'+oldVid+'" frameborder="0" allowFullScreen></iframe>');
             //$("div.videoPlayer img").show();
             $("div.videoPlayer img").attr('src',oldSrc);
             $("div.videoPlayer a").attr('vId',oldVid);
@@ -335,12 +341,12 @@ $("iframe").remove();
         $("div.videoPlayer").click(function(){
             $("span.playBtn").hide();
             $(this).children('img').hide();
-            $("div.videoPlayer").append('<iframe width="582px" height="294px" style="position:relative;top:32px;left:31px" src="'+$(this).children('a').attr('vId')+'" frameborder="0"></iframe>');
+            $("div.videoPlayer").append('<iframe width="582px" height="294px" style="position:relative;top:32px;left:31px" src="'+$(this).children('a').attr('vId')+'" frameborder="0" allowFullScreen></iframe>');
         });
 
      
 
-     $("img.letsImg").click(function(){    
+     $(".signupLink").click(function(){    
              $("div#show_popup").show();
 
      });   
@@ -366,7 +372,7 @@ $("#frmMail").submit(function(e){
                     //type:"json",
                     success:function(_data){
                        $("#frmMail").hide();
-                        $("#lblText").text('Thank you for the subscription'); 
+                        $("#lblText").text('Thanks for signing up. You will start receiving our blog updates shortly'); 
                          //$("#show_popup").hide('fast');                       
                     }   
                 });
@@ -391,6 +397,8 @@ this.validate=function(){
         return true;
     }
        
-</script>  <script>ytEmbed.init({ 'block': 'youtubeDivPlaylist', 'type': 'playlist', 'q': 'PLHAh1MP5b-NXvVc5arVO8TaV1moqLvcn3', 'results': 5, 'meta': true });</script>  
+</script>  <script>ytEmbed.init({ 'block': 'youtubeDivPlaylist', 'type': 'playlist', 'q': 'PLlws_9PjzvlVUvVbnDTrDoGnn6-jx3nRG', 'results': 5, 'meta': true });
+//PLHAh1MP5b-NXvVc5arVO8TaV1moqLvcn3  old id
+</script>  
 </body>
 </html>

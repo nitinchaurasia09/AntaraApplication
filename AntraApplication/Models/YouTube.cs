@@ -49,7 +49,7 @@ namespace AntaraApplication.Models
             DataTable dtUser = new DataTable();
             try
             {
-                parameters[0] = new MySqlParameter("@guid", null);
+                parameters[0] = new SqlParameter("@guid", null);
                 parameters[0].Direction = ParameterDirection.Input;
                 parameters[0].DbType = DbType.Guid;
                 dtUser = Ado.ExecuteStoredProcedure("sp_GetAllYTlinks", parameters);
@@ -74,17 +74,17 @@ namespace AntaraApplication.Models
                 Ado.ExecuteNonQueryStoredProcedure("DeleteYouTubeUrls", null);
                 foreach (YouTube yt in youtubes)
                 {
-                    parameters[0] = new MySqlParameter("@YouTubeLink", yt.YOUTUBELINK);
+                    parameters[0] = new SqlParameter("@YouTubeLink", yt.YOUTUBELINK);
                     parameters[0].Direction = ParameterDirection.Input;
                     parameters[0].DbType = DbType.String;
 
 
-                    parameters[1] = new MySqlParameter("@NumberOfTimeExecuted", yt.NUMBEROFTIMEEXECUTED);
+                    parameters[1] = new SqlParameter("@NumberOfTimeExecuted", yt.NUMBEROFTIMEEXECUTED);
                     parameters[1].Direction = ParameterDirection.Input;
                     parameters[1].DbType = DbType.Int16;
 
 
-                    parameters[2] = new MySqlParameter("@YouTubeText", yt.YOUTUBETEXT);
+                    parameters[2] = new SqlParameter("@YouTubeText", yt.YOUTUBETEXT);
                     parameters[2].Direction = ParameterDirection.Input;
                     parameters[2].DbType = DbType.String;
 

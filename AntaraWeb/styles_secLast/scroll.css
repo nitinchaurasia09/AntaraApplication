@@ -1,0 +1,62 @@
+
+.scroll{
+	width: 1024px;
+	margin: 0 auto;
+	height: 78px;
+	text-align: center;
+	position: relative;
+}
+.lowHght{
+	height: 48px;
+	padding: 0 0 20px;
+}
+.scroll:after{
+	content:'...............................................................................................................................................................................................................';
+	color: #100f0e;
+	font-size: 13px;
+	font-weight: bold;
+	position: absolute;
+	top: 60px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.scroll.lowHght:after{
+	top: 50px;
+}
+.scroll.lowHght.noCnt:after{
+	content: '';
+}
+.scroll > a{
+	color: #f16f23;
+	font-size: 12px;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 18px 0 0;
+	display: inline-block;
+}
+a.centerLink{
+	float: none!important;
+}
+.scroll > a.scrollLink{
+	float: right;
+	color: #f16f23;
+	font-size: 10px;
+	font-weight: normal;
+}
+.scroll > a.scrollLink > span{
+	text-align: center;
+	display: block;
+	font-size: 13px;
+}
+.scroll.sml{
+	width: 744px;
+	height: 40px;
+}
+.scroll.sml:after{
+	content:'..................................................................................................................................................';
+	top: 25px;
+}
+.scroll.sml > a{
+	margin: 0;
+}

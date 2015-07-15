@@ -100,3 +100,4 @@ D:\Old project\My Project\AntaraApplication\AntraApplication\obj\Debug\AntaraApp
 D:\Old project\My Project\AntaraApplication\AntraApplication\obj\Debug\AntaraApplication.pdb
 D:\Old project\My Project\AntaraApplication\AntraApplication\bin\MySql.Data.dll
 D:\Old project\My Project\AntaraApplication\AntraApplication\bin\MySql.Data.Entity.EF6.dll
+D:\Old project\My Project\AntaraApplication\AntraApplication\obj\Debug\AntaraApplication.csprojResolveAssemblyReference.cache

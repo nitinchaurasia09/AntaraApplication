@@ -4,9 +4,10 @@ require_once 'class.phpmailer.php';
 $mail = new PHPMailer(true); //defaults to using php "mail()"; the true param means it will throw exceptions on errors, which we need to catch
 
 try {
-  $mail->AddAddress('sumit.rajora@gmail.com', 'Varun');
-  $mail->SetFrom('sumit.rajora@gmail.com', 'Hi');
-  $mail->AddReplyTo('sumit.rajora@gmail.com', 'First Last');
+  $mail->AddAddress('communitydevelopment@antaraseniorliving.com', 'Antara Community');
+  $mail->AddBCC('varun.dewan@revmint.com', 'Antara Community');
+  $mail->SetFrom('communitydevelopment@antaraseniorliving.com', 'Antara Community');
+  //$mail->AddReplyTo('sumit.rajora@gmail.com', 'First Last');
   $mail->Subject = 'Enquiry from user';
   $mail->AltBody = 'To view the message, please use an HTML compatible email viewer!'; // optional - MsgHTML will create an alternate automatically
  //mail format

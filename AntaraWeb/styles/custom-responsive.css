@@ -1,3 +1,5 @@
+.optional-banner {display:none}
+
 .optional-menu {display:none}
 
 .optional {display:none;}
@@ -43,21 +45,31 @@ div.drdText {min-height: 400px;width: 393px;}
     padding-left: 30px;
     width: 732px;
 }
+
+
+
+
+#letTalk .borderDiv {    margin: 0 23px;}
+
+
+
+
 #letTalk a {
-    background: rgba(0, 0, 0, 0) url("../images/mandalFrame.png") no-repeat scroll left top / 100% auto;
-    display: inline-block;
-    height: 401px;
-    margin: 0 35px;
-    width: 232px;
+    margin: 0 0 0 0px;
+    text-align: left;
 }
 
-#letTalk a img {
-    left: 21px;
-    position: relative;
-    top: 20px;
-    width: 185px;
-}
 
+
+
+.footElement > span {
+    color: #fff;
+    display: block;
+    font-family: arial;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 3px;
+}
 
 .career {
     background: #fff url("../images/career.png") repeat-x scroll left top;
@@ -78,7 +90,12 @@ div.drdText {min-height: 400px;width: 393px;}
 }
 
 
+.blogArea {   width: 515px; height:500px;}
 
+
+.blogSnippet {   width: 480px; text-align:left; padding:0px;}
+
+.rightSection .blogContent {text-align:left; padding:0px;}
 
 	
 }
@@ -108,9 +125,13 @@ div.drdText {min-height: 400px;width: 393px;}
 
 #WhoWeAre a img {margin:0px 0px 0px 10px; width:220px; height:auto;}
 
-#letTalk a {margin:0px 0px 0px 10px; width:220px; height:auto; background-size:100% auto; height:400px;}
+#letTalk a {margin:0px 0px 0px 0px;  height:auto; background-size:100% auto;}
 
-#letTalk a img{ width:180px; left:20px; top:19px; }
+.blogContentlink > img {   width: 116px;}
+
+#letTalk .borderDiv .letsImg, #letTalk .borderDiv .fbContent {   height: 314px !important;   overflow: hidden;}
+
+.blogLogo {   padding: 10px 0 4px;}
 
 footer .footElement:nth-child(1) {display:none;}
 
@@ -130,7 +151,12 @@ footer .footElement:nth-child(3) {margin-left:50px; padding-right:70px;}
 
 .innerContainer {    padding: 0;}	
 
-
+#youtubeDivPlaylist {
+    height: 266px;
+    overflow: hidden;
+    width: 173px;
+	padding:0px;
+}
 
 .leftSection > a {    margin: 0 14px 25px 0px;}
 
@@ -142,7 +168,7 @@ footer .footElement:nth-child(3) {margin-left:50px; padding-right:70px;}
 
 #innerPage #letTalk a {   width: 170px; height: 300px;}
 
-#letTalk a img {  left: 15px;    top: 15px;   width: 138px;}
+
 
 .press {  height: auto;    width: 490px;}
 
@@ -166,6 +192,47 @@ div.drdText {   width: 240px;}
     width: 159px;
 }
 
+
+
+
+#letTalk .borderDiv {
+    margin: 5px;
+}
+
+#letTalk .borderDiv {
+    height: 357px;
+    width: 229px;
+	background-size:100% auto;
+}
+
+
+
+#letTalk .borderDiv .letsImg, #letTalk .borderDiv .fbContent {
+    background-color: #fff;
+    float: left;
+    left: 20px;
+    position: relative;
+    top: 20px;
+    width: 186px;
+}
+
+.rightSection .videoPlayer > img {
+    height: 214px;
+    left: 24px;
+    position: relative;
+    top: 24px;
+    width: 423px;
+}
+
+.rightSection .videoPlayer > iframe { left: 24px !important; top: 24px !important; width: 423px;  height: 214px;}
+
+
+.blogArea {   width: 325px; height:725px;}
+
+
+.blogSnippet {   width: 300px; text-align:left; padding:0px;}
+
+ 
 }
 
 
@@ -188,7 +255,6 @@ div.drdText {   width: 240px;}
 
 #letTalk a {margin:0px 6px 0px 2px; width:185px; height:auto; background-size:100% auto; height:300px;}
 
-#letTalk a img{ width:150px; left:17px; top:16px; }
 
 footer .footElement:nth-child(3) {margin-left:0px; padding-right:0px; padding-left:0px;}
 
@@ -271,7 +337,7 @@ span.leftArw {
     width: 10px;
 }
  
-.centerImg {width:100%;}
+.centerImg {width:50%;}
 
 
 
@@ -288,7 +354,6 @@ form div input {   width: 100%;}
 
 #innerPage #letTalk a {   width: 120px; height: 300px;}
 
-#letTalk a img {  left: 10px;    top: 10px;   width: 98px;}
 
 .press {   width: 390px;}
 
@@ -311,6 +376,130 @@ div.drdText {   width: 100%;}
 
 .rightSection .thumbnails {   width: 385px;}
 
+nav {
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 17px;
+    text-align: center;
+    text-transform: uppercase;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+.footElement > span {
+    color: #fff;
+    display: block;
+    font-family: arial;
+    font-size: 12px;
+    margin-top: -4px;
+}
+
+
+
+footer .footElement.noBorder {
+    float: right;
+}
+
+footer .footElement:nth-child(3) {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+.footElement > span {
+    color: #fff;
+    display: block;
+    font-family: arial;
+    font-size: 11px;
+    margin-top: 0;
+}
+
+
+
+#letTalk .borderDiv {
+    background-size: 100% auto;
+    height: 300px;
+    width: 182px;
+}
+
+
+
+
+#letTalk .borderDiv .letsImg, #letTalk .borderDiv .fbContent {
+    background-color: #fff;
+    float: left;
+    left: 16px;
+    position: relative;
+    top: 16px;
+    width: 148px;
+}
+
+.ytLogo img{
+width:60% !important;
+}
+
+
+
+#youtubeDivPlaylist {
+    height: 203px;
+    overflow: hidden;
+    padding: 0;
+    width: 147px;
+}
+
+
+#letTalk .borderDiv .letsImg, #letTalk .borderDiv .fbContent {
+    height: 249px !important;
+    overflow: hidden;
+}
+
+.blogContentlink {
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.blogContent {   padding: 0 20px; line-height:12px;}
+
+
+
+.videoPlayer > iframe {   width: 517px;    height: 262px; left:29px !important; top:29px !important;}
+
+
+.rightSection .videoPlayer > img {
+    height: 168px;
+    left: 20px;
+    position: relative;
+    top: 20px;
+    width: 333px;
+}
+
+.rightSection .videoPlayer > iframe {
+    height: 171px;
+    left: 18px !important;
+    top: 18px !important;
+    width: 336px;
+}
+
+
+
+.blogArea {
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+}
+
+
+.rightSection .blogSnippet {   width: 100%;}
+
+.rightSection .blogContent {    line-height: 20px;}
+
+.searchArea {   margin: 20px 0;    width: 100%;}
+
+.verticalborder {   border-left: 0 dotted #100f0e; display:none !important;}
+
+
 
 
 }
@@ -327,6 +516,14 @@ div.drdText {   width: 100%;}
 /*  480px  */
 @media all and (max-width: 639px) {
 	
+body {padding-top:0px;}
+
+
+
+
+
+header{position:relative;}
+	
 .innerContainer {   margin: 0 auto;    padding: 0 20px; width: 435px;}	
 
 .topHeader a.arLogo {    background: rgba(0, 0, 0, 0) url("../images/logo.png") no-repeat scroll left top / 200px auto !important;    height: 53px;    margin: 17px 0 0;   text-indent: -9999px;    width: 200px; background-size:200px auto !important;}
@@ -339,7 +536,7 @@ nav {   margin: 0px;    position: absolute;    text-align: left;    width: 150px
 
 nav a{ display:block; border-bottom:1px solid #37281b; color:#fff; padding:7px;}
 
-nav a:hover { background:#C4AF90; color:#fff;}
+nav a:hover { background:#22170d; color:#fff;}
 
 nav span span {
     background: #22170d none repeat scroll 0 0;
@@ -373,7 +570,7 @@ header {   min-height: 66px;}
 
 .scroll > a { float:left;}
 
-.optional-menu {display:block; padding:10px; background:#C4AF90; color:#fff; font-weight:900; font-family:Arial, Helvetica, sans-serif; text-transform:uppercase; background-image:url(../images/as1.png); background-repeat:no-repeat; background-position:right center; cursor:pointer;  font-size: 14px;}
+.optional-menu {display:block; padding:10px; background:#37281b; color:#fff; font-weight:900; font-family:Arial, Helvetica, sans-serif; text-transform:uppercase; background-image:url(../images/as1.png); background-repeat:no-repeat; background-position:right center; cursor:pointer;  font-size: 14px;}
 
 .carouselMessage { right: 0;   top: 12%;    width: 290px;	background-size:100% auto;}
 
@@ -393,13 +590,12 @@ header {   min-height: 66px;}
 
 #letTalk a {margin:0px 0px 0px 0px; width:136px; height:auto; background-size:100% auto; height:220px;}
 
-#letTalk a img{ width:110px; left:13px; top:12px; }
 
 footer .footElement.noBorder {   display:none;}
 
 .footElement {   border-right: 0 solid #fff;}
 
-footer .footElement:nth-child(2) {  width: 325px;}
+footer .footElement:nth-child(2) {  width: 290px;}
 
 footer .footElement:nth-child(3) {   margin-top: 35px;}
 
@@ -482,7 +678,93 @@ form div {  width: 98%;}
 
 .scroll.sml::after { width:100%; margin:0px;}
 
+#letTalk .borderDiv {
+    background-size: 100% auto;
+    height: 301px;
+    width: 127px;
+}
 
+
+
+#letTalk .borderDiv .letsImg, #letTalk .borderDiv .fbContent {
+    background-color: #fff;
+    float: left;
+    left: 12px;
+    position: relative;
+    top: 11px;
+    width: 103px;
+}
+
+
+
+#youtubeDivPlaylist ul table td{display:block;}
+
+
+#youtubeDivPlaylist {
+    height: 144px;
+    overflow: hidden;
+    padding: 0;
+    width: 98px;
+}
+
+#letTalk .borderDiv {
+    background-size: 100% auto;
+    height: 201px;
+    width: 127px;
+}
+
+nav span span#asp {
+    left: 150px;
+    top: 95px;
+}
+
+
+#letTalk .borderDiv .letsImg, #letTalk .borderDiv .fbContent {
+    height: 170px !important;
+    overflow: hidden;
+}
+
+.blogContentlink {
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.blogContent {   padding: 0 20px; line-height:12px;}
+
+
+.blogContentlink > img {
+    width: 88px;
+}
+
+.videoPlayer > iframe {
+    height: 192px;
+    left: 20px !important;
+    top: 21px !important;
+    width: 378px;
+}
+
+.rightSection .videoPlayer > iframe {
+    height: 132px;
+    left: 14px !important;
+    top: 14px !important;
+    width: 259px;
+}
+
+
+.rightSection .videoPlayer > img {
+    height: 130px;
+    left: 15px;
+    position: relative;
+    top: 15px;
+    width: 259px;
+}
+
+
+form div select, #txtTitle {width:100% !important;} 	
+
+.mapview iframe{width:100% !important; height:200px !important;  margin-bottom:15px; border:1px solid #ccc !important;}
+
+.mapContainer {   margin: 30px 0 0;   width: 90%;}
 
 }
 
@@ -527,7 +809,7 @@ footer .footElement:nth-child(2) {  width: 225px;  padding-right: 10px;}
 
 .videoPlayer > img {  height: 147px;    left: 16px;    position: relative;    top: 17px;    width: 89.5%;}
 
-.videoPlayer {   height: 190px;}
+.videoPlayer {   height: 205px;}
 
 .thumbCont {   margin: 10px auto;}
 
@@ -583,6 +865,49 @@ h1 { font-size: 16px;   font-weight: bold;}
     width: 71px;
 }
 
+.footElement {  margin: 21px 0 0;}
+
+
+.footElement > span {
+    color: #fff;
+    display: block;
+    font-family: arial;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 14px;
+    margin-top: 8px;
+}
+
+footer .footElement:nth-child(3) {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#letTalk .borderDiv {display:none;}
+
+.footElement br{display:none;}
+
+.scroll > a.scrollLink { display: none;}
+
+.scroll::after {    padding-bottom: 15px;}
+
+.scroll::after {    top: 50px;}
+
+.lowHght {   display: none;}
+
+.optional-banner {display:block; width:100%; height:auto;}
+
+.optional-banner img { width:100%; height:auto;}
+
+.slideContainer {   display: none;}
+
+.videoPlayer > iframe {
+    height: 144px;
+    left: 15px !important;
+    top: 16px !important;
+    width: 285px;
+}
+
 }
 
 
@@ -632,5 +957,12 @@ footer .footElement:nth-child(2) {  width: 225px;  padding-right: 0px;}
 .thumbnails.directors {  width: 293px;}
 
 .thumbnails div {    margin: 0 4px 60px;}
+
+.videoPlayer > iframe {
+    height: 127px;
+    left: 14px !important;
+    top: 14px !important;
+    width: 252px;
+}
 	
 }

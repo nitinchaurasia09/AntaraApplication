@@ -1,195 +1,197 @@
-﻿<!doctype html>
+﻿    <!doctype html>
 <html class="no-js">
-<head>
-    <meta charset="utf-8">
-    <title>ANTARA Senior LIving</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!--<link rel="shortcut icon" href="/favicon.ico">
-     Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <head>
+        <meta charset="utf-8">
+        <title>ANTARA Senior LIving</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!--<link rel="shortcut icon" href="/favicon.ico">
+         Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/main.css">
 
-    <!-- Bootstrap Default JS -->
-
-    <script src="scripts/jquery.js"></script>
-
+        <!-- Bootstrap Default JS -->
+        
+		<script src="scripts/jquery.js"></script>
+    
     <!-- Plugin JavaScript -->
-    <script src="scripts/jquery.easing.min.js"></script>
-    <script src="scripts/bootstrap.js" type="text/javascript"></script>
-    <script>
-        (function () {
-            var antaraAPI = "http://localhost:49182/api/page/getallpages";
-            $.ajax(antaraAPI, {
-                type: 'GET', contentType: 'application/json', success: function (result) {
-                    $.each(result, function (i, field) {
-                        if (field.PageChild == 11) {
-                            $.each(field.PImages, function (i, subfield) {
-                                debugger;
-                                $('#' + subfield.ImageControl).attr("src", subfield.ImageUrl);
-                                $('#' + subfield.LabelControl).html(subfield.ImageText);
-                                $('#' + subfield.DescControl).html(subfield.Description);
-                            });
-                        }
-                    });
-                }
-            });
-        })();
-    </script>
-</head>
+		<script src="scripts/jquery.easing.min.js"></script>
+        <script src="scripts/bootstrap.js" type="text/javascript"></script>		<script type="text/javascript">
+        <!--
+            function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+            }
+        //-->
+        </script>		
+		 <link href="styles/custom-responsive.css" rel="stylesheet" type="text/css">
+		
+		
+		
+		</head>
+
 <body>
-    <div id="pageContainer">
-        <!-- HEADER -->
-        <header>
-            <div class="innerContainer headerantara">
-                <!-- Top Header -->
-                <div class="topHeader">
-                    <a href="#" class="arLogo">Antara Senior Living</a>
-                    <span class="maxEnt">A MAX Enterprise</span>
-                </div>
-
-                <!-- Navigation-->
-                <nav>
-                    <a href="index.html">home</a>
-                    <span>
-                        <a href="our-belief.html">our belief</a>
-                        <span>
-                            <a href="our-belief.html">The Antara Way</a>
-                            <a href="our-board-of-directors.html" class="active">Our Board of Directors</a>
-                            <a href="our-team.html">Our team</a>
-                        </span>
-                    </span>
-                    <span>
-                        <a href="antara-dehradun.html">antara dehradun</a>
-                        <span>
-                            <a href="antara-dehradun.html#ol">OUR LOCATION</a>
-                            <a href="antara-dehradun.html#odj">OUR DESIGN JOURNEY</a>
-                            <a href="antara-dehradun.html#ls">LIVING SPACES</a>
-                            <a href="antara-dehradun.html#laa">LIFE AT ANTARA</a>
-                            <a href="antara-dehradun.html#acb">ACB</a>
-                            <a href="antara-dehradun.html#download">DOWNLOADS</a>
-                            <a href="antara-dehradun.html#faq">FAQS</a>
-                        </span>
-                    </span>
-                    <span>
-                        <a href="antara-speak.html">antara speak</a>
-                        <span id="asp">
-                            <a href="antara-speak.html">Social media</a>
-                            <a href="film.html">film</a>
-                            <a href="press.html">press</a>
-                        </span>
-                    </span>
-                    <a href="max-promise.html">max promise</a>
-                    <span>
-                        <a href="get-in-touch.html">get in touch</a>
-                        <span id="getocuh">
-                            <a href="get-in-touch.html#innerPage">Reach Us</a>
-                            <a href="get-in-touch.html#carer">careers</a>
-                        </span>
-                    </span>
-                </nav>
-                <div class="navShadow"></div>
+<div id="pageContainer">
+    <!-- HEADER -->
+    <header>
+        <div class="innerContainer headerantara">
+            <!-- Top Header -->
+            <div class="topHeader">
+                <a href="#" class="arLogo">Antara Senior Living</a>
+                <span class="maxEnt">A MAX Enterprise</span>
             </div>
-        </header>
 
-        <!-- Life Handcrafted -->
-        <div class="innerContainer" id="innerPage">
-            <!-- Left Section -->
-            <div class="leftSection">
-                <a href="our-belief.html">The antara way</a>
-                <a href="our-board-of-directors.html" class="active">our board of directors</a>
-                <a href="our-team.html">our team</a>
+            <!-- Navigation-->
+ <nav id="nav">
+                <a href="index.html">home</a>  
+                <span><a href="our-belief.html">our belief</a>
+                    <span>
+                        <a href="our-belief.html">The Antara Way</a>
+                        <a href="our-board-of-directors.html" class="active">Our Board of Directors</a>
+                        <a href="our-team.html">Our team</a>
+                    </span>
+                </span>
+                <span><a href="antara-dehradun.html">antara dehradun</a>  
+                    <span>
+                        <a href="antara-dehradun.html#ol">OUR LOCATION</a>
+                        <a href="antara-dehradun.html#odj">OUR DESIGN JOURNEY</a>
+                        <a href="antara-dehradun.html#ls">LIVING SPACES</a>
+                        <a href="antara-dehradun.html#laa">LIFE AT ANTARA</a>
+                        <a href="antara-dehradun.html#acb">ACB</a>
+                        <a href="antara-dehradun.html#download">DOWNLOADS</a>
+                        <a href="antara-dehradun.html#faq">FAQS</a>
+                    </span>
+                </span>
+                <span><a href="antara-speak.html">antara speak</a>  
+                    <span id="asp">
+                        <a href="antara-speak.html">Social media</a>
+                        <a href="film.html">film</a>
+                        <a href="press.html">press</a>
+                    </span>
+                </span>
+                <a href="max-promise.html">max promise</a>  
+                <span> 
+                    <a href="get-in-touch.html">get in touch</a>
+                    <span id="getocuh">
+                        <a href="get-in-touch.html#innerPage">Reach Us</a>
+<a href="get-in-touch.html#carer">careers</a>
+                    </span>
+                </span>
+            </nav>
+            <div class="navShadow"></div>
+        </div>    </header>
+
+<div class="optional-menu" onclick="toggle_visibility('nav');">Menu</div><!-- Life Handcrafted -->
+    <div class="innerContainer" id="innerPage">
+        <!-- Left Section -->
+        <div class="leftSection">
+            <a href="our-belief.html">The antara way</a>
+            <a href="our-board-of-directors.html" class="active">our board of directors</a>
+            <a href="our-team.html">our team</a>
+        </div>
+        <!-- Right Section -->
+        <div class="rightSection">
+            <div class="headCont innerPage">
+                <h1 class="inner">Our Board of Directors</h1>
             </div>
-            <!-- Right Section -->
-            <div class="rightSection">
-                <div class="headCont innerPage">
-                    <h1 class="inner">Our Board of Directors</h1>
-                </div>
-                <p id="generic">Meet our distinguished Board of Directors, whose collective experience<br />provides us with strategic direction and motivation.</p>
-                <p id="anaP">Mr. Analjit Singh is the Founder and Non-Executive Chairman of Max India and all its group companies. An industry statesman, he was awarded the Padma Bhushan in 2011. He is the Non-Executive Chairman of Vodafone India, and is on the Board of Tata Global Beverages and Sofina NV/SA, Belgium. An alumnus of Doon School and Shri Ram College of Commerce, Delhi, he holds an MBA from Boston University.</p>
-                <p id="rahulP">Mr. Rahul Khosla, Managing Director, Max India Limited, is a seasoned business leader with deep management experience, broad leadership skills and wide business perspectives over the last 30 years of working in India and globally. He has worked across several multinational environments, notably for Visa, ANZ Grindlay, Bank of America and American Express.</p>
-                <p id="mohitP">Mr. Mohit Talwar took over as the Deputy Managing Director of Max India Limited in Feb 2012. His key responsibilities include managing effective shareholder alignment, ensuring appropriate funding arrangements for the Group, optimizing group capital management and treasury, managing investor and analyst relations and advising management and shareholders on capital market implications.  </p>
+            <p id="generic">Meet our distinguished Board of Directors, whose collective experience<br/>provides us with strategic direction and motivation.</p>
+             <p id="anaP">Mr. Analjit Singh is the Founder and Non-Executive Chairman of Max India and all its group companies. An industry statesman, he was awarded the Padma Bhushan in 2011. He is the Non-Executive Chairman of Vodafone India, and is on the Board of Tata Global Beverages and Sofina NV/SA, Belgium. An alumnus of Doon School and Shri Ram College of Commerce, Delhi, he holds an MBA from Boston University.</p>
+              <p id="rahulP">Mr. Rahul Khosla, Managing Director, Max India Limited, is a seasoned business leader with deep management experience, broad leadership skills and wide business perspectives over the last 30 years of working in India and globally. He has worked across several multinational environments, notably for Visa, ANZ Grindlay, Bank of America and American Express.</p>
+               <p id="mohitP">Mr. Mohit Talwar took over as the Deputy Managing Director of Max India Limited in Feb 2012. His key responsibilities include managing effective shareholder alignment, ensuring appropriate funding arrangements for the Group, optimizing group capital management and treasury, managing investor and analyst relations and advising management and shareholders on capital market implications.  </p>
+               <p id="sujataP">Ms. Sujatha Ratnam is responsible for Fund raising for the Group, Managing Treasury and Investment Portfolio, Providing advisory services on strategic financial matters related to Corporate Finance and Providing support on Special projects related to risk and revenue optimization. Ms. Ratnam joined the Company on July 12, 2004. She has over 20 years of experience in the field of Fund Raising, Financial Restructuring and Financial Planning & Analysis. Prior to joining Max India, she was working with Jubilant Organosys Ltd. as the General Manager - Finance. She started her corporate career with Tata Motors Limited in 1989. Ms. Ratnam holds a Bachelor’s degree in Commerce and is a qualified Chartered Accountant.  </p>
                 <p id="ashwiniP">Mr. Ashwani Windlass, Vice Chairman, Max Ventures, has served the group in different capacities including as its Joint MD & MD - Hutchison Max Telecom until 1998 and as a Board member since. He has been the Chairman, MGRM (Asia-Pac), and VC & MD of Reliance Telecom. He serves on leading advisory and statutory Boards, including MGRM Holdings, Vodafone India and more. </p>
-                <p id="pradeepP">Mr. Pradeep Pant is a highly experienced business leader, involved in consulting, education and with an experience of about 37 years in the FMCG industry. An expert in building businesses in both mature and emerging markets, he has a deep understanding of market dynamics and cultural diversity. He has managed a wide range of iconic brands across Asia and the Middle East.</p>
-                <p id="sharmilaP">Mrs. Sharmila Tagore is one of the most admired actresses of the Indian Film Industry. After starting her film career in 1957, there was no looking back for the talented actress – and accolades like National Film Awards and Filmfare awards are a testimony to her unmatched screen performances. She is UNICEF’s goodwill ambassador in the causes of HIV/AIDS along with supporting multiple socio-cultural and community projects and was awarded Padma Bhushan in 2013. </p>
-                <p id="shubnumP">Dr. Shubnum Singh, alumnus of Lady Hardinge Medical College, Delhi, has about 33 years of experience in clinical pathology, allergy & hospital administration. She has been honored by the British Association of Physicians of Indian Origin (BAPIO) in 2014 and by the State of Delhi for her contribution as a woman entrepreneur in the field of Healthcare. </p>
-                <p id="hectorP">Mr. Hector de Galard holds degrees in general studies, photography and art. He has work experience of over 2 decades in the world of hospitality where he specialized in all aspects of launching and operating innovative, world-class hotels & resorts and delivering the best luxury service. He has worked in America, Europe, Africa, Asia and the Middle East. </p>
-                <p id="rohitP">Mr. Rohit Kapoor, Sr. Director – Strategy and Business Performance, Max India Limited, is a seasoned professional with diverse experience across management consulting and industry. Over a career spanning 15 years, he has worked across six markets globally, notably with Religare Enterprises Limited and McKinsey & Company. </p>
-                <div class="thumbnails directors">
-                    <div class="anaP">
-                        <img id="imgana" src="images/ana.png" />
-                        <span id="lblana">Analjit Singh</span>
+                 <p id="pradeepP">Mr. Pradeep Pant is a highly experienced business leader, involved in consulting, education and with an experience of about 37 years in the FMCG industry. An expert in building businesses in both mature and emerging markets, he has a deep understanding of market dynamics and cultural diversity. He has managed a wide range of iconic brands across Asia and the Middle East.</p>
+                  <p id="sharmilaP">Mrs. Sharmila Tagore is one of the most admired actresses of the Indian Film Industry. After starting her film career in 1957, there was no looking back for the talented actress – and accolades like National Film Awards and Filmfare awards are a testimony to her unmatched screen performances. She is UNICEF’s goodwill ambassador in the causes of HIV/AIDS along with supporting multiple socio-cultural and community projects and was awarded Padma Bhushan in 2013. </p>
+                   <p id="shubnumP">Dr. Shubnum Singh is a founder member of Max Healthcare Institute Ltd where she’s been actively involved in strategizing and developing different verticals of the business including insurance and senior living. In her current capacity as CEO of Max Institute of Health Education and Research (MIHER), she is actively engaged in developing the educational vertical for the group including a Medical College, Nursing & Allied Health College and Skills Academy.  An alumnus of Lady Hardinge Medical College, Delhi, she has about 33 years of experience in clinical pathology, allergy & hospital administration. She has been honored by the British Association of Physicians of Indian Origin (BAPIO) in 2014 and by the State of Delhi for her contribution as a woman entrepreneur in the field of Healthcare. </p>
+                    <p id="hectorP">Mr. Hector de Galard is the President – Business Operations, Max Ventures & Leeu Collection. He has work experience of over 2 decades in the world of hospitality where he specialized in all aspects of launching and operating innovative, world-class hotels & resorts and delivering the best luxury service. He has worked in America, Europe, Africa, Asia and the Middle East. He holds degrees in general studies, photography and art. </p>
+                     <p id="rohitP">Mr. Rohit Kapoor, Sr. Director – Strategy and Business Performance, Max India Limited, is a seasoned professional with diverse experience across management consulting and industry. Over a career spanning 15 years, he has worked across six markets globally, notably with Religare Enterprises Limited and McKinsey & Company. </p>
+            <div class="thumbnails directors">
+                    <div class="anaP">                        
+                        <img src="images/ana.png"/> 
+                        <span>Analjit Singh</span>
                     </div>
-                    <div class="rahulP">
-                        <img id="imgrk" src="images/rk.png" />
-                        <span id="lblrk">Rahul Khosla</span>
+                    <div class="rahulP">                        
+                        <img src="images/rk.png"/> 
+                        <span>Rahul Khosla</span>
                     </div>
-                    <div class="mohitP">
-                        <img id="imgmt" src="images/mt.png" />
-                        <span id="lblmt">Mohit Talwar</span>
+                    <div class="mohitP">                        
+                        <img src="images/mt.png"/> 
+                        <span>Mohit Talwar</span>
                     </div>
-                    <br />
-                    <div class="ashwiniP">
-                        <img id="imgaw" src="images/aw.png" />
-                        <span id="lblaw">Ashwani Windlass</span>
+                    <div class="ashwiniP">                        
+                        <img src="images/aw.png"/> 
+                        <span>Ashwani Windlass</span>
                     </div>
-                    <div class="pradeepP">
-                        <img id="imgprp" src="images/prp.png" />
-                        <span id="lblprp">Pradeep Pant</span>
+                    <br/>
+                    <div class="sujataP">                        
+                        <img src="images/sujata.png"/> 
+                        <span>Sujata Ratnam</span>
                     </div>
-                    <div class="sharmilaP">
-                        <img id="imgst" src="images/st.png" />
-                        <span id="lblst">Sharmila Tagore</span>
+                    <div class="pradeepP">                        
+                        <img src="images/prp.png"/> 
+                        <span>Pradeep Pant</span>
                     </div>
-                    <div class="shubnumP">
-                        <img id="imgsbs" src="images/sbs.png" />
-                        <span id="lblsbs">Shubnum Singh</span>
+                    <div class="sharmilaP">                        
+                        <img src="images/st.png"/> 
+                        <span>Sharmila Tagore</span>
                     </div>
-                    <div class="hectorP">
-                        <img id="imghdg" src="images/hdg.png" />
-                        <span id="lblhdg">Hector de Galard</span>
+                    <div class="shubnumP">                        
+                        <img src="images/sbs.png"/> 
+                        <span>Shubnum Singh</span>
                     </div>
-                    <div class="rohitP">
-                        <img id="imgrok" src="images/rok.png" />
-                        <span id="lblrok">Rohit Kapoor</span>
+                    <div class="hectorP">                        
+                        <img src="images/hdg.png"/> 
+                        <span>Hector de Galard</span>
                     </div>
-                </div>
-                <p><span>Scroll over to know more about our directors</span></p>
+                    <div class="rohitP">                        
+                        <img src="images/rok.png"/> 
+                        <span>Rohit Kapoor</span>
+                    </div>
             </div>
+            <p><span>Scroll over to know more about our directors</span></p>
+            <a href="books/ID-Appointment-Letter-Draft.pdf" target="_blank" class="bodHyperLink"><img src="images/pdf_link.gif" alt="">&nbsp;&nbsp;ID Appointment Letter-Draft</a>
         </div>
 
-        <!-- Footer -->
-        <footer class="innerFoot">
-            <div class="innerContainer">
-                <div class="footElement"><span>To discuss your life at Antara, please call +91 88600 76464 / +91 839292 6464</span></div>
-                <div class="footElement"><span>Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com?Subject=Contact%20Info" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
-                <div class="footElement noBorder"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
-            </div>
-        </footer>
     </div>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
+    <!-- Footer -->
+    <footer>
+        <div class="innerContainer">
+            <div class="footElement"><img src="images/footLogo.png"></div>
+            <div class="footElement"><span>Call us: +91 88600 76464 / +91 83929 26464<br/>
+Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
+            <div class="footElement"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement noBorder"><img src="images/max.png" style="margin-top:11px"/></div>
+        </div>
+    </footer>
 
+</div>  
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        
+        $("p[id$=P]").hide();
+        $("div[class$=P]").on('mouseover click',function(elem){
+            
             $("p[id$=P]").hide();
-            $("div[class$=P]").on('mouseover click', function (elem) {
-
-                $("p[id$=P]").hide();
-                $("p#generic").hide();
-                $("#" + $(this).attr('class')).show();
-            });
-            /*  $("div[class=rightSection]").on("mouseleave",function(e){
-
-                  //setTimeout(function(){
-                     $("p[id$=P]").hide();
-                     $("p#generic").show();
-                     e.stopPropagation()
-                  //},2000);
-
-
-
-             });*/
+            $("p#generic").hide();
+            $("#"+$(this).attr('class')).show();
         });
-    </script>
+       /*  $("div[class=rightSection]").on("mouseleave",function(e){
+             
+             //setTimeout(function(){
+                $("p[id$=P]").hide();
+                $("p#generic").show();
+                e.stopPropagation()    
+             //},2000);
+            
+
+            
+        });*/
+    });
+</script>  
 </body>
 </html>

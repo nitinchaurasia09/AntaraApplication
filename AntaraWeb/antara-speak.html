@@ -17,10 +17,23 @@
     <!-- Plugin JavaScript -->
 		<script src="scripts/jquery.easing.min.js"></script>
         <script src="scripts/bootstrap.js" type="text/javascript"></script>
-		<script src="scripts/custom.js"></script><script src="scripts/ytembed.js"></script>
-        
+		<script src="scripts/custom.js"></script><script src="scripts/ytembed.js"></script>		<script type="text/javascript">
+        <!--
+            function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+            }
+        //-->
+        </script>		
+		 <link href="styles/custom-responsive.css" rel="stylesheet" type="text/css">
+		
+		
+		
+		</head>
 
- </head>
 <body>
 <div id="pageContainer">
     <!-- Facebook plugin -->
@@ -43,7 +56,7 @@
             </div>
 
             <!-- Navigation-->
- <nav>
+ <nav id="nav">
                 <a href="index.html">home</a>  
                 <span><a href="our-belief.html">our belief</a>
                     <span>
@@ -80,10 +93,9 @@
                 </span>
             </nav>
             <div class="navShadow"></div>
-        </div>
-    </header>
+        </div>    </header>
 
-    <!-- Life Handcrafted -->
+<div class="optional-menu" onClick="toggle_visibility('nav');">Menu</div><!-- Life Handcrafted -->
     <div class="innerContainer" id="innerPage">
         <!-- Left Section -->
         <div class="leftSection small">
@@ -101,7 +113,24 @@
             <!-- Let,s Get Talking -->
             <div id="letTalk" class="antaraSpeak">
                 <!-- Stack of Images -->
-                        <div class="borderDiv" href="#"><img class="letsImg" src="images/blog.jpg"></div>
+                        <div class="borderDiv" href="#">
+
+                          <span class="fbContent">
+            <div class="blogLogo">
+              <a href="tara-blog.html" class="blogContentlink"><img class="" src="images/tara_blog_head.png"></a>
+            </div>
+             <div class="ytLogo ">
+              <a href="tara-blog.html" class="blogContentlink"><img class="" src="images/tara_blog_pic.png"></a>
+            </div>
+            <div class="blogContent">
+             <a href="tara-blog.html" class="blogContentlink"> Hi, I am Tara Singh Vachani, CEO, Antara Senior Living. Welcome to my blog, where I share the Antara Dehradun journey.</a>
+              <a class="signupLink" >Sign up </a>
+            </div>
+            <div class="blogsignup"></div>
+          </span>
+
+
+                        </div>
                 <div class="borderDiv" href="#">
                 <!-- Facebook content -->
                 <span class="fbContent">
@@ -116,17 +145,110 @@
         </span></div> 
             </div>
 
+
+	<div class="optional">
+        <a href="tara-blog.html"><img src="images/blog.png"></a>
+        <!----<a href="#"><img src="images/fb.png"></a>
+        <a href="#"><img src="images/youtube.png"></a>--->
+		<a class="signupLink" style="text-decoration:underline;">Sign up </a>
+		 
+	</div>
+
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="innerFoot">
+    <footer>
         <div class="innerContainer">
-            <div class="footElement"><span>To discuss your life at Antara, please call +91 88600 76464 / +91 839292 6464</span></div>
-            <div class="footElement"><span>Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com?Subject=Contact%20Info" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
-            <div class="footElement noBorder"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement"><img src="images/footLogo.png"></div>
+            <div class="footElement"><span>Call us: +91 88600 76464 / +91 83929 26464<br/>
+Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
+            <div class="footElement"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement noBorder"><img src="images/max.png" style="margin-top:11px"/></div>
         </div>
     </footer>
-</div>    <script>ytEmbed.init({ 'block': 'youtubeDivPlaylist', 'type': 'playlist', 'q': 'PLHAh1MP5b-NXvVc5arVO8TaV1moqLvcn3', 'results': 5, 'meta': true });</script>  
+
+</div>
+<div id="show_popup" style="display: none;">
+    <div class="overlay-pop"></div>
+
+
+        <div class="pop-new" style="top: 213px; margin-top: -88px;">
+            <div class="close-pop"></div>
+                <div class="pop-inside"> 
+                <span id="lblText"></span>
+                <form action="" method="" id="frmMail">
+                Please enter your email id
+                <br/>
+                    
+                <input type="text" id="txtEmail" name="txtEmail"/>
+                <br/>
+                <br/>
+                <input type="submit" id="btnSubmit" value ="Submit"</button>
+                <br/>
+                <br/>
+                </form>
+            <div><img src="images/logo-pop.png"></div>
+
+        </div>
+
+
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+   $(".signupLink").click(function(){    
+             $("div#show_popup").show();
+
+     });   
+$(".close-pop, .overlay-pop").click(function(e) {
+    $("#show_popup").hide('fast');
+});
+
+br_height= $(window).height()/2;
+
+$(".pop-new").css({"top":br_height,"margin-top":-88});
+
+
+
+$("#frmMail").submit(function(e){
+            e.preventDefault();
+            if(!validate())
+                return false;
+           $.ajax(
+                {
+                    url:"SendMailForSubscription.php",
+                    method:"post",
+                    data:GetData(),
+                    //type:"json",
+                    success:function(_data){
+                       $("#frmMail").hide();
+                        $("#lblText").text('Thanks for signing up. You will start receiving our blog updates shortly'); 
+                         //$("#show_popup").hide('fast');                       
+                    }   
+                });
+            e.preventDefault();  
+        });    
+    });
+this.GetData=function(){
+      /*  var _d="{'txtTitle':'"+$("#txtTitle").val()+"','txtFirstName':'"+$("#txtFirstName").val()+"','txtLastName':'"+$("#txtLastName").val()+"','txtEmail':'"+$("#txtEmail").val()+"','txtPhone':'"+$("#txtPhone").val()+"','txtState':'"+$("#txtState").val()+"','txtCountry':'"+$("#txtCountry").val()+"'}";
+       */
+       var _d=$("#frmMail").serialize();
+       // alert(_d);
+        return _d;
+    }
+this.validate=function(){
+
+
+        if($("#txtEmail").val()==''){
+           alert('Please enter your email id');
+            return false;
+          }
+        
+        return true;
+    }
+       
+</script>    <script>ytEmbed.init({ 'block': 'youtubeDivPlaylist', 'type': 'playlist', 'q': 'PLlws_9PjzvlVUvVbnDTrDoGnn6-jx3nRG', 'results': 5, 'meta': true });</script>  
+
 </body>
 </html>

@@ -17,8 +17,23 @@
     <!-- Plugin JavaScript -->
 		<script src="scripts/jquery.easing.min.js"></script>
         <script src="scripts/bootstrap.js" type="text/javascript"></script>
-		<script src="scripts/custom.js"></script>
- </head>
+		<script src="scripts/custom.js"></script>		<script type="text/javascript">
+        <!--
+            function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+            }
+        //-->
+        </script>		
+		 <link href="styles/custom-responsive.css" rel="stylesheet" type="text/css">
+		
+		
+		
+		</head>
+
 <body>
 <div id="pageContainer">
     <!-- HEADER -->
@@ -31,7 +46,7 @@
             </div>
 
             <!-- Navigation-->
- <nav>
+ <nav id="nav">
                 <a href="index.html">home</a>  
                 <span><a href="our-belief.html">our belief</a>
                     <span>
@@ -68,10 +83,9 @@
                 </span>
             </nav>
             <div class="navShadow"></div>
-        </div>
-    </header>
+        </div>    </header>
 
-    <!-- Life Handcrafted -->
+<div class="optional-menu" onclick="toggle_visibility('nav');">Menu</div><!-- Life Handcrafted -->
     <div class="innerContainer" id="innerPage">
         <!-- Left Section -->
         <div class="leftSection">
@@ -97,13 +111,16 @@ Nam in porro suscipit legendos, enim semper ut mei. Quas omnes bonorum vel no, e
     </div>
  
     <!-- Footer -->
-    <footer class="innerFoot">
+    <footer>
         <div class="innerContainer">
-            <div class="footElement"><span>To discuss your life at Antara, please call +91 88600 76464 / +91 839292 6464</span></div>
-            <div class="footElement"><span>Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com?Subject=Contact%20Info" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
-            <div class="footElement noBorder"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement"><img src="images/footLogo.png"></div>
+            <div class="footElement"><span>Call us: +91 88600 76464 / +91 83929 26464<br/>
+Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
+            <div class="footElement"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement noBorder"><img src="images/max.png" style="margin-top:11px"/></div>
         </div>
     </footer>
+
 </div>    
 </body>
 </html>

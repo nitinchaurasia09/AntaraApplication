@@ -17,8 +17,23 @@
     <!-- Plugin JavaScript -->
 		<script src="scripts/jquery.easing.min.js"></script>
         <script src="scripts/bootstrap.js" type="text/javascript"></script>
-		<script src="scripts/custom.js"></script>
- </head>
+		<script src="scripts/custom.js"></script>		<script type="text/javascript">
+        <!--
+            function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+            }
+        //-->
+        </script>		
+		 <link href="styles/custom-responsive.css" rel="stylesheet" type="text/css">
+		
+		
+		
+		</head>
+
 <body>
 <div id="pageContainer">
     <!-- HEADER -->
@@ -31,7 +46,7 @@
             </div>
 
             <!-- Navigation-->
- <nav>
+ <nav id="nav">
                 <a href="index.html">home</a>  
                 <span><a href="our-belief.html">our belief</a>
                     <span>
@@ -68,18 +83,21 @@
                 </span>
             </nav>
             <div class="navShadow"></div>
-        </div>
-    </header>
+        </div>    </header>
 
-    <!-- Life Handcrafted -->
+<div class="optional-menu" onclick="toggle_visibility('nav');">Menu</div><!-- Life Handcrafted -->
     <div class="innerContainer" id="innerPage">
         <!-- Left Section -->
         <div class="leftSection small">
-            <a href="antara-speak.html" class="active">2016 ></a>
-            <a href="#" class="active">March 2016</a>
+             <a href="antara-speak.html">Social media</a>
+             <a href="antara-speak.html" class="active">2015</a>
+            <a href="film.html">film</a>
+            <a href="press.html">press</a>
+            
+       <!--      <a href="#" class="active">March 2016</a>
             <a href="#">February 2016</a>
             <a href="#">January 2016</a>
-            <a href="#"><2015></a>
+            <a href="#"><2015></a> -->
         </div>
         <!-- Right Section -->
         <div class="rightSection small">
@@ -90,35 +108,29 @@
             <!--  Blog Snippet -->
             <div class="blogArea">
                 <span class="blogSnippet">
-                    <span class="date">02 Mar 2016</span>
-                    <span class="blogHead">Club house interiors to be complete this week!</span>
-                    <span class="blogContent">I am happy to announce that the Club House will finally be ready this week in all respects, two weeks ahead of schedule. It has come out beautifully and I must say that despite being involved in its design right from the stage of conception, it has surpassed my expectations and delighted everyone who has laid eyes on it. The residents and Antara staff are as excited as I am at the prospect of using the club from next Monday on. <a href="#">(Read more...)</a></span>
-                </span>
-                <div class="clearBlog"></div>
-                <span class="blogSnippet">
-                    <span class="date">01 Mar 2016</span>
-                    <span class="blogHead">Mr. Bachchan’s visit</span>
-                    <span class="blogContent">It was a privilege and a pleasure to host Mr. Amitabh Bachchan at our weekly informal luncheon. It was also a complete suprise, as he had come in his personal capacity to meet his friend Mr. Gurvinder Sodhi, one of our earliest residents. Mr. Sodhi asked me quite late if we could accommodate an extra guest at the luncheon, but gave us no clue <a href="#">(Read more...)</a></span>
-                </span>
-                <div class="clearBlog"></div>
-                <span class="blogSnippet">
-                    <span class="date">01 Mar 2016</span>
-                    <span class="blogHead">Mr. Bachchan’s visit</span>
-                    <span class="blogContent">It was a privilege and a pleasure to host Mr. Amitabh Bachchan at our weekly informal luncheon. It was also a complete suprise, as he had come in his personal capacity to meet his friend Mr. Gurvinder Sodhi, one of our earliest residents. Mr. Sodhi asked me quite late if we could accommodate an extra guest at the luncheon, but gave us no clue <a href="#">(Read more...)</a></span>
-                </span>
-                <div class="clearBlog"></div>
-                <span class="blogSnippet">
-                    <span class="date">01 Mar 2016</span>
-                    <span class="blogHead">Mr. Bachchan’s visit</span>
-                    <span class="blogContent">It was a privilege and a pleasure to host Mr. Amitabh Bachchan at our weekly informal luncheon. It was also a complete suprise, as he had come in his personal capacity to meet his friend Mr. Gurvinder Sodhi, one of our earliest residents. Mr. Sodhi asked me quite late if we could accommodate an extra guest at the luncheon, but gave us no clue <a href="#">(Read more...)</a></span>
+                 <span class="date">13th July 2015</span>
+                 <span class="blogHead">The Antara Journey</span>
+
+                    <span class="blogContent">I started the journey of building Antara Senior Living with a simple yet powerful question: what would it take to give people the best life they could possibly have as they got older. The quest for the answer took me across various parts of the world and the  Indian sub-continent. These travels helped me discover and learn that communities such as what we are creating  will be a  new way to think about later life - a life that radiates energy with a promise of an increase in quality of life.
+I envisioned progressive individuals joining me in this journey and I can say that I am truly delighted with where we  have reached now.<br/>
+The launch of our relationship building work  in May’2013 gave us an encouraging response from our prospective residents and the industry at large. I along with a robust team in place, have had the chance to therefore celebrate many  milestones for our first community at Purukul, Dehradun since then. I must share with you that each milestone brought me closer to the actualization of Antara Dehradun. <br/>
+The past 2 years have been quite remarkable for all my team members, with each and every member putting their best foot forward towards the successful completion of Antara Dehradun and truly embodying our vision and commitment. Our construction work is in its last stages of completion and we are all geared up for our residents to start moving in the first quarter of 2016. With the design journey almost completed, the focus now is towards setting up the community operations. The team now has on board the head of the departments who will be instrumental in smooth functioning of operations.<br/><br/>
+ 
+As we work tirelessly to get the community ready for next year our residents give us the drive to work, bigger and better.
+I will write periodically on this blog to give updates and interesting anecdotes from our experiences and I look forward to sharing how our journey unfolds with you.<br/><br/>
+ 
+Subscribe to my blog for more updates about Antara.
+
+
                 </span>
             </div>
             <!--  Search Area -->
+        <div class="verticalborder">
             <div class="searchArea">
-                <div class="search">
+                <!--<div class="search">
                     <input type="" value="Search This Blog" class="searchInput">
                     <input type="" value="Go" class="go">
-                </div>
+                </div> -->
                 <div class="clearBlog"></div>
                 <img src="images/tara.png" class="centerImg"/>
                 <p>
@@ -126,18 +138,22 @@
                         CEO of Antara Senior Living. My team and I are creating the first Antara community in Dehradun with a lot of passion and dedication, and this blog is where we share this story.
                 </p>
             </div> 
+        </div>
 
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="innerFoot">
+    <footer>
         <div class="innerContainer">
-            <div class="footElement"><span>To discuss your life at Antara, please call +91 88600 76464 / +91 839292 6464</span></div>
-            <div class="footElement"><span>Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com?Subject=Contact%20Info" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
-            <div class="footElement noBorder"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement"><img src="images/footLogo.png"></div>
+            <div class="footElement"><span>Call us: +91 88600 76464 / +91 83929 26464<br/>
+Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
+            <div class="footElement"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
+            <div class="footElement noBorder"><img src="images/max.png" style="margin-top:11px"/></div>
         </div>
     </footer>
+
 </div>    
 </body>
 </html>

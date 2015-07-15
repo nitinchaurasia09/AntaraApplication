@@ -1,0 +1,56 @@
+nav{
+	width: 100%;
+	margin: 2px auto 0;
+	font-size: 12px;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+}
+nav a{
+	margin: 0 14px;
+	text-decoration: none;
+	color: #000;
+}
+
+nav span span{
+	position: absolute;
+	left: 224px;
+	top: 15px;
+	background: #eae5c8;
+	display: inline-block;
+	border-radius: 5px 5px 5px 5px;
+	font-size: 11px;
+	z-index: 9999;
+	padding: 5px;
+	display: none;
+}
+nav span span#getocuh{
+	left: 715px;
+}
+nav span span#asp{
+	left: 475px;
+}
+nav span:hover{
+	background: #eae5c8;
+	border-radius: 5px 5px 5px 5px;
+}
+nav span:hover span{
+	display: block;
+}
+nav span a{
+	margin: 0 4px;
+}
+nav a:hover{
+	color: #991B31;
+}
+nav a.active{
+	color: #991B31;
+}
+.navShadow{
+	position: absolute;
+	left: 0;
+	top: 114px;
+	width: 100%;
+	height: 26px;
+	background: url('../images/nav_shadow.png') left top repeat-x;
+}
