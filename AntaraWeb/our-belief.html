@@ -30,10 +30,11 @@
                     type: 'GET', contentType: 'application/json', success: function (result) {
                         $.each(result, function (i, field) {
                             if (field.PageChild == 10) {
-                                if (field.OrderNumber = (i + 1)) {
+                                debugger;
+                                //if (field.OrderNumber == (i + 1)) {
                                     $("#title" + field.OrderNumber).html(field.PageName);
                                     $("#text" + field.OrderNumber).html(field.PageDescription);
-                                }
+                                //}
                             }
                         });
                     }

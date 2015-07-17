@@ -19,13 +19,30 @@
         <script src="scripts/bootstrap.js" type="text/javascript"></script>
 		<script src="scripts/custom.js"></script>		<script type="text/javascript">
         <!--
-            function toggle_visibility(id) {
-               var e = document.getElementById(id);
-               if(e.style.display == 'block')
-                  e.style.display = 'none';
-               else
-                  e.style.display = 'block';
-            }
+            (function () {
+                var antaraAPI = "http://localhost:49182/api/page/getallpages";
+                $.ajax(antaraAPI, {
+                    type: 'GET', contentType: 'application/json', success: function (result) {
+                        $.each(result, function (i, field) {
+                            debugger;
+                            if (field.PageChild == 13) {
+                                //if (field.OrderNumber == (i + 1)) {
+                                    $("#title" + field.OrderNumber).html(field.PageName);
+                                    $("#text" + field.OrderNumber).html(field.PageDescription);
+                                //}
+                            }
+                        });
+                    }
+                });
+
+                function toggle_visibility(id) {
+                    var e = document.getElementById(id);
+                    if (e.style.display == 'block')
+                        e.style.display = 'none';
+                    else
+                        e.style.display = 'block';
+                }
+            })();
         //-->
         </script>		
 		 <link href="styles/custom-responsive.css" rel="stylesheet" type="text/css">
@@ -90,21 +107,24 @@
         <!-- Right Section -->
         <div class="rightSection fullPage">
             <div class="headCont innerPage">
-                <h1 class="inner">The Max Promise</h1>
+                <h1 id="title1" class="inner">The Max Promise</h1>
             </div>
-            <p>The Antara journey officially began in 2012 with approval from the Board of Directors of Max India.
-            </p>
-            <p>
-            With Max India being in 'Life' businesses, the step towards creating a one of its kind full service residential lifestyle and lifecare community was a natural decision. Antara is a seamless extension of Max India's core commitment to businesses of social good and service and is an expression of Max India's strong ethos of Sevabhav, Credibility and Excellence.
-            </p>
-            <p>
-            From the commencement of Antara's journey to the present, the Max India Board has been a constant source of wisdom, direction and motivation. Through regular contact the board guides the efforts of Antara's leadership team and has played a significant part in shaping the new way of senior living represented by Antara. This valuable and inspiring interaction with the Board will continue to guide Antara's strategic direction in the present and future.
-            </p>
-            <p>
-            Max India provides a strong foundation for Antara. We are proud to share the heritage and values of Max Life Insurance, Max Healthcare, Max Bupa Health Insurance, Max Speciality Films and the Max India Foundation.
-            </p>
-            <img src="images/maxlogo.png" class="centerImg"/>
-            <br/><br/>
+            <div id="text1">
+                <p>
+                    The Antara journey officially began in 2012 with approval from the Board of Directors of Max India.
+                </p>
+                <p>
+                    With Max India being in 'Life' businesses, the step towards creating a one of its kind full service residential lifestyle and lifecare community was a natural decision. Antara is a seamless extension of Max India's core commitment to businesses of social good and service and is an expression of Max India's strong ethos of Sevabhav, Credibility and Excellence.
+                </p>
+                <p>
+                    From the commencement of Antara's journey to the present, the Max India Board has been a constant source of wisdom, direction and motivation. Through regular contact the board guides the efforts of Antara's leadership team and has played a significant part in shaping the new way of senior living represented by Antara. This valuable and inspiring interaction with the Board will continue to guide Antara's strategic direction in the present and future.
+                </p>
+                <p>
+                    Max India provides a strong foundation for Antara. We are proud to share the heritage and values of Max Life Insurance, Max Healthcare, Max Bupa Health Insurance, Max Speciality Films and the Max India Foundation.
+                </p>
+                <img src="images/maxlogo.png" class="centerImg" />
+                <br /><br />
+            </div>
         </div>
     </div>
 

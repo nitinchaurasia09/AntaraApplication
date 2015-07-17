@@ -19,13 +19,32 @@
         <script src="scripts/bootstrap.js" type="text/javascript"></script>
 		<!--<script src="scripts/custom.js"></script>-->		<script type="text/javascript">
         <!--
-            function toggle_visibility(id) {
-               var e = document.getElementById(id);
-               if(e.style.display == 'block')
-                  e.style.display = 'none';
-               else
-                  e.style.display = 'block';
-            }
+            (function () {
+                var antaraAPI = "http://localhost:49182/api/page/getallpages";
+                $.ajax(antaraAPI, {
+                    type: 'GET', contentType: 'application/json', success: function (result) {
+                        $.each(result, function (i, field) {
+                            if (field.PageChild == 12) {
+                                $.each(field.PImages, function (i, subfield) {
+                                    debugger;
+                                    $('#' + subfield.ImageControl).attr("src", subfield.ImageUrl);
+                                    $('#' + subfield.LabelControl).html(subfield.ImageText);
+                                    $('#' + subfield.DescControl).html(subfield.Description);
+                                });
+                            }
+                        });
+                    }
+                });
+
+                function toggle_visibility(id) {
+                    var e = document.getElementById(id);
+                    if (e.style.display == 'block')
+                        e.style.display = 'none';
+                    else
+                        e.style.display = 'block';
+                }
+            })();
+            
         //-->
         </script>		
 		 <link href="styles/custom-responsive.css" rel="stylesheet" type="text/css">
@@ -114,59 +133,59 @@
                      <p id="deepaP">A LLB from Delhi University, ACS from ICSI & Bachelor of Commerce, Deepa has over 14 years of experience in the area of Compliances and Leagal. In her last assignment Deepa was associated with Akme Projects Limited and in this role she was working as Head – Legal and compliance. Prior to this she was associated with Hemant Sahai Associates, Dua Associates, DSK Legal, Chatterji Associates and Hindustan Level Limited. She is a daring futurist who can see beyond words and always finds loopholes that no one can see.</p>
                       <p id="jishnuP">Along with being a Post Graduate from the prestigious Oberoi Centre of Learning and Development, Jishnu also holds a masters degree from Institute of Management Studies, Ghaziabad and is a graduate from IHM Bangalore. He has around 18 years of experience in the area of Hotel Management. He has previously worked with Skansa MEA, prior to which he was associated with The Oberoi Group for over 12 years, as well as The One and Only Royal Mirage and Sea Club Stella Di Mare. A happy person who spreads joy and warmth with a hospitable nature, Jishnu is always dressed to kill. </p>
             <div class="picCont ourTeam leftFloat taraP">
-                <img src="images/vachani.png">
-                <span>Tara Singh Vachani <span>CEO</span></span>
+                <img id="imgVachani" src="images/vachani.png">
+                <span id="lblVachani">Tara Singh Vachani <span>CEO</span></span>
             </div>
             <div class="thumbnails rightFloat">
                     <div class="badarP">                        
-                        <img src="images/teamMbr.png"/> 
-                        <span>Badar Afaq <span>Information Technology</span></span>
+                        <img id="imgMbr" src="images/teamMbr.png"/> 
+                        <span id="lblMbr">Badar Afaq <span>Information Technology</span></span>
                     </div>
                     <div class="geetanjaliP">                        
-                        <img src="images/gbt.png"/> 
-                        <span>Geetanjali Bharadwaj <span>Design</span></span>
+                        <img id="imgGbt" src="images/gbt.png"/> 
+                        <span id="lblGbt">Geetanjali Bharadwaj <span>Design</span></span>
                     </div>
                     <div class="sanjayP">                        
-                        <img src="images/sbh.png"/> 
-                        <span>Sanjay Bhatia <span>Relationship Building</span></span>
+                        <img id="imgSbh" src="images/sbh.png"/> 
+                        <span id="lblSbh">Sanjay Bhatia <span>Relationship Building</span></span>
                     </div>
                     <div class="ambicaP">                        
-                        <img src="images/amc.png"/> 
-                        <span>Ambica Chaturvedi <span>Human Capital</span></span>
+                        <img id="imgAmc" src="images/amc.png"/> 
+                        <span id="lblAmc">Ambica Chaturvedi <span>Human Capital</span></span>
                     </div>
 
                     <div class="renukaP">                        
-                        <img src="images/ned.png"/> 
-                        <span>Renuka Dudeja <span>Brand & Communications</span></span>
+                        <img id="imgNed" src="images/ned.png"/> 
+                        <span id="lblNed">Renuka Dudeja <span>Brand & Communications</span></span>
                     </div>
                     <div class="avkP">                        
-                        <img src="images/avk.png"/> 
-                        <span>AVK Rao <span>Finance & Accounts</span></span>
+                        <img id="imgAvk" src="images/avk.png"/> 
+                        <span id="lblAvk">AVK Rao <span>Finance & Accounts</span></span>
                     </div>
                     <div class="saumyajitP">                        
-                        <img src="images/sar.png"/> 
-                        <span>Saumyajit Roy <span>Business Planning & Performance</span></span>
+                        <img id="imgSar" src="images/sar.png"/> 
+                        <span id="lblSar">Saumyajit Roy <span>Business Planning & Performance</span></span>
                     </div>
                     <div class="kennethP">                        
-                        <img src="images/kes.png"/> 
-                        <span>Kenneth Sannoo <span>Community Development</span></span>
+                        <img id="imgKes" src="images/kes.png"/> 
+                        <span id="lblKes">Kenneth Sannoo <span>Community Development</span></span>
                     </div>
 
                     <div class="harshP">                        
-                        <img src="images/hrs.png"/> 
-                        <span>Harsh Sharma <span>Projects</span></span>
+                        <img id="imgHrs" src="images/hrs.png"/> 
+                        <span id="lblHrs">Harsh Sharma <span>Projects</span></span>
                     </div>
                     <div class="gyanendraP">                        
-                        <img src="images/gps.png"/> 
-                        <span>Gyanendra Pratap Singh <span>Procurement & Contracts</span></span>
+                        <img id="imgGps" src="images/gps.png"/> 
+                        <span id="lblGps">Gyanendra Pratap Singh <span>Procurement & Contracts</span></span>
                     </div>
                     <div class="deepaP">                        
-                        <img src="images/dps.png"/> 
-                        <span>Deepa Sood <span>Legal & Secretarial</span></span>
+                        <img id="imgDps" src="images/dps.png" /> 
+                        <span id="lblDps">Deepa Sood <span>Legal & Secretarial</span></span>
                     </div>
                     <div class="jishnuP">                        
-                        <img src="images/jsv.png"/> 
-                        <span>Jishnu Veliath <span>Community Operations</span></span>
+                        <img id="imgJsv" src="images/jsv.png"/> 
+                        <span id="lblJsv">Jishnu Veliath <span>Community Operations</span></span>
                     </div>
             </div>
             <div class="clearall"></div>

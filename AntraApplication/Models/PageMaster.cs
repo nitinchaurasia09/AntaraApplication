@@ -13,7 +13,7 @@ namespace AntaraApplication.Models
         {
             try
             {
-                Ado.ExecuteNoneQueryText("UPDATE page_master SET PageDescription = '" + description + "' WHERE GUID = '" + guid + "'");
+                Ado.ExecuteNoneQueryText("UPDATE page_master SET PageDescription = '" + description.Replace("'","''") + "' WHERE GUID = '" + guid + "'");
             }
             catch (Exception ex)
             {
