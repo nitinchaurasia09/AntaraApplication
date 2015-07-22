@@ -31,13 +31,31 @@
         <script src="scripts/bootstrap.js" type="text/javascript"></script>
 		<script src="scripts/custom.js"></script>		<script type="text/javascript">
         <!--
-            function toggle_visibility(id) {
-               var e = document.getElementById(id);
-               if(e.style.display == 'block')
-                  e.style.display = 'none';
-               else
-                  e.style.display = 'block';
-            }
+            (function () {
+                var antaraAPI = "http://localhost:49182/api/page/getallpages";
+                $.ajax(antaraAPI, {
+                    type: 'GET', contentType: 'application/json', success: function (result) {
+                        $.each(result, function (i, field) {
+                            if (field.PageChild == 16) {
+                                debugger;
+                                //if (field.OrderNumber == (i + 1)) {
+                                $("#title" + field.OrderNumber).html(field.PageName);
+                                $("#text" + field.OrderNumber).html(field.PageDescription);
+                                //}
+                            }
+                        });
+                    }
+                });
+
+                function toggle_visibility(id) {
+                    var e = document.getElementById(id);
+                    if (e.style.display == 'block')
+                        e.style.display = 'none';
+                    else
+                        e.style.display = 'block';
+                }
+            })();
+            
         //-->
         </script>		
 		 <link href="styles/custom-responsive.css" rel="stylesheet" type="text/css">
@@ -108,15 +126,15 @@
         <!-- Right Section -->
         <div class="rightSection small">
             <div class="headCont innerPage">
-                <h1 class="inner">Disclaimer</h1>
+                <h1 id="title1" class="inner">Disclaimer</h1>
             </div>
-                          
-                
+            <div id="text1">
+
                 <p>Antara and Mandalas device are proprietary Trade Marks of Antara Senior Living Limited.</p>
-<p>The contents of the website are owned by Antara Senior Living Limited. Unauthorized copying and use of the same may result in violation of the Intellectual Property rights of Antara Senior Living Limited, who shall be at its liberty to initiate appropriate action against such violator including and limiting to obtaining relief of injunction and seeking compensatory and punitive damages for such violation.</p>
-<p>The pictures/ photographs appearing on the website are proprietary material and owned by Antara Senior Living Limited. Unauthorized copying and use of the same may result in violation of the Intellectual Property rights of the relevant owner, who shall be at its liberty to initiate appropriate action against such violator including and limiting to obtaining relief of injunction and seeking compensatory and punitive damages for such violation.’</p>
-<p>The information on this site has been included in good faith and is for general purposes only. It should not be relied upon for any specific purpose and no representation or warranty is given as regards its accuracy or completeness. No information on this site shall constitute an invitation to invest or enter into any relationship with Antara Senior Living or any of its affiliates. Neither, Antara Senior Living, nor their or their affiliates’ officers, employees or agents shall be liable for any loss, damage or expense arising out of any access to or use of this site or any site linked to it, including, without limitation, any loss of profit, indirect, incidental or consequential loss.</p>
-    
+                <p>The contents of the website are owned by Antara Senior Living Limited. Unauthorized copying and use of the same may result in violation of the Intellectual Property rights of Antara Senior Living Limited, who shall be at its liberty to initiate appropriate action against such violator including and limiting to obtaining relief of injunction and seeking compensatory and punitive damages for such violation.</p>
+                <p>The pictures/ photographs appearing on the website are proprietary material and owned by Antara Senior Living Limited. Unauthorized copying and use of the same may result in violation of the Intellectual Property rights of the relevant owner, who shall be at its liberty to initiate appropriate action against such violator including and limiting to obtaining relief of injunction and seeking compensatory and punitive damages for such violation.’</p>
+                <p>The information on this site has been included in good faith and is for general purposes only. It should not be relied upon for any specific purpose and no representation or warranty is given as regards its accuracy or completeness. No information on this site shall constitute an invitation to invest or enter into any relationship with Antara Senior Living or any of its affiliates. Neither, Antara Senior Living, nor their or their affiliates’ officers, employees or agents shall be liable for any loss, damage or expense arising out of any access to or use of this site or any site linked to it, including, without limitation, any loss of profit, indirect, incidental or consequential loss.</p>
+            </div>
                 
                  
             

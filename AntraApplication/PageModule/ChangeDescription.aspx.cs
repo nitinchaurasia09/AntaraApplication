@@ -37,8 +37,11 @@ namespace AntaraApplication.PageModule
             PageMaster objPage = new PageMaster();
             try
             {
-                DataTable dt = objPage.getPageDescription(new Guid(ddlPageName.SelectedValue));
-                txtDescription.Text = dt.Rows[0]["PageDescription"].ToString();
+                if (ddlPageName.SelectedIndex != 0)
+                {
+                    DataTable dt = objPage.getPageDescription(new Guid(ddlPageName.SelectedValue));
+                    txtDescription.Text = dt.Rows[0]["PageDescription"].ToString();
+                }
             }
             catch (Exception ex)
             {

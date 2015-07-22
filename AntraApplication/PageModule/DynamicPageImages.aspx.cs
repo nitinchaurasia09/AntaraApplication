@@ -60,7 +60,7 @@ namespace AntaraApplication.PageModule
                 objPageImg.IMAGETEXT = txtImageText.Text;
                 if (flPageImage.FileName != "")
                 {
-                    String path = Server.MapPath(imgPage.ImageUrl.Replace(ConfigurationManager.AppSettings["ImageUrl"].ToString(), ""));
+                    String path = Server.MapPath("../" + imgPage.ImageUrl.Replace(ConfigurationManager.AppSettings["ImageUrl"].ToString(), ""));
                     if (System.IO.File.Exists(path)) { System.IO.File.Delete(path); }
 
                     string fileName = Path.GetFileName(flPageImage.PostedFile.FileName);

@@ -31,13 +31,31 @@
         <script src="scripts/bootstrap.js" type="text/javascript"></script>
 		<script src="scripts/custom.js"></script>		<script type="text/javascript">
         <!--
-            function toggle_visibility(id) {
-               var e = document.getElementById(id);
-               if(e.style.display == 'block')
-                  e.style.display = 'none';
-               else
-                  e.style.display = 'block';
-            }
+            (function () {
+                var antaraAPI = "http://localhost:49182/api/page/getallpages";
+                $.ajax(antaraAPI, {
+                    type: 'GET', contentType: 'application/json', success: function (result) {
+                        $.each(result, function (i, field) {
+                            if (field.PageChild == 15) {
+                                debugger;
+                                //if (field.OrderNumber == (i + 1)) {
+                                $("#title" + field.OrderNumber).html(field.PageName);
+                                $("#text" + field.OrderNumber).html(field.PageDescription);
+                                //}
+                            }
+                        });
+                    }
+                });
+
+                function toggle_visibility(id) {
+                    var e = document.getElementById(id);
+                    if (e.style.display == 'block')
+                        e.style.display = 'none';
+                    else
+                        e.style.display = 'block';
+                }
+            })();
+            
         //-->
         </script>		
 		 <link href="styles/custom-responsive.css" rel="stylesheet" type="text/css">
@@ -108,27 +126,22 @@
         <!-- Right Section -->
         <div class="rightSection small">
             <div class="headCont innerPage">
-                <h1 class="inner">Privacy Policy</h1>
+                <h1 id="title1" class="inner">Privacy Policy</h1>
             </div>
-            
-                 
-                
-               
-               <p>The Antara Senior Living Limited web site (the “Site”) is a service of Antara Senior Living Limited. This Privacy Policy applies only to information that we collect from users of the Site.</p>
-<p>WE MAY REVISE THIS PRIVACY POLICY AT ANY TIME. WHEN WE DO, WE WILL ALSO REVISE THE “LAST UPDATED” DATE AT THE TOP OF THIS PRIVACY POLICY. YOU ARE RESPONSIBLE FOR REGULARLY REVIEWING THE CURRENT PRIVACY POLICY. YOUR CONTINUED USE OF THE SITE AFTER WE POST ANY REVISIONS CONSTITUTES YOUR AGREEMENT TO ANY SUCH REVISIONS.</p>
-<h5 class="inner">What information do we collect from this Site?</h5>
-<p>We collect certain information automatically each time you visit the Site. This may include, without limitation, your IP address, the type of computer you use, and the web browser you use. An IP address is a number assigned to your computer when you connect to the Internet. Each time you visit the Site, our web server may automatically recognize (where possible) and collect your IP address. We may also use “cookies” and “web beacons”. A “cookie” is a small amount of data that is sent to your browser from a web server and stored on your computer’s hard drive. Among other things, cookies provide a means for Websites you visit to keep track of your online patterns and preferences. A cookie will not allow a Website to learn any personally identifiable information (such as your real name and address) that you have not otherwise disclosed. “Web beacons”, also known as clear GIFs or single-pixel GIFs, are small image files that we may place on web pages and within web-based email newsletters that we send. Working in conjunction with cookies, web beacons allow us to accurately count the number of unique users who have visited a specific page and the number of times those pages are displayed. We can also use web beacons to let us know how many people opened a web-based email newsletter. We also collect personally identifiable information that you provide to us. Personally identifiable information is information that tells us who you are such as your name and your e-mail address. We may collect this information when you register to use this Site and when you update and/or modify information that is maintained on the Site.</p>
-<h5 class="inner">How do we use the information that we collect?</h5>
-<p>We may use automatic information to customize your experience while visiting the Site and to evaluate and improve the design of the Site. We use personally identifiable information for the purpose for which it was provided to us. For example, we may use personally identifiable information that you submit when registering for the Site to establish your online account, to send you information and reports that you may be interested in, and/or to contact you directly about products or services that you may be interested in. We may use personally identifiable information that you submit to apply for a job for purposes of evaluating your candidacy for any applicable jobs. We may also use personally identifiable information to send you e-mails about the Site, respond to e-mails, provide customer support, and other similar matters.</p>
-<p>We may use non-personally identifiable aggregate information to help us run and maintain the Site, study traffic patterns and generally learn about the usage of the Site. We may also use such information for purposes of system administration, to improve the design and content of the Site, and/or to enable us to personalize your Internet experience. How the information collected is disclosed? We may share information obtained from the site with our chapters, affiliates, and subsidiaries and/or partners. Except as provided in this Privacy Policy, (a) we do not sell, rent or trade with unaffiliated third parties any personally identifiable information that you provide to us through the Site, and (b) we do not share such information with third parties.</p>
-<p>We may disclose personally identifiable information about you to third parties who provide services to us and who agree to maintain such information in accordance with this Privacy Policy. These third parties may provide a variety of services to us including, without limitation, hosting this Site, processing and storing user information, updating your customer information records in our database (including address verification), and sending or coordinating the sending of marketing communications on our behalf.</p>
-<p>We may disclose personally identifiable information in special cases when we have reason to believe that disclosing such information is necessary to identify, contact, or bring legal action against someone who may have breached our Terms of Use [insert link] or who may be causing injury to or interference with (either intentionally or unintentionally) our rights or property, other users of the Site, or anyone else who could be harmed by such activities. We may also disclose personally identifiable information when we reasonably believe that the law requires it.</p>
-<p>We may acquire, sell or change our affiliation with independent chapters or other organizations or engage in other business purchases, sales, or affiliations. In such transactions, personally identifiable information is sometimes one of the transferred business assets, but remains subject to any pre-existing Privacy Policy. Also, in the unlikely event that some or all of our assets are sold, personally identifiable information may be one of the transferred assets. We may disclose non-personally identifiable information in aggregate form to third parties including, without limitation, advertisers and business partners. Do you have a choice as to whether to provide information to us? You can choose not to provide personally identifiable information to us. However, if you do not provide such information, you may not be able to access or use certain portions of the Site. Additionally, most browsers can be configured to reject cookies or alert you when cookies are being sent. However, if you refuse to accept cookies, it is possible that some portions of the Site may not function as intended.</p>
-<h5 class="inner">How do we protect the security of your information?</h5>
-<p>We maintain physical, electronic and procedural safeguards to reduce the risk of unauthorized access to personal information. However, although we employ such safeguards, information transmitted on the Internet and/or stored on systems connected to the Internet is not 100% secure. As a result, we cannot ensure, warrant or guarantee the security or integrity of such information.</p>
-    
-                
-                 
+            <div id="text1">
+                <p>The Antara Senior Living Limited web site (the “Site”) is a service of Antara Senior Living Limited. This Privacy Policy applies only to information that we collect from users of the Site.</p>
+                <p>WE MAY REVISE THIS PRIVACY POLICY AT ANY TIME. WHEN WE DO, WE WILL ALSO REVISE THE “LAST UPDATED” DATE AT THE TOP OF THIS PRIVACY POLICY. YOU ARE RESPONSIBLE FOR REGULARLY REVIEWING THE CURRENT PRIVACY POLICY. YOUR CONTINUED USE OF THE SITE AFTER WE POST ANY REVISIONS CONSTITUTES YOUR AGREEMENT TO ANY SUCH REVISIONS.</p>
+                <h5 class="inner">What information do we collect from this Site?</h5>
+                <p>We collect certain information automatically each time you visit the Site. This may include, without limitation, your IP address, the type of computer you use, and the web browser you use. An IP address is a number assigned to your computer when you connect to the Internet. Each time you visit the Site, our web server may automatically recognize (where possible) and collect your IP address. We may also use “cookies” and “web beacons”. A “cookie” is a small amount of data that is sent to your browser from a web server and stored on your computer’s hard drive. Among other things, cookies provide a means for Websites you visit to keep track of your online patterns and preferences. A cookie will not allow a Website to learn any personally identifiable information (such as your real name and address) that you have not otherwise disclosed. “Web beacons”, also known as clear GIFs or single-pixel GIFs, are small image files that we may place on web pages and within web-based email newsletters that we send. Working in conjunction with cookies, web beacons allow us to accurately count the number of unique users who have visited a specific page and the number of times those pages are displayed. We can also use web beacons to let us know how many people opened a web-based email newsletter. We also collect personally identifiable information that you provide to us. Personally identifiable information is information that tells us who you are such as your name and your e-mail address. We may collect this information when you register to use this Site and when you update and/or modify information that is maintained on the Site.</p>
+                <h5 class="inner">How do we use the information that we collect?</h5>
+                <p>We may use automatic information to customize your experience while visiting the Site and to evaluate and improve the design of the Site. We use personally identifiable information for the purpose for which it was provided to us. For example, we may use personally identifiable information that you submit when registering for the Site to establish your online account, to send you information and reports that you may be interested in, and/or to contact you directly about products or services that you may be interested in. We may use personally identifiable information that you submit to apply for a job for purposes of evaluating your candidacy for any applicable jobs. We may also use personally identifiable information to send you e-mails about the Site, respond to e-mails, provide customer support, and other similar matters.</p>
+                <p>We may use non-personally identifiable aggregate information to help us run and maintain the Site, study traffic patterns and generally learn about the usage of the Site. We may also use such information for purposes of system administration, to improve the design and content of the Site, and/or to enable us to personalize your Internet experience. How the information collected is disclosed? We may share information obtained from the site with our chapters, affiliates, and subsidiaries and/or partners. Except as provided in this Privacy Policy, (a) we do not sell, rent or trade with unaffiliated third parties any personally identifiable information that you provide to us through the Site, and (b) we do not share such information with third parties.</p>
+                <p>We may disclose personally identifiable information about you to third parties who provide services to us and who agree to maintain such information in accordance with this Privacy Policy. These third parties may provide a variety of services to us including, without limitation, hosting this Site, processing and storing user information, updating your customer information records in our database (including address verification), and sending or coordinating the sending of marketing communications on our behalf.</p>
+                <p>We may disclose personally identifiable information in special cases when we have reason to believe that disclosing such information is necessary to identify, contact, or bring legal action against someone who may have breached our Terms of Use [insert link] or who may be causing injury to or interference with (either intentionally or unintentionally) our rights or property, other users of the Site, or anyone else who could be harmed by such activities. We may also disclose personally identifiable information when we reasonably believe that the law requires it.</p>
+                <p>We may acquire, sell or change our affiliation with independent chapters or other organizations or engage in other business purchases, sales, or affiliations. In such transactions, personally identifiable information is sometimes one of the transferred business assets, but remains subject to any pre-existing Privacy Policy. Also, in the unlikely event that some or all of our assets are sold, personally identifiable information may be one of the transferred assets. We may disclose non-personally identifiable information in aggregate form to third parties including, without limitation, advertisers and business partners. Do you have a choice as to whether to provide information to us? You can choose not to provide personally identifiable information to us. However, if you do not provide such information, you may not be able to access or use certain portions of the Site. Additionally, most browsers can be configured to reject cookies or alert you when cookies are being sent. However, if you refuse to accept cookies, it is possible that some portions of the Site may not function as intended.</p>
+                <h5 class="inner">How do we protect the security of your information?</h5>
+                <p>We maintain physical, electronic and procedural safeguards to reduce the risk of unauthorized access to personal information. However, although we employ such safeguards, information transmitted on the Internet and/or stored on systems connected to the Internet is not 100% secure. As a result, we cannot ensure, warrant or guarantee the security or integrity of such information.</p>
+            </div>             
 
         </div>
     </div>

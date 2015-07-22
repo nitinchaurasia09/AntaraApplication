@@ -41,8 +41,8 @@ namespace AntaraApplication.UserModule
                             txtUserLocation.Text = dt.Rows[0]["UserLocation"].ToString();
                             txtFirstName.Text = dt.Rows[0]["FirstName"].ToString();
                             txtLastName.Text = dt.Rows[0]["LastName"].ToString();
-                            imgUser.Visible = true;
-                            imgUser.ImageUrl = dt.Rows[0]["UserImage"].ToString();
+                            //imgUser.Visible = true;
+                            //imgUser.ImageUrl = dt.Rows[0]["UserImage"].ToString();
                             rdoIsAdmin.SelectedValue = dt.Rows[0]["IsAdmin"].ToString();
                             rdoUserStatus.SelectedValue = dt.Rows[0]["UserStat"].ToString();
                            // divPassword.Visible = false;
