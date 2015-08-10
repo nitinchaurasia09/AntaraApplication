@@ -62,8 +62,8 @@ body.home{
 	width: 692px;
 	padding-left: 50px;
 	display: inline-block;
-	border-left: 2px dotted #100f0e;
-	margin-top: 20px;
+	border-left: 2px dotted #58595b;
+	padding-top: 20px;
 }
 .innerContainer > .rightSection.small{
 	width: 808px;

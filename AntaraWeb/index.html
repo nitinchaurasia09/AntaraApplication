@@ -2,8 +2,8 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>ANTARA Senior LIving</title>
-        <meta name="description" content="">
+        <title>Residential community for active seniors</title>
+        <meta name="description" content="First of its kind of active senior living community in India offering the perfect blend of luxury senior living combined with lifestyle and lifecare programs to progressive individuals.">
         <meta name="viewport" content="width=device-width">
         <!--<link rel="shortcut icon" href="/favicon.ico">
          Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -70,6 +70,7 @@
 	<!-- HEADER -->
     <header>
         <div class="innerContainer headerantara">
+		<div class="optional-banner"><img src="images/header_mobile.png"></div>	
             <!-- Top Header -->
             <div class="topHeader">
                 <a href="http://antaraseniorliving.com" class="arLogo">Antara Senior Living</a>
@@ -83,9 +84,7 @@
                     <span>
                         <a href="our-belief.html">The Antara Way</a>
                         <a href="our-board-of-directors.html">Our Board of Directors</a>
-                        <a href="our-team.html">Our team</a>
-                    </span>
-                </span>
+                        <a href="our-team.html">Our team</a>                    </span>                </span>
                 <span><a href="antara-dehradun.html">antara dehradun</a>  
                     <span>
                         <a href="antara-dehradun.html#ol">OUR LOCATION</a>
@@ -94,25 +93,18 @@
                         <a href="antara-dehradun.html#laa">LIFE AT ANTARA</a>
                         <a href="antara-dehradun.html#acb">ACB</a>
                         <a href="antara-dehradun.html#download">DOWNLOADS</a>
-                        <a href="antara-dehradun.html#faq">FAQS</a>
-                    </span>
-                </span>
+                        <a href="antara-dehradun.html#faq">FAQS</a>                    </span>                </span>
                 <span><a href="antara-speak.html">antara speak</a>  
                     <span id="asp">
                         <a href="antara-speak.html">Social media</a>
                         <a href="film.html">film</a>
-                        <a href="press.html">press</a>
-                    </span>
-                </span>
+                        <a href="press.html">press</a>                    </span>                </span>
                 <a href="max-promise.html">max promise</a>  
                 <span> 
                     <a href="get-in-touch.html">get in touch</a>
                     <span id="getocuh">                        
                         <a href="get-in-touch.html#innerPage">Reach Us</a>
-<a href="get-in-touch.html#carer">careers</a>
-                    </span>
-                </span>
-            </nav>
+<a href="get-in-touch.html#carer">careers</a>                    </span>                </span>            </nav>
             <div class="navShadow"></div>
         </div>
     </header>
@@ -283,7 +275,7 @@
         <div class="innerContainer">
             <div class="footElement"><img src="images/footLogo.png"></div>
             <div class="footElement"><span>Call us: +91 88600 76464 / +91 83929 26464<br/>
-Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com" target="_top">contactus@antaraseniorliving.com</a></br>&nbsp; Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
+Email us: <a class="contactEmail" href="mailto:contactus@antaraseniorliving.com" target="_top">contactus@antaraseniorliving.com</a></br>Antara Senior Living&nbsp;&copy;&nbsp;2015 | <a href="terms.html" class="terms">Terms &amp; Conditions</a></span></div>
             <div class="footElement"><a href="https://www.youtube.com/channel/UCu2Gaq66vDM3PkoBZgME-zA" target="_blank"><img src="images/youtubeIcn.png"></a><a href="https://www.facebook.com/antaraseniorliving" target="_blank"><img src="images/facebookIcn.png"></a></div>
             <div class="footElement noBorder"><img src="images/max.png" style="margin-top:11px"/></div>
         </div>
@@ -366,7 +358,7 @@ $("#frmMail").submit(function(e){
                 return false;
            $.ajax(
                 {
-                    url:"SendMailForSubscription.php",
+                    url:"http://webgrips.com/SendMailForSubscription.php",
                     method:"post",
                     data:GetData(),
                     //type:"json",
@@ -376,6 +368,8 @@ $("#frmMail").submit(function(e){
                          //$("#show_popup").hide('fast');                       
                     }   
                 });
+				$("#frmMail").hide();
+                        $("#lblText").text('Thanks for signing up. You will start receiving our blog updates shortly'); 
             e.preventDefault();  
         });    
     });
@@ -399,6 +393,16 @@ this.validate=function(){
        
 </script>  <script>ytEmbed.init({ 'block': 'youtubeDivPlaylist', 'type': 'playlist', 'q': 'PLlws_9PjzvlVUvVbnDTrDoGnn6-jx3nRG', 'results': 5, 'meta': true });
 //PLHAh1MP5b-NXvVc5arVO8TaV1moqLvcn3  old id
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-41188277-1', 'auto');
+ga('send', 'pageview');
+
 </script>  
 </body>
 </html>

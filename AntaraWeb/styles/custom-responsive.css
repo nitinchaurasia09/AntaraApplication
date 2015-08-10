@@ -1,3 +1,9 @@
+#book a{ color:#991b31; text-decoration:none; font-size:12px; font-family:Verdana, Geneva, sans-serif; font-weight:bold; width: 200px !important; line-height:30px;}
+
+#book .left{float:left; margin-top:-100px; }
+
+#book .right{float:right; margin-top:-100px; text-align:center; }
+
 .optional-banner {display:none}
 
 .optional-menu {display:none}
@@ -96,6 +102,14 @@ div.drdText {min-height: 400px;width: 393px;}
 .blogSnippet {   width: 480px; text-align:left; padding:0px;}
 
 .rightSection .blogContent {text-align:left; padding:0px;}
+
+nav span span#asp {   left: 447px;}
+
+nav span span {  left: 131px;}
+
+nav span span#getocuh {  left: 673px;}
+
+
 
 	
 }
@@ -231,6 +245,22 @@ div.drdText {   width: 240px;}
 
 
 .blogSnippet {   width: 300px; text-align:left; padding:0px;}
+
+
+
+
+nav span span#asp {   left: 349px;}
+
+nav span span {  left: 131px;}
+
+nav span span#getocuh {  left: 573px;}
+
+nav span span {  font-size: 10px;}
+
+
+#book .left, #book .right {   margin-top: -40px;}
+
+#book .right {   text-align: right;}
 
  
 }
@@ -502,6 +532,19 @@ width:60% !important;
 
 
 
+
+
+nav span span#asp {
+    left: 284px;
+}
+
+
+nav span span#getocuh {
+    left: 475px;
+}
+
+#book img{width:400px;}
+
 }
 
 
@@ -519,7 +562,12 @@ width:60% !important;
 body {padding-top:0px;}
 
 
+nav span span#getocuh {
+    left: 150px;
+    top: 159px;
+}
 
+.press {   width: 88%; margin:auto;}
 
 
 header{position:relative;}
@@ -766,6 +814,24 @@ form div select, #txtTitle {width:100% !important;}
 
 .mapContainer {   margin: 30px 0 0;   width: 90%;}
 
+
+footer .footElement.noBorder {
+   
+    display: none;
+    float: none;
+    text-align: center;
+    width: 88%;
+ 	margin-top: 10px;
+}
+
+footer {  height: 89px;}
+
+footer .footElement.noBorder img{ border:1px solid #8d6c54; padding:10px; box-shadow:2px 2px 2px #000;} 
+
+
+
+
+
 }
 
 
@@ -776,10 +842,14 @@ form div select, #txtTitle {width:100% !important;}
 @media all and (max-width: 479px) {
 	
 .topHeader .maxEnt {  display: none;}
-
+.topHeader {  display: none;}
 .innerContainer {  padding: 0; width: 91%}
+.topHeader a.arLogo {display:none !important}
+.topHeader {  display: none !important;}
+
 
 .topHeader a.arLogo {  width: 97%;  background-size:200px auto; background-position:center top;}
+
 
 .carouselMessage {   width: 260px;}
 
@@ -809,7 +879,7 @@ footer .footElement:nth-child(2) {  width: 225px;  padding-right: 10px;}
 
 .videoPlayer > img {  height: 147px;    left: 16px;    position: relative;    top: 17px;    width: 89.5%;}
 
-.videoPlayer {   height: 205px;}
+.videoPlayer {   height: 190px;}
 
 .thumbCont {   margin: 10px auto;}
 
@@ -885,7 +955,7 @@ footer .footElement:nth-child(3) {
 
 #letTalk .borderDiv {display:none;}
 
-.footElement br{display:none;}
+
 
 .scroll > a.scrollLink { display: none;}
 
@@ -907,6 +977,22 @@ footer .footElement:nth-child(3) {
     top: 16px !important;
     width: 285px;
 }
+
+.scroll.sml {   display: block;    width: 100%;}
+
+
+#book {margin-bottom: 30px;}
+
+#book img{width:300px;}
+
+
+#book .left, #book .right {
+    margin-top: -11px;
+	font-size:11px;
+	width:140px !important;
+}
+
+.press {   width: 100%; margin:auto;}
 
 }
 
@@ -963,6 +1049,18 @@ footer .footElement:nth-child(2) {  width: 225px;  padding-right: 0px;}
     left: 14px !important;
     top: 14px !important;
     width: 252px;
+}
+
+h1::before {
+    left: -40px;
+}
+
+h1::after {
+    right: -40px;
+}
+
+h1.inner {
+    max-width: 215px;
 }
 	
 }
