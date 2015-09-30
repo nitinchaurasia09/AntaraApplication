@@ -49,3 +49,5 @@ D:\Old project\My Project\AntaraApplication\AntraApplication\bin\Microsoft.Owin.
 D:\Old project\My Project\AntaraApplication\AntraApplication\obj\Release\AntaraApplication.csprojResolveAssemblyReference.cache
 D:\Old project\My Project\AntaraApplication\AntraApplication\obj\Release\AntaraApplication.dll
 D:\Old project\My Project\AntaraApplication\AntraApplication\obj\Release\AntaraApplication.pdb
+D:\Old project\My Project\AntaraApplication\AntraApplication\bin\MySql.Data.dll
+D:\Old project\My Project\AntaraApplication\AntraApplication\bin\MySql.Data.Entity.EF6.dll

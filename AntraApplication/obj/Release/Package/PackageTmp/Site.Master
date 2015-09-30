@@ -62,6 +62,7 @@
                     </li>
                     <li><a href="../UserModule/ShowAllUsers.aspx">User Management</a>
                         <a href="../PageModule/ManageDynamicPages.aspx">Page Management</a>
+                        <a href="../PageModule/ChangeDescription.aspx">Page Description</a>
                         <a href="../YTModule/YouTube.aspx">Youtube Management</a>
                         
                     </li>

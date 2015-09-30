@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ChangeDescription.aspx.cs" Inherits="AntaraApplication.PageModule.ChangeDescription" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" ValidateRequest="false" CodeBehind="ChangeDescription.aspx.cs" Inherits="AntaraApplication.PageModule.ChangeDescription" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!-- Page Content -->
@@ -8,7 +8,13 @@
             <hr />
             <div class="alert alert-success" id="lblError" runat="server" visible="false">
             </div>
-
+              <div class="form-group clearfix">
+                    <label for="inputName" class="col-lg-3 control-label">Page Name *</label>
+                    <div class="col-lg-9">
+                        <asp:DropDownList ID="ddlPageName" runat="server" DataTextField="PageName" DataValueField="GUID" Width="280px" CssClass="form-control" OnSelectedIndexChanged="ddlPageName_SelectedIndexChanged" AutoPostBack="true">
+                        </asp:DropDownList>
+                    </div>
+                </div>
             <div class="modal-body">
                 <fieldset>
                     <div class="form-group clearfix">
@@ -20,7 +26,7 @@
                 </fieldset>
             </div>
             <div class="modal-footer">
-                <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary"/>
+                <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btnSave_Click"/>
             </div>
         </div>
     </div>

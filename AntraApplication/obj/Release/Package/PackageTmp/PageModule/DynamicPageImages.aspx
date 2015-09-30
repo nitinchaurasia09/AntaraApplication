@@ -42,6 +42,12 @@
                             <asp:TextBox ID="txtLabelControl" runat="server" CssClass="form-control" MaxLength="50" Enabled="false"></asp:TextBox>
                         </div>
                     </div>
+                    <div class="form-group clearfix">
+                        <label for="inputName" class="col-lg-3 control-label">Description *</label>
+                        <div class="col-lg-9">
+                            <asp:TextBox ID="txtDesc" TextMode="MultiLine" Rows="10" Columns="20" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
+                    </div>
                 </fieldset>
             </div>
             <div class="modal-footer">
@@ -49,4 +55,27 @@
             </div>
         </div>
     </div>
+    <script>
+
+        $(document).ready(function () {
+            $('#MainContent_btnSave').click(function () {
+                if ($('#MainContent_flPageImage').val().trim() != '') {
+                    if (($('#MainContent_flPageImage')[0].files[0].size / (1024 * 1024)) > 2) {
+                        alert('File size should not be more than 2 MB');
+                        return false;
+                    }
+                }
+                if ($('#MainContent_txtImageText').val().trim() == '') {
+                    alert('Please enter Image Text');
+                    return false;
+                }
+
+
+                if ($('#MainContent_txtDesc').val().trim() == '') {
+                    alert('Please enter Description');
+                    return false;
+                }
+            });
+        });
+    </script>
 </asp:Content>
