@@ -5,6 +5,8 @@ D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\EntityFramework.dll
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\EntityFramework.SqlServer.dll
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\Newtonsoft.Json.dll
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\System.Net.Http.Formatting.dll
+D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\System.Web.Cors.dll
+D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\System.Web.Http.Cors.dll
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\System.Web.Http.dll
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\System.Web.Http.WebHost.dll
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\EntityFramework.xml
@@ -12,11 +14,9 @@ D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\EntityFramework.Sql
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\Newtonsoft.Json.xml
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\System.Net.Http.Formatting.xml
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\System.Web.Http.xml
+D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\System.Web.Http.Cors.xml
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\System.Web.Http.WebHost.xml
+D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\ko\System.Web.Http.Cors.resources.dll
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\obj\Debug\AntaraWebApi.csprojResolveAssemblyReference.cache
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\obj\Debug\AntaraWebApi.dll
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\obj\Debug\AntaraWebApi.pdb
-D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\System.Web.Cors.dll
-D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\System.Web.Http.Cors.dll
-D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\System.Web.Http.Cors.xml
-D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\ko\System.Web.Http.Cors.resources.dll
