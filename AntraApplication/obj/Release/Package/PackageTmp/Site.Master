@@ -64,7 +64,7 @@
                         <a href="../PageModule/ManageDynamicPages.aspx">Page Management</a>
                         <a href="../PageModule/ChangeDescription.aspx">Page Description</a>
                         <a href="../YTModule/YouTube.aspx">Youtube Management</a>
-                        
+                        <a href="../BlogModule/ShowAllBlog.aspx">Blog Management</a>
                     </li>
                 </ul>
             </div>
