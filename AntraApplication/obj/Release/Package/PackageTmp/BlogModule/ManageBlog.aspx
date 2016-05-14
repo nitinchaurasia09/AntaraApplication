@@ -1,7 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  MasterPageFile="~/Site.Master"  CodeBehind="ManageBlog.aspx.cs" Inherits="AntaraApplication.BlogModule.ManageBlog" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="ManageBlog.aspx.cs" Inherits="AntaraApplication.BlogModule.ManageBlog" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-     <!-- Page Content -->
+    <!-- Page Content -->
     <div id="page-content-wrapper">
         <div class="container-fluid">
             <h3>Add/Edit User</h3>
@@ -33,10 +33,27 @@
                         <div class="form-group clearfix">
                             <label for="inputName" class="col-lg-3 control-label">Image </label>
                             <div class="col-lg-9 image-container">
-                                <div class="col-lg-4"><asp:FileUpload ID="fileUplImage" runat="server" /></div>
-                                <div class="col-lg-8"> <asp:Image ID="imgUploaded" Width="100" Height="100"  runat="server" Visible="false" /></div>
-                             </div>
-                        </div>                                                
+                                <div class="col-lg-4">
+                                    <asp:FileUpload ID="fileUplImage" runat="server" /></div>
+                                <div class="col-lg-8">
+                                    <asp:Image ID="imgUploaded" Width="100" Height="100" runat="server" Visible="false" /></div>
+                            </div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label for="inputName" class="col-lg-3 control-label">Is Featured</label>
+                            <div class="col-lg-9 image-container">
+                                <div class="col-lg-4">
+                                    <asp:CheckBox ID="chkIsFeatured" runat="server" AutoPostBack="true" OnCheckedChanged="chkIsFeatured_CheckedChanged" />
+                                </div>
+                                <div class="col-lg-8"></div>
+                            </div>
+                        </div>
+                        <div class="form-group clearfix" id="dvFeature" runat="server" visible="false">
+                            <label for="inputName" class="col-lg-3 control-label">Featured Description</label>
+                            <div class="col-lg-9">
+                                <asp:TextBox ID="txtFeature" runat="server" TextMode="MultiLine" Width="300px" Columns="2" Rows="2" CssClass="form-control" MaxLength="300"></asp:TextBox>
+                            </div>
+                        </div>
                     </fieldset>
                 </form>
             </div>
@@ -57,7 +74,7 @@
                 if ($('#MainContent_txtDescribeFor').val().trim() == '') {
                     alert('Please enter Describe For');
                     return false;
-                } 
+                }
                 if ($('#MainContent_txtDescription').val().trim() == '') {
                     alert('Please enter Description');
                     return false;
@@ -65,7 +82,7 @@
 
             });
         });
-       
+
     </script>
 
 

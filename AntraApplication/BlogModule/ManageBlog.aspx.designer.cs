@@ -67,6 +67,33 @@ namespace AntaraApplication.BlogModule {
         protected global::System.Web.UI.WebControls.Image imgUploaded;
         
         /// <summary>
+        /// chkIsFeatured control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkIsFeatured;
+        
+        /// <summary>
+        /// dvFeature control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvFeature;
+        
+        /// <summary>
+        /// txtFeature control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFeature;
+        
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>

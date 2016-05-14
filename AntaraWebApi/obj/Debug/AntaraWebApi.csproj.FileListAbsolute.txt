@@ -20,3 +20,25 @@ D:\Old project\My Project\AntaraApplication\AntaraWebApi\bin\ko\System.Web.Http.
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\obj\Debug\AntaraWebApi.csprojResolveAssemblyReference.cache
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\obj\Debug\AntaraWebApi.dll
 D:\Old project\My Project\AntaraApplication\AntaraWebApi\obj\Debug\AntaraWebApi.pdb
+C:\Project\AntaraApplication\AntaraWebApi\bin\AntaraWebApi.dll.config
+C:\Project\AntaraApplication\AntaraWebApi\bin\AntaraWebApi.dll
+C:\Project\AntaraApplication\AntaraWebApi\bin\AntaraWebApi.pdb
+C:\Project\AntaraApplication\AntaraWebApi\bin\EntityFramework.dll
+C:\Project\AntaraApplication\AntaraWebApi\bin\EntityFramework.SqlServer.dll
+C:\Project\AntaraApplication\AntaraWebApi\bin\Newtonsoft.Json.dll
+C:\Project\AntaraApplication\AntaraWebApi\bin\System.Net.Http.Formatting.dll
+C:\Project\AntaraApplication\AntaraWebApi\bin\System.Web.Cors.dll
+C:\Project\AntaraApplication\AntaraWebApi\bin\System.Web.Http.Cors.dll
+C:\Project\AntaraApplication\AntaraWebApi\bin\System.Web.Http.dll
+C:\Project\AntaraApplication\AntaraWebApi\bin\System.Web.Http.WebHost.dll
+C:\Project\AntaraApplication\AntaraWebApi\bin\EntityFramework.xml
+C:\Project\AntaraApplication\AntaraWebApi\bin\EntityFramework.SqlServer.xml
+C:\Project\AntaraApplication\AntaraWebApi\bin\Newtonsoft.Json.xml
+C:\Project\AntaraApplication\AntaraWebApi\bin\System.Net.Http.Formatting.xml
+C:\Project\AntaraApplication\AntaraWebApi\bin\System.Web.Http.xml
+C:\Project\AntaraApplication\AntaraWebApi\bin\System.Web.Http.Cors.xml
+C:\Project\AntaraApplication\AntaraWebApi\bin\System.Web.Http.WebHost.xml
+C:\Project\AntaraApplication\AntaraWebApi\bin\ko\System.Web.Http.Cors.resources.dll
+C:\Project\AntaraApplication\AntaraWebApi\obj\Debug\AntaraWebApi.csprojResolveAssemblyReference.cache
+C:\Project\AntaraApplication\AntaraWebApi\obj\Debug\AntaraWebApi.dll
+C:\Project\AntaraApplication\AntaraWebApi\obj\Debug\AntaraWebApi.pdb

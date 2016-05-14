@@ -194,4 +194,68 @@ namespace AntaraApplication.Models
             }
         }
     }
+
+
+    public class Featured
+    {
+        public Guid ID
+        {
+            get;
+            set;
+        }
+
+        public string DESCRIPTION
+        {
+            get;
+            set;
+        }
+                
+        public DataTable getFeaturedByBlogId()
+        {
+            DbParameter[] parameters = new DbParameter[1];
+            DataTable dtBlog = new DataTable();
+            try
+            {
+                parameters[0] = new SqlParameter("@guid", null);
+                parameters[0].Direction = ParameterDirection.Input;
+                parameters[0].DbType = DbType.Guid;
+                dtBlog = Ado.ExecuteStoredProcedure("sp_GetAllFeature", parameters);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                parameters = null;
+                dtBlog.Dispose();
+            }
+            return dtBlog;
+        }
+
+        public void saveFeatured()
+        {
+            DbParameter[] parameters = new DbParameter[2];
+            try
+            {
+                parameters[0] = new SqlParameter("@guid", ID);
+                parameters[0].Direction = ParameterDirection.Input;
+                parameters[0].DbType = DbType.Guid;
+
+                parameters[1] = new SqlParameter("@Description", DESCRIPTION);
+                parameters[1].Direction = ParameterDirection.Input;
+                parameters[1].DbType = DbType.String;
+
+                Ado.ExecuteNonQueryStoredProcedure("sp_AddFeature", parameters);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                parameters = null;
+            }
+        }
+    }
 }

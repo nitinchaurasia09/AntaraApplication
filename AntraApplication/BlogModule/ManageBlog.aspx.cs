@@ -44,6 +44,17 @@ namespace AntaraApplication.BlogModule
                                 imgUploaded.ImageUrl = string.Format(@"..\{0}\{1}", "UploadedImages", dt.Rows[0]["ImagePath"].ToString());
                             }
                         }
+
+                        Featured objF = new Featured();
+                        DataTable dtF = objF.getFeaturedByBlogId();
+                        if (dtF.Rows.Count > 0) {
+                            if (dtF.Rows[0]["blogId"].ToString() == Request.QueryString["guid"].ToString()) { 
+                            txtFeature.Text = dtF.Rows[0]["FeartureDescription"].ToString();
+                            chkIsFeatured.Checked = true;
+                            dvFeature.Visible = true;
+                            }
+                        }
+
                     }
                     catch (Exception ex)
                     {
@@ -61,6 +72,7 @@ namespace AntaraApplication.BlogModule
         protected void btnSave_Click(object sender, EventArgs e)
         {
             Blog objAddNewBlog = new Blog();
+            Featured objFeature = new Featured();
             try
             {
                 if (string.IsNullOrWhiteSpace(txtBlogName.Text))
@@ -115,6 +127,12 @@ namespace AntaraApplication.BlogModule
                         lblError.Visible = true;
                         lblError.InnerHtml = "Blog updated successfully";                        
                     }
+                    if (chkIsFeatured.Checked == true) {
+                        objFeature.DESCRIPTION = txtFeature.Text;
+                        objFeature.ID = objAddNewBlog.ID;
+                        objFeature.saveFeatured();
+                    }
+
                 }
             }
             catch (Exception ex)
@@ -126,6 +144,14 @@ namespace AntaraApplication.BlogModule
             {
                 objAddNewBlog = null;
             }
+        }
+
+        protected void chkIsFeatured_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkIsFeatured.Checked == true)
+                dvFeature.Visible = true;
+            else
+                dvFeature.Visible = false;
         }
     }
 }
